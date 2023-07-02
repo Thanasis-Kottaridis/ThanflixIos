@@ -1,0 +1,615 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 55;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		AED7A06A2A5153CC00A6C820 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AED7A0692A5153CC00A6C820 /* AppDelegate.swift */; };
+		AED7A06C2A5153CC00A6C820 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AED7A06B2A5153CC00A6C820 /* SceneDelegate.swift */; };
+		AED7A06E2A5153CC00A6C820 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AED7A06D2A5153CC00A6C820 /* ViewController.swift */; };
+		AED7A0712A5153CC00A6C820 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AED7A06F2A5153CC00A6C820 /* Main.storyboard */; };
+		AED7A0732A5153D000A6C820 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AED7A0722A5153D000A6C820 /* Assets.xcassets */; };
+		AED7A0762A5153D000A6C820 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AED7A0742A5153D000A6C820 /* LaunchScreen.storyboard */; };
+		AED7A0812A5153D000A6C820 /* ThanflixTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AED7A0802A5153D000A6C820 /* ThanflixTests.swift */; };
+		AED7A08B2A5153D000A6C820 /* ThanflixUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AED7A08A2A5153D000A6C820 /* ThanflixUITests.swift */; };
+		AED7A08D2A5153D000A6C820 /* ThanflixUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AED7A08C2A5153D000A6C820 /* ThanflixUITestsLaunchTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		AED7A07D2A5153D000A6C820 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = AED7A05E2A5153CC00A6C820 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = AED7A0652A5153CC00A6C820;
+			remoteInfo = Thanflix;
+		};
+		AED7A0872A5153D000A6C820 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = AED7A05E2A5153CC00A6C820 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = AED7A0652A5153CC00A6C820;
+			remoteInfo = Thanflix;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		AED7A0662A5153CC00A6C820 /* Thanflix.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Thanflix.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		AED7A0692A5153CC00A6C820 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		AED7A06B2A5153CC00A6C820 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		AED7A06D2A5153CC00A6C820 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		AED7A0702A5153CC00A6C820 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		AED7A0722A5153D000A6C820 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		AED7A0752A5153D000A6C820 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		AED7A0772A5153D000A6C820 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AED7A07C2A5153D000A6C820 /* ThanflixTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ThanflixTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		AED7A0802A5153D000A6C820 /* ThanflixTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThanflixTests.swift; sourceTree = "<group>"; };
+		AED7A0862A5153D000A6C820 /* ThanflixUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ThanflixUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		AED7A08A2A5153D000A6C820 /* ThanflixUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThanflixUITests.swift; sourceTree = "<group>"; };
+		AED7A08C2A5153D000A6C820 /* ThanflixUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThanflixUITestsLaunchTests.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		AED7A0632A5153CC00A6C820 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AED7A0792A5153D000A6C820 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AED7A0832A5153D000A6C820 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		AED7A05D2A5153CC00A6C820 = {
+			isa = PBXGroup;
+			children = (
+				AED7A0682A5153CC00A6C820 /* Thanflix */,
+				AED7A07F2A5153D000A6C820 /* ThanflixTests */,
+				AED7A0892A5153D000A6C820 /* ThanflixUITests */,
+				AED7A0672A5153CC00A6C820 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		AED7A0672A5153CC00A6C820 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				AED7A0662A5153CC00A6C820 /* Thanflix.app */,
+				AED7A07C2A5153D000A6C820 /* ThanflixTests.xctest */,
+				AED7A0862A5153D000A6C820 /* ThanflixUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		AED7A0682A5153CC00A6C820 /* Thanflix */ = {
+			isa = PBXGroup;
+			children = (
+				AED7A0692A5153CC00A6C820 /* AppDelegate.swift */,
+				AED7A06B2A5153CC00A6C820 /* SceneDelegate.swift */,
+				AED7A06D2A5153CC00A6C820 /* ViewController.swift */,
+				AED7A06F2A5153CC00A6C820 /* Main.storyboard */,
+				AED7A0722A5153D000A6C820 /* Assets.xcassets */,
+				AED7A0742A5153D000A6C820 /* LaunchScreen.storyboard */,
+				AED7A0772A5153D000A6C820 /* Info.plist */,
+			);
+			path = Thanflix;
+			sourceTree = "<group>";
+		};
+		AED7A07F2A5153D000A6C820 /* ThanflixTests */ = {
+			isa = PBXGroup;
+			children = (
+				AED7A0802A5153D000A6C820 /* ThanflixTests.swift */,
+			);
+			path = ThanflixTests;
+			sourceTree = "<group>";
+		};
+		AED7A0892A5153D000A6C820 /* ThanflixUITests */ = {
+			isa = PBXGroup;
+			children = (
+				AED7A08A2A5153D000A6C820 /* ThanflixUITests.swift */,
+				AED7A08C2A5153D000A6C820 /* ThanflixUITestsLaunchTests.swift */,
+			);
+			path = ThanflixUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		AED7A0652A5153CC00A6C820 /* Thanflix */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AED7A0902A5153D000A6C820 /* Build configuration list for PBXNativeTarget "Thanflix" */;
+			buildPhases = (
+				AED7A0622A5153CC00A6C820 /* Sources */,
+				AED7A0632A5153CC00A6C820 /* Frameworks */,
+				AED7A0642A5153CC00A6C820 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Thanflix;
+			productName = Thanflix;
+			productReference = AED7A0662A5153CC00A6C820 /* Thanflix.app */;
+			productType = "com.apple.product-type.application";
+		};
+		AED7A07B2A5153D000A6C820 /* ThanflixTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AED7A0932A5153D000A6C820 /* Build configuration list for PBXNativeTarget "ThanflixTests" */;
+			buildPhases = (
+				AED7A0782A5153D000A6C820 /* Sources */,
+				AED7A0792A5153D000A6C820 /* Frameworks */,
+				AED7A07A2A5153D000A6C820 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				AED7A07E2A5153D000A6C820 /* PBXTargetDependency */,
+			);
+			name = ThanflixTests;
+			productName = ThanflixTests;
+			productReference = AED7A07C2A5153D000A6C820 /* ThanflixTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		AED7A0852A5153D000A6C820 /* ThanflixUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AED7A0962A5153D000A6C820 /* Build configuration list for PBXNativeTarget "ThanflixUITests" */;
+			buildPhases = (
+				AED7A0822A5153D000A6C820 /* Sources */,
+				AED7A0832A5153D000A6C820 /* Frameworks */,
+				AED7A0842A5153D000A6C820 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				AED7A0882A5153D000A6C820 /* PBXTargetDependency */,
+			);
+			name = ThanflixUITests;
+			productName = ThanflixUITests;
+			productReference = AED7A0862A5153D000A6C820 /* ThanflixUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		AED7A05E2A5153CC00A6C820 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1420;
+				LastUpgradeCheck = 1420;
+				TargetAttributes = {
+					AED7A0652A5153CC00A6C820 = {
+						CreatedOnToolsVersion = 14.2;
+					};
+					AED7A07B2A5153D000A6C820 = {
+						CreatedOnToolsVersion = 14.2;
+						TestTargetID = AED7A0652A5153CC00A6C820;
+					};
+					AED7A0852A5153D000A6C820 = {
+						CreatedOnToolsVersion = 14.2;
+						TestTargetID = AED7A0652A5153CC00A6C820;
+					};
+				};
+			};
+			buildConfigurationList = AED7A0612A5153CC00A6C820 /* Build configuration list for PBXProject "Thanflix" */;
+			compatibilityVersion = "Xcode 13.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = AED7A05D2A5153CC00A6C820;
+			productRefGroup = AED7A0672A5153CC00A6C820 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				AED7A0652A5153CC00A6C820 /* Thanflix */,
+				AED7A07B2A5153D000A6C820 /* ThanflixTests */,
+				AED7A0852A5153D000A6C820 /* ThanflixUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		AED7A0642A5153CC00A6C820 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AED7A0762A5153D000A6C820 /* LaunchScreen.storyboard in Resources */,
+				AED7A0732A5153D000A6C820 /* Assets.xcassets in Resources */,
+				AED7A0712A5153CC00A6C820 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AED7A07A2A5153D000A6C820 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AED7A0842A5153D000A6C820 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		AED7A0622A5153CC00A6C820 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AED7A06E2A5153CC00A6C820 /* ViewController.swift in Sources */,
+				AED7A06A2A5153CC00A6C820 /* AppDelegate.swift in Sources */,
+				AED7A06C2A5153CC00A6C820 /* SceneDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AED7A0782A5153D000A6C820 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AED7A0812A5153D000A6C820 /* ThanflixTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AED7A0822A5153D000A6C820 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AED7A08D2A5153D000A6C820 /* ThanflixUITestsLaunchTests.swift in Sources */,
+				AED7A08B2A5153D000A6C820 /* ThanflixUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		AED7A07E2A5153D000A6C820 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = AED7A0652A5153CC00A6C820 /* Thanflix */;
+			targetProxy = AED7A07D2A5153D000A6C820 /* PBXContainerItemProxy */;
+		};
+		AED7A0882A5153D000A6C820 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = AED7A0652A5153CC00A6C820 /* Thanflix */;
+			targetProxy = AED7A0872A5153D000A6C820 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		AED7A06F2A5153CC00A6C820 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				AED7A0702A5153CC00A6C820 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		AED7A0742A5153D000A6C820 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				AED7A0752A5153D000A6C820 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		AED7A08E2A5153D000A6C820 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		AED7A08F2A5153D000A6C820 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		AED7A0912A5153D000A6C820 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = PQV5BN264J;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Thanflix/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = gr.thanflix.Thanflix;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		AED7A0922A5153D000A6C820 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = PQV5BN264J;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Thanflix/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = gr.thanflix.Thanflix;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+		AED7A0942A5153D000A6C820 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = PQV5BN264J;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = gr.thanflix.ThanflixTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Thanflix.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Thanflix";
+			};
+			name = Debug;
+		};
+		AED7A0952A5153D000A6C820 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = PQV5BN264J;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = gr.thanflix.ThanflixTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Thanflix.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Thanflix";
+			};
+			name = Release;
+		};
+		AED7A0972A5153D000A6C820 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = PQV5BN264J;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = gr.thanflix.ThanflixUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Thanflix;
+			};
+			name = Debug;
+		};
+		AED7A0982A5153D000A6C820 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = PQV5BN264J;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = gr.thanflix.ThanflixUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Thanflix;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		AED7A0612A5153CC00A6C820 /* Build configuration list for PBXProject "Thanflix" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AED7A08E2A5153D000A6C820 /* Debug */,
+				AED7A08F2A5153D000A6C820 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AED7A0902A5153D000A6C820 /* Build configuration list for PBXNativeTarget "Thanflix" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AED7A0912A5153D000A6C820 /* Debug */,
+				AED7A0922A5153D000A6C820 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AED7A0932A5153D000A6C820 /* Build configuration list for PBXNativeTarget "ThanflixTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AED7A0942A5153D000A6C820 /* Debug */,
+				AED7A0952A5153D000A6C820 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AED7A0962A5153D000A6C820 /* Build configuration list for PBXNativeTarget "ThanflixUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AED7A0972A5153D000A6C820 /* Debug */,
+				AED7A0982A5153D000A6C820 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = AED7A05E2A5153CC00A6C820 /* Project object */;
+}
