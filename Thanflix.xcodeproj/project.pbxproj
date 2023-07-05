@@ -17,6 +17,8 @@
 		AEA26DC62A55C94C003E8AA0 /* Presentation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AED7A1D32A515B0E00A6C820 /* Presentation.framework */; };
 		AEA26DC72A55C94C003E8AA0 /* Presentation.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = AED7A1D32A515B0E00A6C820 /* Presentation.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		AEA26DC92A55CA27003E8AA0 /* Enviroments.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEA26DC82A55CA27003E8AA0 /* Enviroments.swift */; };
+		AEA26DCE2A55CC92003E8AA0 /* RequestHeadersBuilderImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEA26DCD2A55CC92003E8AA0 /* RequestHeadersBuilderImpl.swift */; };
+		AEA26DD22A55CDCF003E8AA0 /* Ext_UIDevice.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEA26DD12A55CDCF003E8AA0 /* Ext_UIDevice.swift */; };
 		AED7A06A2A5153CC00A6C820 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AED7A0692A5153CC00A6C820 /* AppDelegate.swift */; };
 		AED7A06C2A5153CC00A6C820 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AED7A06B2A5153CC00A6C820 /* SceneDelegate.swift */; };
 		AED7A06E2A5153CC00A6C820 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AED7A06D2A5153CC00A6C820 /* ViewController.swift */; };
@@ -113,6 +115,8 @@
 		99C24A12CD5449B0B498EA0F /* libPods-ThanflixTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ThanflixTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		AEA26DBF2A55C8E2003E8AA0 /* AppConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppConfig.swift; sourceTree = "<group>"; };
 		AEA26DC82A55CA27003E8AA0 /* Enviroments.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Enviroments.swift; sourceTree = "<group>"; };
+		AEA26DCD2A55CC92003E8AA0 /* RequestHeadersBuilderImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestHeadersBuilderImpl.swift; sourceTree = "<group>"; };
+		AEA26DD12A55CDCF003E8AA0 /* Ext_UIDevice.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Ext_UIDevice.swift; sourceTree = "<group>"; };
 		AED7A0662A5153CC00A6C820 /* Thanflix.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Thanflix.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AED7A0692A5153CC00A6C820 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AED7A06B2A5153CC00A6C820 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -188,6 +192,32 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		AEA26DCC2A55CC77003E8AA0 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				AEA26DCF2A55CDB6003E8AA0 /* Helpers */,
+				AEA26DD02A55CDC0003E8AA0 /* Extensions */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		AEA26DCF2A55CDB6003E8AA0 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				AEA26DC82A55CA27003E8AA0 /* Enviroments.swift */,
+				AEA26DCD2A55CC92003E8AA0 /* RequestHeadersBuilderImpl.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		AEA26DD02A55CDC0003E8AA0 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				AEA26DD12A55CDCF003E8AA0 /* Ext_UIDevice.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		AED7A05D2A5153CC00A6C820 = {
 			isa = PBXGroup;
 			children = (
@@ -216,6 +246,7 @@
 			children = (
 				AED7A22C2A515E8200A6C820 /* Application */,
 				AED7A2342A515EB600A6C820 /* Controllers */,
+				AEA26DCC2A55CC77003E8AA0 /* Utils */,
 				AED7A2332A515E9300A6C820 /* Resources */,
 			);
 			path = Thanflix;
@@ -281,7 +312,6 @@
 				AED7A0692A5153CC00A6C820 /* AppDelegate.swift */,
 				AED7A06B2A5153CC00A6C820 /* SceneDelegate.swift */,
 				AEA26DBF2A55C8E2003E8AA0 /* AppConfig.swift */,
-				AEA26DC82A55CA27003E8AA0 /* Enviroments.swift */,
 			);
 			path = Application;
 			sourceTree = "<group>";
@@ -568,11 +598,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AEA26DCE2A55CC92003E8AA0 /* RequestHeadersBuilderImpl.swift in Sources */,
 				AED7A06E2A5153CC00A6C820 /* ViewController.swift in Sources */,
 				AEA26DC92A55CA27003E8AA0 /* Enviroments.swift in Sources */,
 				AEA26DC02A55C8E2003E8AA0 /* AppConfig.swift in Sources */,
 				AED7A06A2A5153CC00A6C820 /* AppDelegate.swift in Sources */,
 				AED7A06C2A5153CC00A6C820 /* SceneDelegate.swift in Sources */,
+				AEA26DD22A55CDCF003E8AA0 /* Ext_UIDevice.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
