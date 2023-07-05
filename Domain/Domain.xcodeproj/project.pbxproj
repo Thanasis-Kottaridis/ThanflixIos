@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		A671078A6665FD019A76EB13 /* libPods-Domain.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2DD104E9ECB8C799518F43F8 /* libPods-Domain.a */; };
+		AEA26DA72A55BC05003E8AA0 /* CustomInject.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEA26DA62A55BC05003E8AA0 /* CustomInject.swift */; };
 		AED7A1262A51593700A6C820 /* Domain.docc in Sources */ = {isa = PBXBuildFile; fileRef = AED7A1252A51593700A6C820 /* Domain.docc */; };
 		AED7A12C2A51593700A6C820 /* Domain.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AED7A1212A51593700A6C820 /* Domain.framework */; };
 		AED7A1312A51593700A6C820 /* DomainTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AED7A1302A51593700A6C820 /* DomainTests.swift */; };
@@ -26,6 +27,7 @@
 
 /* Begin PBXFileReference section */
 		2DD104E9ECB8C799518F43F8 /* libPods-Domain.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Domain.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		AEA26DA62A55BC05003E8AA0 /* CustomInject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomInject.swift; sourceTree = "<group>"; };
 		AED7A1212A51593700A6C820 /* Domain.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Domain.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AED7A1242A51593700A6C820 /* Domain.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Domain.h; sourceTree = "<group>"; };
 		AED7A1252A51593700A6C820 /* Domain.docc */ = {isa = PBXFileReference; lastKnownFileType = folder.documentationcatalog; path = Domain.docc; sourceTree = "<group>"; };
@@ -55,6 +57,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		AEA26DA52A55BBF5003E8AA0 /* DI */ = {
+			isa = PBXGroup;
+			children = (
+				AEA26DA62A55BC05003E8AA0 /* CustomInject.swift */,
+			);
+			path = DI;
+			sourceTree = "<group>";
+		};
 		AED7A1172A51593700A6C820 = {
 			isa = PBXGroup;
 			children = (
@@ -78,6 +88,7 @@
 		AED7A1232A51593700A6C820 /* Domain */ = {
 			isa = PBXGroup;
 			children = (
+				AEA26DA52A55BBF5003E8AA0 /* DI */,
 				AED7A1242A51593700A6C820 /* Domain.h */,
 				AED7A1252A51593700A6C820 /* Domain.docc */,
 			);
@@ -246,6 +257,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				AED7A1262A51593700A6C820 /* Domain.docc in Sources */,
+				AEA26DA72A55BC05003E8AA0 /* CustomInject.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -457,6 +469,7 @@
 		AED7A1392A51593700A6C820 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = PQV5BN264J;
@@ -473,6 +486,7 @@
 		AED7A13A2A51593700A6C820 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = PQV5BN264J;

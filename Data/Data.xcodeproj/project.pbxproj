@@ -8,6 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		6DD234C155550F9C07950B5C /* libPods-Data.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D38796A22F8B61BDE717B924 /* libPods-Data.a */; };
+		AEA26DA22A55BBA0003E8AA0 /* MoviesPathRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEA26DA12A55BBA0003E8AA0 /* MoviesPathRouter.swift */; };
+		AEA26DB22A55BD2D003E8AA0 /* DataBoundry.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEA26DB02A55BD2D003E8AA0 /* DataBoundry.swift */; };
+		AEA26DB32A55BD2D003E8AA0 /* DataAppConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEA26DB12A55BD2D003E8AA0 /* DataAppConfig.swift */; };
+		AEA26DB52A55BD6B003E8AA0 /* InjectBoundries.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEA26DB42A55BD6B003E8AA0 /* InjectBoundries.swift */; };
+		AEA26DB62A55BD99003E8AA0 /* Domain.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AED7A1F92A515B3600A6C820 /* Domain.framework */; };
+		AEA26DB72A55BD99003E8AA0 /* Domain.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = AED7A1F92A515B3600A6C820 /* Domain.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		AED7A16E2A515A5200A6C820 /* Data.docc in Sources */ = {isa = PBXBuildFile; fileRef = AED7A16D2A515A5200A6C820 /* Data.docc */; };
 		AED7A1742A515A5300A6C820 /* Data.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AED7A1692A515A5200A6C820 /* Data.framework */; };
 		AED7A1792A515A5300A6C820 /* DataTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AED7A1782A515A5300A6C820 /* DataTests.swift */; };
@@ -38,9 +44,27 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		AEA26DB82A55BD99003E8AA0 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				AEA26DB72A55BD99003E8AA0 /* Domain.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		09328B1345F74C135F742184 /* Pods-Data.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Data.debug.xcconfig"; path = "Target Support Files/Pods-Data/Pods-Data.debug.xcconfig"; sourceTree = "<group>"; };
 		64EA0F3F3FA0716223E1A6BA /* Pods-Data.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Data.release.xcconfig"; path = "Target Support Files/Pods-Data/Pods-Data.release.xcconfig"; sourceTree = "<group>"; };
+		AEA26DA12A55BBA0003E8AA0 /* MoviesPathRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviesPathRouter.swift; sourceTree = "<group>"; };
+		AEA26DB02A55BD2D003E8AA0 /* DataBoundry.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataBoundry.swift; sourceTree = "<group>"; };
+		AEA26DB12A55BD2D003E8AA0 /* DataAppConfig.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataAppConfig.swift; sourceTree = "<group>"; };
+		AEA26DB42A55BD6B003E8AA0 /* InjectBoundries.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InjectBoundries.swift; sourceTree = "<group>"; };
 		AED7A1692A515A5200A6C820 /* Data.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Data.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AED7A16C2A515A5200A6C820 /* Data.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Data.h; sourceTree = "<group>"; };
 		AED7A16D2A515A5200A6C820 /* Data.docc */ = {isa = PBXFileReference; lastKnownFileType = folder.documentationcatalog; path = Data.docc; sourceTree = "<group>"; };
@@ -55,6 +79,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AEA26DB62A55BD99003E8AA0 /* Domain.framework in Frameworks */,
 				6DD234C155550F9C07950B5C /* libPods-Data.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -88,6 +113,47 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		AEA26D9D2A55BB86003E8AA0 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				AEA26DA32A55BBB1003E8AA0 /* Apj */,
+				AEA26DA02A55BB8C003E8AA0 /* Utils */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		AEA26DA02A55BB8C003E8AA0 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		AEA26DA32A55BBB1003E8AA0 /* Apj */ = {
+			isa = PBXGroup;
+			children = (
+				AEA26DA12A55BBA0003E8AA0 /* MoviesPathRouter.swift */,
+			);
+			path = Apj;
+			sourceTree = "<group>";
+		};
+		AEA26DA42A55BBC5003E8AA0 /* Di */ = {
+			isa = PBXGroup;
+			children = (
+				AEA26DB42A55BD6B003E8AA0 /* InjectBoundries.swift */,
+			);
+			path = Di;
+			sourceTree = "<group>";
+		};
+		AEA26DAF2A55BD2D003E8AA0 /* Boundaries */ = {
+			isa = PBXGroup;
+			children = (
+				AEA26DB02A55BD2D003E8AA0 /* DataBoundry.swift */,
+				AEA26DB12A55BD2D003E8AA0 /* DataAppConfig.swift */,
+			);
+			path = Boundaries;
+			sourceTree = "<group>";
+		};
 		AED7A15F2A515A5200A6C820 = {
 			isa = PBXGroup;
 			children = (
@@ -112,6 +178,9 @@
 		AED7A16B2A515A5200A6C820 /* Data */ = {
 			isa = PBXGroup;
 			children = (
+				AEA26DA42A55BBC5003E8AA0 /* Di */,
+				AEA26DAF2A55BD2D003E8AA0 /* Boundaries */,
+				AEA26D9D2A55BB86003E8AA0 /* Network */,
 				AED7A16C2A515A5200A6C820 /* Data.h */,
 				AED7A16D2A515A5200A6C820 /* Data.docc */,
 			);
@@ -166,6 +235,7 @@
 				AED7A1652A515A5200A6C820 /* Sources */,
 				AED7A1662A515A5200A6C820 /* Frameworks */,
 				AED7A1672A515A5200A6C820 /* Resources */,
+				AEA26DB82A55BD99003E8AA0 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -301,7 +371,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AEA26DA22A55BBA0003E8AA0 /* MoviesPathRouter.swift in Sources */,
 				AED7A16E2A515A5200A6C820 /* Data.docc in Sources */,
+				AEA26DB22A55BD2D003E8AA0 /* DataBoundry.swift in Sources */,
+				AEA26DB32A55BD2D003E8AA0 /* DataAppConfig.swift in Sources */,
+				AEA26DB52A55BD6B003E8AA0 /* InjectBoundries.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -513,6 +587,7 @@
 		AED7A1812A515A5300A6C820 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = PQV5BN264J;
@@ -529,6 +604,7 @@
 		AED7A1822A515A5300A6C820 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = PQV5BN264J;

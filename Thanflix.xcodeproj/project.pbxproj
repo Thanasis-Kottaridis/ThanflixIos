@@ -9,6 +9,14 @@
 /* Begin PBXBuildFile section */
 		3093736C2B920D26730D1F8D /* libPods-ThanflixTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 99C24A12CD5449B0B498EA0F /* libPods-ThanflixTests.a */; };
 		AC086DC1AEC5DC9034B8F565 /* libPods-Thanflix-ThanflixUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 87E1DE48C9D06A36C6FE0B5D /* libPods-Thanflix-ThanflixUITests.a */; };
+		AEA26DC02A55C8E2003E8AA0 /* AppConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEA26DBF2A55C8E2003E8AA0 /* AppConfig.swift */; };
+		AEA26DC12A55C93D003E8AA0 /* Data.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AED7A1DC2A515B1200A6C820 /* Data.framework */; };
+		AEA26DC22A55C93D003E8AA0 /* Data.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = AED7A1DC2A515B1200A6C820 /* Data.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		AEA26DC42A55C941003E8AA0 /* Domain.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AED7A1E52A515B1700A6C820 /* Domain.framework */; };
+		AEA26DC52A55C941003E8AA0 /* Domain.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = AED7A1E52A515B1700A6C820 /* Domain.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		AEA26DC62A55C94C003E8AA0 /* Presentation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AED7A1D32A515B0E00A6C820 /* Presentation.framework */; };
+		AEA26DC72A55C94C003E8AA0 /* Presentation.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = AED7A1D32A515B0E00A6C820 /* Presentation.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		AEA26DC92A55CA27003E8AA0 /* Enviroments.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEA26DC82A55CA27003E8AA0 /* Enviroments.swift */; };
 		AED7A06A2A5153CC00A6C820 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AED7A0692A5153CC00A6C820 /* AppDelegate.swift */; };
 		AED7A06C2A5153CC00A6C820 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AED7A06B2A5153CC00A6C820 /* SceneDelegate.swift */; };
 		AED7A06E2A5153CC00A6C820 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AED7A06D2A5153CC00A6C820 /* ViewController.swift */; };
@@ -80,6 +88,22 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		AEA26DC32A55C93D003E8AA0 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				AEA26DC52A55C941003E8AA0 /* Domain.framework in Embed Frameworks */,
+				AEA26DC22A55C93D003E8AA0 /* Data.framework in Embed Frameworks */,
+				AEA26DC72A55C94C003E8AA0 /* Presentation.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		001E2AAEB6DBD0588AB31417 /* libPods-Thanflix.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Thanflix.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		07F4A9A6834BC2FEE24FA87F /* Pods-Thanflix-ThanflixUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Thanflix-ThanflixUITests.release.xcconfig"; path = "Target Support Files/Pods-Thanflix-ThanflixUITests/Pods-Thanflix-ThanflixUITests.release.xcconfig"; sourceTree = "<group>"; };
@@ -87,6 +111,8 @@
 		6E917852570F9E88B1A3DA40 /* Pods-ThanflixTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ThanflixTests.release.xcconfig"; path = "Target Support Files/Pods-ThanflixTests/Pods-ThanflixTests.release.xcconfig"; sourceTree = "<group>"; };
 		87E1DE48C9D06A36C6FE0B5D /* libPods-Thanflix-ThanflixUITests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Thanflix-ThanflixUITests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		99C24A12CD5449B0B498EA0F /* libPods-ThanflixTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ThanflixTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		AEA26DBF2A55C8E2003E8AA0 /* AppConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppConfig.swift; sourceTree = "<group>"; };
+		AEA26DC82A55CA27003E8AA0 /* Enviroments.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Enviroments.swift; sourceTree = "<group>"; };
 		AED7A0662A5153CC00A6C820 /* Thanflix.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Thanflix.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AED7A0692A5153CC00A6C820 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AED7A06B2A5153CC00A6C820 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -113,6 +139,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AEA26DC42A55C941003E8AA0 /* Domain.framework in Frameworks */,
+				AEA26DC12A55C93D003E8AA0 /* Data.framework in Frameworks */,
+				AEA26DC62A55C94C003E8AA0 /* Presentation.framework in Frameworks */,
 				CB862757C0BF3C8AF5018FE1 /* libPods-Thanflix.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -185,13 +214,9 @@
 		AED7A0682A5153CC00A6C820 /* Thanflix */ = {
 			isa = PBXGroup;
 			children = (
-				AED7A0692A5153CC00A6C820 /* AppDelegate.swift */,
-				AED7A06B2A5153CC00A6C820 /* SceneDelegate.swift */,
-				AED7A06D2A5153CC00A6C820 /* ViewController.swift */,
-				AED7A06F2A5153CC00A6C820 /* Main.storyboard */,
-				AED7A0722A5153D000A6C820 /* Assets.xcassets */,
-				AED7A0742A5153D000A6C820 /* LaunchScreen.storyboard */,
-				AED7A0772A5153D000A6C820 /* Info.plist */,
+				AED7A22C2A515E8200A6C820 /* Application */,
+				AED7A2342A515EB600A6C820 /* Controllers */,
+				AED7A2332A515E9300A6C820 /* Resources */,
 			);
 			path = Thanflix;
 			sourceTree = "<group>";
@@ -250,6 +275,36 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
+		AED7A22C2A515E8200A6C820 /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				AED7A0692A5153CC00A6C820 /* AppDelegate.swift */,
+				AED7A06B2A5153CC00A6C820 /* SceneDelegate.swift */,
+				AEA26DBF2A55C8E2003E8AA0 /* AppConfig.swift */,
+				AEA26DC82A55CA27003E8AA0 /* Enviroments.swift */,
+			);
+			path = Application;
+			sourceTree = "<group>";
+		};
+		AED7A2332A515E9300A6C820 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				AED7A06F2A5153CC00A6C820 /* Main.storyboard */,
+				AED7A0722A5153D000A6C820 /* Assets.xcassets */,
+				AED7A0742A5153D000A6C820 /* LaunchScreen.storyboard */,
+				AED7A0772A5153D000A6C820 /* Info.plist */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		AED7A2342A515EB600A6C820 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				AED7A06D2A5153CC00A6C820 /* ViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -261,6 +316,7 @@
 				AED7A0622A5153CC00A6C820 /* Sources */,
 				AED7A0632A5153CC00A6C820 /* Frameworks */,
 				AED7A0642A5153CC00A6C820 /* Resources */,
+				AEA26DC32A55C93D003E8AA0 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -513,6 +569,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				AED7A06E2A5153CC00A6C820 /* ViewController.swift in Sources */,
+				AEA26DC92A55CA27003E8AA0 /* Enviroments.swift in Sources */,
+				AEA26DC02A55C8E2003E8AA0 /* AppConfig.swift in Sources */,
 				AED7A06A2A5153CC00A6C820 /* AppDelegate.swift in Sources */,
 				AED7A06C2A5153CC00A6C820 /* SceneDelegate.swift in Sources */,
 			);
@@ -694,7 +752,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = PQV5BN264J;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = Thanflix/Info.plist;
+				INFOPLIST_FILE = Thanflix/Resources/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -706,7 +764,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = gr.thanflix.Thanflix;
+				PRODUCT_BUNDLE_IDENTIFIER = gr.thanflix;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
 				SUPPORTS_MACCATALYST = NO;
@@ -727,7 +785,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = PQV5BN264J;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = Thanflix/Info.plist;
+				INFOPLIST_FILE = Thanflix/Resources/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -739,7 +797,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = gr.thanflix.Thanflix;
+				PRODUCT_BUNDLE_IDENTIFIER = gr.thanflix;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
 				SUPPORTS_MACCATALYST = NO;
