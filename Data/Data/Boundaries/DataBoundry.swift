@@ -12,16 +12,20 @@ public class DataBoundry {
     
     // MARK: - Dependencies
     var appConfig: DataAppConfig
+    var requestHeadersBuilder: RequestHeadersBuilder
 
     public init(
-        appConfig: DataAppConfig
+        appConfig: DataAppConfig,
+        requestHeadersBuilder: RequestHeadersBuilder
     ) {
         self.appConfig = appConfig
+        self.requestHeadersBuilder = requestHeadersBuilder
     }
     
     public func initialize() {
         // set up dependencies
         InjectedValues[\.dataAppConfig] = appConfig
+        InjectedValues[\.requestHeadersBuilder] = requestHeadersBuilder
     }
 
 }

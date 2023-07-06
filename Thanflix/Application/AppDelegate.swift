@@ -6,14 +6,20 @@
 //
 
 import UIKit
+import Domain
+import Data
+import Presentation
+import AlamofireNetworkActivityLogger
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
-
-
-
+    
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
+        // This is the first method that we must call here!!!
+        // set up modules
+        initializeModules()
+        // set up 3ed party dependencies
+        initializeDependencies()
         return true
     }
 
@@ -34,3 +40,23 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 }
 
+// MARK: - Initialize 3ed Party Dependencies
+extension AppDelegate {
+    private func initializeDependencies() {
+        //enable alamofire logging
+#if DEBUG
+        NetworkActivityLogger.shared.level = .debug
+        NetworkActivityLogger.shared.startLogging()
+#endif
+    }
+}
+
+// MARK: - Initialize Modules
+extension AppDelegate {
+    private func initializeModules() {
+        DataBoundry(
+            appConfig: AppConfig(),
+            requestHeadersBuilder: RequestHeadersBuilderImpl()
+        ).initialize()
+    }
+}

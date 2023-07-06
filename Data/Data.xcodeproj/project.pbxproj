@@ -7,8 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		6DD234C155550F9C07950B5C /* libPods-Data.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D38796A22F8B61BDE717B924 /* libPods-Data.a */; };
-		AEA26DA22A55BBA0003E8AA0 /* MoviesPathRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEA26DA12A55BBA0003E8AA0 /* MoviesPathRouter.swift */; };
+		185DC382966C6B517DB78AF0 /* Pods_Data.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CD3ADE4DD382C948A6CDB673 /* Pods_Data.framework */; };
+		AE53D2992A5762010017C9EE /* NetworkProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE53D2962A5762000017C9EE /* NetworkProvider.swift */; };
+		AE53D29B2A5762140017C9EE /* DataRequest_Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE53D29A2A5762140017C9EE /* DataRequest_Ext.swift */; };
+		AE53D2B32A576BE80017C9EE /* MoviesDataContextImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE53D2B22A576BE80017C9EE /* MoviesDataContextImpl.swift */; };
+		AEA26DA22A55BBA0003E8AA0 /* TMDBPathRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEA26DA12A55BBA0003E8AA0 /* TMDBPathRouter.swift */; };
 		AEA26DB22A55BD2D003E8AA0 /* DataBoundry.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEA26DB02A55BD2D003E8AA0 /* DataBoundry.swift */; };
 		AEA26DB32A55BD2D003E8AA0 /* DataAppConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEA26DB12A55BD2D003E8AA0 /* DataAppConfig.swift */; };
 		AEA26DB52A55BD6B003E8AA0 /* InjectBoundries.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEA26DB42A55BD6B003E8AA0 /* InjectBoundries.swift */; };
@@ -62,7 +65,10 @@
 /* Begin PBXFileReference section */
 		09328B1345F74C135F742184 /* Pods-Data.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Data.debug.xcconfig"; path = "Target Support Files/Pods-Data/Pods-Data.debug.xcconfig"; sourceTree = "<group>"; };
 		64EA0F3F3FA0716223E1A6BA /* Pods-Data.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Data.release.xcconfig"; path = "Target Support Files/Pods-Data/Pods-Data.release.xcconfig"; sourceTree = "<group>"; };
-		AEA26DA12A55BBA0003E8AA0 /* MoviesPathRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviesPathRouter.swift; sourceTree = "<group>"; };
+		AE53D2962A5762000017C9EE /* NetworkProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkProvider.swift; sourceTree = "<group>"; };
+		AE53D29A2A5762140017C9EE /* DataRequest_Ext.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataRequest_Ext.swift; sourceTree = "<group>"; };
+		AE53D2B22A576BE80017C9EE /* MoviesDataContextImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviesDataContextImpl.swift; sourceTree = "<group>"; };
+		AEA26DA12A55BBA0003E8AA0 /* TMDBPathRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TMDBPathRouter.swift; sourceTree = "<group>"; };
 		AEA26DB02A55BD2D003E8AA0 /* DataBoundry.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataBoundry.swift; sourceTree = "<group>"; };
 		AEA26DB12A55BD2D003E8AA0 /* DataAppConfig.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataAppConfig.swift; sourceTree = "<group>"; };
 		AEA26DB42A55BD6B003E8AA0 /* InjectBoundries.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InjectBoundries.swift; sourceTree = "<group>"; };
@@ -73,7 +79,7 @@
 		AED7A1732A515A5300A6C820 /* DataTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DataTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		AED7A1782A515A5300A6C820 /* DataTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataTests.swift; sourceTree = "<group>"; };
 		AED7A1F32A515B3600A6C820 /* Domain.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Domain.xcodeproj; path = ../../Domain/Domain.xcodeproj; sourceTree = "<group>"; };
-		D38796A22F8B61BDE717B924 /* libPods-Data.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Data.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		CD3ADE4DD382C948A6CDB673 /* Pods_Data.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Data.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,7 +88,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				AEA26DB62A55BD99003E8AA0 /* Domain.framework in Frameworks */,
-				6DD234C155550F9C07950B5C /* libPods-Data.a in Frameworks */,
+				185DC382966C6B517DB78AF0 /* Pods_Data.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -110,9 +116,17 @@
 		856BC7603A16244F8E27D25A /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				D38796A22F8B61BDE717B924 /* libPods-Data.a */,
+				CD3ADE4DD382C948A6CDB673 /* Pods_Data.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		AE53D2B12A576BAD0017C9EE /* DataContext */ = {
+			isa = PBXGroup;
+			children = (
+				AE53D2B22A576BE80017C9EE /* MoviesDataContextImpl.swift */,
+			);
+			path = DataContext;
 			sourceTree = "<group>";
 		};
 		AEA26D9D2A55BB86003E8AA0 /* Network */ = {
@@ -127,7 +141,9 @@
 		AEA26DA02A55BB8C003E8AA0 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				AE53D2962A5762000017C9EE /* NetworkProvider.swift */,
 				AEA26DCA2A55CB0D003E8AA0 /* RequestHeadersBuilder.swift */,
+				AE53D29A2A5762140017C9EE /* DataRequest_Ext.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -135,7 +151,7 @@
 		AEA26DA32A55BBB1003E8AA0 /* Apj */ = {
 			isa = PBXGroup;
 			children = (
-				AEA26DA12A55BBA0003E8AA0 /* MoviesPathRouter.swift */,
+				AEA26DA12A55BBA0003E8AA0 /* TMDBPathRouter.swift */,
 			);
 			path = Apj;
 			sourceTree = "<group>";
@@ -184,6 +200,7 @@
 				AEA26DA42A55BBC5003E8AA0 /* Di */,
 				AEA26DAF2A55BD2D003E8AA0 /* Boundaries */,
 				AEA26D9D2A55BB86003E8AA0 /* Network */,
+				AE53D2B12A576BAD0017C9EE /* DataContext */,
 				AED7A16C2A515A5200A6C820 /* Data.h */,
 				AED7A16D2A515A5200A6C820 /* Data.docc */,
 			);
@@ -374,8 +391,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AE53D2992A5762010017C9EE /* NetworkProvider.swift in Sources */,
 				AEA26DCB2A55CB0D003E8AA0 /* RequestHeadersBuilder.swift in Sources */,
-				AEA26DA22A55BBA0003E8AA0 /* MoviesPathRouter.swift in Sources */,
+				AEA26DA22A55BBA0003E8AA0 /* TMDBPathRouter.swift in Sources */,
+				AE53D2B32A576BE80017C9EE /* MoviesDataContextImpl.swift in Sources */,
+				AE53D29B2A5762140017C9EE /* DataRequest_Ext.swift in Sources */,
 				AED7A16E2A515A5200A6C820 /* Data.docc in Sources */,
 				AEA26DB22A55BD2D003E8AA0 /* DataBoundry.swift in Sources */,
 				AEA26DB32A55BD2D003E8AA0 /* DataAppConfig.swift in Sources */,

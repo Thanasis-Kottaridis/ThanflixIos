@@ -10,8 +10,8 @@ workspace 'Thanflix.xcworkspace'
 # ====================================
 def unit_test_pods
   # RxTest and RxBlocking make the most sense in the context of unit/integration tests
-  pod 'RxBlocking', '6.5.0'
-  pod 'RxTest', '6.5.0'
+  #  pod 'RxBlocking', '6.5.0'
+  #  pod 'RxTest', '6.5.0'
   
   # Alamofier mocking library By WeTransfer
   pod 'Mocker', '~> 2.5.4'
@@ -28,7 +28,7 @@ end
 
 target 'Domain' do
   project './Domain/Domain.project'
-  # use_frameworks!
+   use_frameworks!
   domain_pods
 end
 
@@ -52,7 +52,7 @@ end
 
 target 'Data' do
   project './Data/Data.project'
-  # use_frameworks!
+   use_frameworks!
   data_pods
 end
 
@@ -63,10 +63,10 @@ end
 # ====================================
 def presentation_pods
   # Rx pods
-  pod 'RxSwift', '6.5.0'
-  pod 'RxCocoa', '6.5.0'
-  pod 'RxDataSources', '~> 5.0'
-  
+  #  pod 'RxSwift', '6.5.0'
+  #  pod 'RxCocoa', '6.5.0'
+  #  pod 'RxDataSources', '~> 5.0'
+    
   # TextStyling
   pod 'BonMot'
   
@@ -76,7 +76,7 @@ end
 
 target 'Presentation' do
   project './Presentation/Presentation.project'
-  # use_frameworks!
+   use_frameworks!
   presentation_pods
 end
 
@@ -89,7 +89,7 @@ target 'Thanflix' do
   project './Thanflix.xcodeproj'
 
   # Comment the next line if you don't want to use dynamic frameworks
-  # use_frameworks!
+   use_frameworks!
   # Pods for Thanflix
 
   # Framework Pods

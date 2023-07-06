@@ -42,6 +42,11 @@ final class AppConfig: DataAppConfig {
         return "eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiI0MGJjYzU2YmNiYzE5YzY3MTVhYzFlZWMzNTgwZDc4ZSIsInN1YiI6IjY0YTAzY2ZjOGMwYTQ4MDBjNzYzZDRiMCIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.6BM8aYSJ_L4CMAO-8zKlgfViqA4eWMYkilTY2FnRMjg"
     }()
     
+    lazy var accountId: String = {
+        return "20091904"
+    }()
+    
+    
 
     private func path(_ keys: String...) -> String {
         var current = Bundle.main.infoDictionary

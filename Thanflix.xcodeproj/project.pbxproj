@@ -7,8 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		3093736C2B920D26730D1F8D /* libPods-ThanflixTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 99C24A12CD5449B0B498EA0F /* libPods-ThanflixTests.a */; };
-		AC086DC1AEC5DC9034B8F565 /* libPods-Thanflix-ThanflixUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 87E1DE48C9D06A36C6FE0B5D /* libPods-Thanflix-ThanflixUITests.a */; };
+		0D08C372817071D72EE59821 /* Pods_Thanflix.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F59255741DF68A1BD0D4060E /* Pods_Thanflix.framework */; };
+		0F5D820364C0AC8D91189A4D /* Pods_ThanflixTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A82C8F828FEA59D01B44CF34 /* Pods_ThanflixTests.framework */; };
+		64497B5685ACD5BB5C3337E5 /* Pods_Thanflix_ThanflixUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3951D132FD5FA6D79033A006 /* Pods_Thanflix_ThanflixUITests.framework */; };
 		AEA26DC02A55C8E2003E8AA0 /* AppConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEA26DBF2A55C8E2003E8AA0 /* AppConfig.swift */; };
 		AEA26DC12A55C93D003E8AA0 /* Data.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AED7A1DC2A515B1200A6C820 /* Data.framework */; };
 		AEA26DC22A55C93D003E8AA0 /* Data.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = AED7A1DC2A515B1200A6C820 /* Data.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
@@ -28,7 +29,6 @@
 		AED7A0812A5153D000A6C820 /* ThanflixTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AED7A0802A5153D000A6C820 /* ThanflixTests.swift */; };
 		AED7A08B2A5153D000A6C820 /* ThanflixUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AED7A08A2A5153D000A6C820 /* ThanflixUITests.swift */; };
 		AED7A08D2A5153D000A6C820 /* ThanflixUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AED7A08C2A5153D000A6C820 /* ThanflixUITestsLaunchTests.swift */; };
-		CB862757C0BF3C8AF5018FE1 /* libPods-Thanflix.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 001E2AAEB6DBD0588AB31417 /* libPods-Thanflix.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -107,12 +107,11 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		001E2AAEB6DBD0588AB31417 /* libPods-Thanflix.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Thanflix.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		07F4A9A6834BC2FEE24FA87F /* Pods-Thanflix-ThanflixUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Thanflix-ThanflixUITests.release.xcconfig"; path = "Target Support Files/Pods-Thanflix-ThanflixUITests/Pods-Thanflix-ThanflixUITests.release.xcconfig"; sourceTree = "<group>"; };
 		0F3CEEAACADFFA062275140B /* Pods-Thanflix.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Thanflix.release.xcconfig"; path = "Target Support Files/Pods-Thanflix/Pods-Thanflix.release.xcconfig"; sourceTree = "<group>"; };
+		3951D132FD5FA6D79033A006 /* Pods_Thanflix_ThanflixUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Thanflix_ThanflixUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6E917852570F9E88B1A3DA40 /* Pods-ThanflixTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ThanflixTests.release.xcconfig"; path = "Target Support Files/Pods-ThanflixTests/Pods-ThanflixTests.release.xcconfig"; sourceTree = "<group>"; };
-		87E1DE48C9D06A36C6FE0B5D /* libPods-Thanflix-ThanflixUITests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Thanflix-ThanflixUITests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		99C24A12CD5449B0B498EA0F /* libPods-ThanflixTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ThanflixTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		A82C8F828FEA59D01B44CF34 /* Pods_ThanflixTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ThanflixTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AEA26DBF2A55C8E2003E8AA0 /* AppConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppConfig.swift; sourceTree = "<group>"; };
 		AEA26DC82A55CA27003E8AA0 /* Enviroments.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Enviroments.swift; sourceTree = "<group>"; };
 		AEA26DCD2A55CC92003E8AA0 /* RequestHeadersBuilderImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestHeadersBuilderImpl.swift; sourceTree = "<group>"; };
@@ -135,6 +134,7 @@
 		AED7A1DF2A515B1700A6C820 /* Domain.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Domain.xcodeproj; path = Domain/Domain.xcodeproj; sourceTree = "<group>"; };
 		B4249A55475269B90D8BB922 /* Pods-Thanflix-ThanflixUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Thanflix-ThanflixUITests.debug.xcconfig"; path = "Target Support Files/Pods-Thanflix-ThanflixUITests/Pods-Thanflix-ThanflixUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		E9B15F41ADE74D42C372B438 /* Pods-Thanflix.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Thanflix.debug.xcconfig"; path = "Target Support Files/Pods-Thanflix/Pods-Thanflix.debug.xcconfig"; sourceTree = "<group>"; };
+		F59255741DF68A1BD0D4060E /* Pods_Thanflix.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Thanflix.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FF799658EF87229666E0E89D /* Pods-ThanflixTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ThanflixTests.debug.xcconfig"; path = "Target Support Files/Pods-ThanflixTests/Pods-ThanflixTests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -146,7 +146,7 @@
 				AEA26DC42A55C941003E8AA0 /* Domain.framework in Frameworks */,
 				AEA26DC12A55C93D003E8AA0 /* Data.framework in Frameworks */,
 				AEA26DC62A55C94C003E8AA0 /* Presentation.framework in Frameworks */,
-				CB862757C0BF3C8AF5018FE1 /* libPods-Thanflix.a in Frameworks */,
+				0D08C372817071D72EE59821 /* Pods_Thanflix.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -154,7 +154,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3093736C2B920D26730D1F8D /* libPods-ThanflixTests.a in Frameworks */,
+				0F5D820364C0AC8D91189A4D /* Pods_ThanflixTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -162,7 +162,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AC086DC1AEC5DC9034B8F565 /* libPods-Thanflix-ThanflixUITests.a in Frameworks */,
+				64497B5685ACD5BB5C3337E5 /* Pods_Thanflix_ThanflixUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -172,9 +172,9 @@
 		5BE4FC02691F5367259000A6 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				001E2AAEB6DBD0588AB31417 /* libPods-Thanflix.a */,
-				87E1DE48C9D06A36C6FE0B5D /* libPods-Thanflix-ThanflixUITests.a */,
-				99C24A12CD5449B0B498EA0F /* libPods-ThanflixTests.a */,
+				F59255741DF68A1BD0D4060E /* Pods_Thanflix.framework */,
+				3951D132FD5FA6D79033A006 /* Pods_Thanflix_ThanflixUITests.framework */,
+				A82C8F828FEA59D01B44CF34 /* Pods_ThanflixTests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -347,6 +347,7 @@
 				AED7A0632A5153CC00A6C820 /* Frameworks */,
 				AED7A0642A5153CC00A6C820 /* Resources */,
 				AEA26DC32A55C93D003E8AA0 /* Embed Frameworks */,
+				5CFC43AED3023DFE9D5D3AAF /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -365,6 +366,7 @@
 				AED7A0782A5153D000A6C820 /* Sources */,
 				AED7A0792A5153D000A6C820 /* Frameworks */,
 				AED7A07A2A5153D000A6C820 /* Resources */,
+				206DB900A6FA0D4A92385312 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -384,6 +386,7 @@
 				AED7A0822A5153D000A6C820 /* Sources */,
 				AED7A0832A5153D000A6C820 /* Frameworks */,
 				AED7A0842A5153D000A6C820 /* Resources */,
+				7B48ED807951844844639FE4 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -547,6 +550,23 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		206DB900A6FA0D4A92385312 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ThanflixTests/Pods-ThanflixTests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ThanflixTests/Pods-ThanflixTests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-ThanflixTests/Pods-ThanflixTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		2310EC0C1B673F038AB67BCF /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -569,6 +589,23 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		5CFC43AED3023DFE9D5D3AAF /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Thanflix/Pods-Thanflix-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Thanflix/Pods-Thanflix-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Thanflix/Pods-Thanflix-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		7ABE64CA0E262C490DBD2566 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -589,6 +626,23 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7B48ED807951844844639FE4 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Thanflix-ThanflixUITests/Pods-Thanflix-ThanflixUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Thanflix-ThanflixUITests/Pods-Thanflix-ThanflixUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Thanflix-ThanflixUITests/Pods-Thanflix-ThanflixUITests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -778,6 +832,8 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = E9B15F41ADE74D42C372B438 /* Pods-Thanflix.debug.xcconfig */;
 			buildSettings = {
+				APP_BASE_URL = "https://api.themoviedb.org/3";
+				APP_ENV = DEV;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
@@ -811,6 +867,8 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 0F3CEEAACADFFA062275140B /* Pods-Thanflix.release.xcconfig */;
 			buildSettings = {
+				APP_BASE_URL = "https://api.themoviedb.org/3";
+				APP_ENV = DEV;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;

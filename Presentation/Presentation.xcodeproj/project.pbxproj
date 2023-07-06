@@ -7,13 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		209F9696311A839B68016AEC /* libPods-Presentation.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 215D0837E4AAEDEB846AE298 /* libPods-Presentation.a */; };
 		AEA26DBB2A55BDA4003E8AA0 /* Domain.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AED7A1EF2A515B2800A6C820 /* Domain.framework */; };
 		AEA26DBC2A55BDA4003E8AA0 /* Domain.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = AED7A1EF2A515B2800A6C820 /* Domain.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		AED7A1B62A515AD200A6C820 /* Presentation.docc in Sources */ = {isa = PBXBuildFile; fileRef = AED7A1B52A515AD200A6C820 /* Presentation.docc */; };
 		AED7A1BC2A515AD200A6C820 /* Presentation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AED7A1B12A515AD200A6C820 /* Presentation.framework */; };
 		AED7A1C12A515AD200A6C820 /* PresentationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AED7A1C02A515AD200A6C820 /* PresentationTests.swift */; };
 		AED7A1C22A515AD200A6C820 /* Presentation.h in Headers */ = {isa = PBXBuildFile; fileRef = AED7A1B42A515AD200A6C820 /* Presentation.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AF7BA0DAD309480C4637F97B /* Pods_Presentation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1C0EB74AEFDC46228B34C960 /* Pods_Presentation.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,7 +56,7 @@
 
 /* Begin PBXFileReference section */
 		1602AD75357EAE33AE852489 /* Pods-Presentation.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Presentation.debug.xcconfig"; path = "Target Support Files/Pods-Presentation/Pods-Presentation.debug.xcconfig"; sourceTree = "<group>"; };
-		215D0837E4AAEDEB846AE298 /* libPods-Presentation.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Presentation.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		1C0EB74AEFDC46228B34C960 /* Pods_Presentation.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Presentation.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3BEFE8A06268BE02B54F6964 /* Pods-Presentation.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Presentation.release.xcconfig"; path = "Target Support Files/Pods-Presentation/Pods-Presentation.release.xcconfig"; sourceTree = "<group>"; };
 		AED7A1B12A515AD200A6C820 /* Presentation.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Presentation.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AED7A1B42A515AD200A6C820 /* Presentation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Presentation.h; sourceTree = "<group>"; };
@@ -72,7 +72,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				AEA26DBB2A55BDA4003E8AA0 /* Domain.framework in Frameworks */,
-				209F9696311A839B68016AEC /* libPods-Presentation.a in Frameworks */,
+				AF7BA0DAD309480C4637F97B /* Pods_Presentation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -90,7 +90,7 @@
 		150C94242878029B86C717D7 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				215D0837E4AAEDEB846AE298 /* libPods-Presentation.a */,
+				1C0EB74AEFDC46228B34C960 /* Pods_Presentation.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
