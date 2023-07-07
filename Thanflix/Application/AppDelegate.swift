@@ -58,5 +58,9 @@ extension AppDelegate {
             appConfig: AppConfig(),
             requestHeadersBuilder: RequestHeadersBuilderImpl()
         ).initialize()
+        
+        PresentationBoundary(
+            errorDispatcher: BaseErrorDispatcherImpl()
+        ).initialize()
     }
 }

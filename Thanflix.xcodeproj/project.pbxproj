@@ -10,6 +10,7 @@
 		0D08C372817071D72EE59821 /* Pods_Thanflix.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F59255741DF68A1BD0D4060E /* Pods_Thanflix.framework */; };
 		0F5D820364C0AC8D91189A4D /* Pods_ThanflixTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A82C8F828FEA59D01B44CF34 /* Pods_ThanflixTests.framework */; };
 		64497B5685ACD5BB5C3337E5 /* Pods_Thanflix_ThanflixUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3951D132FD5FA6D79033A006 /* Pods_Thanflix_ThanflixUITests.framework */; };
+		AE53D3792A58BB0E0017C9EE /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = AE53D3782A58BB0E0017C9EE /* Localizable.strings */; };
 		AEA26DC02A55C8E2003E8AA0 /* AppConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEA26DBF2A55C8E2003E8AA0 /* AppConfig.swift */; };
 		AEA26DC12A55C93D003E8AA0 /* Data.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AED7A1DC2A515B1200A6C820 /* Data.framework */; };
 		AEA26DC22A55C93D003E8AA0 /* Data.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = AED7A1DC2A515B1200A6C820 /* Data.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
@@ -20,6 +21,7 @@
 		AEA26DC92A55CA27003E8AA0 /* Enviroments.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEA26DC82A55CA27003E8AA0 /* Enviroments.swift */; };
 		AEA26DCE2A55CC92003E8AA0 /* RequestHeadersBuilderImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEA26DCD2A55CC92003E8AA0 /* RequestHeadersBuilderImpl.swift */; };
 		AEA26DD22A55CDCF003E8AA0 /* Ext_UIDevice.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEA26DD12A55CDCF003E8AA0 /* Ext_UIDevice.swift */; };
+		AED6FA6E2A58C50500AB8F92 /* BaseErrorDispatcherImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = AED6FA672A58C50500AB8F92 /* BaseErrorDispatcherImpl.swift */; };
 		AED7A06A2A5153CC00A6C820 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AED7A0692A5153CC00A6C820 /* AppDelegate.swift */; };
 		AED7A06C2A5153CC00A6C820 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AED7A06B2A5153CC00A6C820 /* SceneDelegate.swift */; };
 		AED7A06E2A5153CC00A6C820 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AED7A06D2A5153CC00A6C820 /* ViewController.swift */; };
@@ -112,10 +114,12 @@
 		3951D132FD5FA6D79033A006 /* Pods_Thanflix_ThanflixUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Thanflix_ThanflixUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6E917852570F9E88B1A3DA40 /* Pods-ThanflixTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ThanflixTests.release.xcconfig"; path = "Target Support Files/Pods-ThanflixTests/Pods-ThanflixTests.release.xcconfig"; sourceTree = "<group>"; };
 		A82C8F828FEA59D01B44CF34 /* Pods_ThanflixTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ThanflixTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		AE53D3782A58BB0E0017C9EE /* Localizable.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
 		AEA26DBF2A55C8E2003E8AA0 /* AppConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppConfig.swift; sourceTree = "<group>"; };
 		AEA26DC82A55CA27003E8AA0 /* Enviroments.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Enviroments.swift; sourceTree = "<group>"; };
 		AEA26DCD2A55CC92003E8AA0 /* RequestHeadersBuilderImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestHeadersBuilderImpl.swift; sourceTree = "<group>"; };
 		AEA26DD12A55CDCF003E8AA0 /* Ext_UIDevice.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Ext_UIDevice.swift; sourceTree = "<group>"; };
+		AED6FA672A58C50500AB8F92 /* BaseErrorDispatcherImpl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseErrorDispatcherImpl.swift; sourceTree = "<group>"; };
 		AED7A0662A5153CC00A6C820 /* Thanflix.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Thanflix.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AED7A0692A5153CC00A6C820 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AED7A06B2A5153CC00A6C820 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -192,6 +196,14 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		AE53D3772A58BB0E0017C9EE /* Localization */ = {
+			isa = PBXGroup;
+			children = (
+				AE53D3782A58BB0E0017C9EE /* Localizable.strings */,
+			);
+			path = Localization;
+			sourceTree = "<group>";
+		};
 		AEA26DCC2A55CC77003E8AA0 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
@@ -206,6 +218,7 @@
 			children = (
 				AEA26DC82A55CA27003E8AA0 /* Enviroments.swift */,
 				AEA26DCD2A55CC92003E8AA0 /* RequestHeadersBuilderImpl.swift */,
+				AED6FA672A58C50500AB8F92 /* BaseErrorDispatcherImpl.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -319,6 +332,7 @@
 		AED7A2332A515E9300A6C820 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				AE53D3772A58BB0E0017C9EE /* Localization */,
 				AED7A06F2A5153CC00A6C820 /* Main.storyboard */,
 				AED7A0722A5153D000A6C820 /* Assets.xcassets */,
 				AED7A0742A5153D000A6C820 /* LaunchScreen.storyboard */,
@@ -506,6 +520,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				AED7A0762A5153D000A6C820 /* LaunchScreen.storyboard in Resources */,
+				AE53D3792A58BB0E0017C9EE /* Localizable.strings in Resources */,
 				AED7A0732A5153D000A6C820 /* Assets.xcassets in Resources */,
 				AED7A0712A5153CC00A6C820 /* Main.storyboard in Resources */,
 			);
@@ -658,6 +673,7 @@
 				AEA26DC02A55C8E2003E8AA0 /* AppConfig.swift in Sources */,
 				AED7A06A2A5153CC00A6C820 /* AppDelegate.swift in Sources */,
 				AED7A06C2A5153CC00A6C820 /* SceneDelegate.swift in Sources */,
+				AED6FA6E2A58C50500AB8F92 /* BaseErrorDispatcherImpl.swift in Sources */,
 				AEA26DD22A55CDCF003E8AA0 /* Ext_UIDevice.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

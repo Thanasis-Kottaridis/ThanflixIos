@@ -1,0 +1,13 @@
+/* 
+  Localizable.strings
+  PayzyB2B
+
+  Created by thanos kottaridis on 10/5/23.
+  
+*/
+
+//MARK: GENERIC ERROR MESSAGES
+"SOMETHING_WENT_WRONG_TRY_AGAIN" = "Somthing went wrong...\nPlease try again.";
+"LOGIN_SESSION_INVALIDATED" = "Oops! Your login session timed out...\nTry to login again.";
+"NETWORK_ERROR" = "Internet connection lost.\nThe application has no internet access.";
+"NETWORK_RESTORED" = "Connection has been restored.";
