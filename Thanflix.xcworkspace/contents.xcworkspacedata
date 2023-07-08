@@ -11,6 +11,12 @@
       location = "group:Presentation/Presentation.xcodeproj">
    </FileRef>
    <FileRef
+      location = "group:Movies/Movies.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:Series/Series.xcodeproj">
+   </FileRef>
+   <FileRef
       location = "group:Thanflix.xcodeproj">
    </FileRef>
    <FileRef

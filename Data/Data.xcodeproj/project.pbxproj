@@ -16,7 +16,6 @@
 		AEA26DB32A55BD2D003E8AA0 /* DataAppConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEA26DB12A55BD2D003E8AA0 /* DataAppConfig.swift */; };
 		AEA26DB52A55BD6B003E8AA0 /* InjectBoundries.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEA26DB42A55BD6B003E8AA0 /* InjectBoundries.swift */; };
 		AEA26DB62A55BD99003E8AA0 /* Domain.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AED7A1F92A515B3600A6C820 /* Domain.framework */; };
-		AEA26DB72A55BD99003E8AA0 /* Domain.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = AED7A1F92A515B3600A6C820 /* Domain.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		AEA26DCB2A55CB0D003E8AA0 /* RequestHeadersBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEA26DCA2A55CB0D003E8AA0 /* RequestHeadersBuilder.swift */; };
 		AED7A16E2A515A5200A6C820 /* Data.docc in Sources */ = {isa = PBXBuildFile; fileRef = AED7A16D2A515A5200A6C820 /* Data.docc */; };
 		AED7A1742A515A5300A6C820 /* Data.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AED7A1692A515A5200A6C820 /* Data.framework */; };
@@ -47,20 +46,6 @@
 			remoteInfo = DomainTests;
 		};
 /* End PBXContainerItemProxy section */
-
-/* Begin PBXCopyFilesBuildPhase section */
-		AEA26DB82A55BD99003E8AA0 /* Embed Frameworks */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "";
-			dstSubfolderSpec = 10;
-			files = (
-				AEA26DB72A55BD99003E8AA0 /* Domain.framework in Embed Frameworks */,
-			);
-			name = "Embed Frameworks";
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		09328B1345F74C135F742184 /* Pods-Data.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Data.debug.xcconfig"; path = "Target Support Files/Pods-Data/Pods-Data.debug.xcconfig"; sourceTree = "<group>"; };
@@ -255,7 +240,6 @@
 				AED7A1652A515A5200A6C820 /* Sources */,
 				AED7A1662A515A5200A6C820 /* Frameworks */,
 				AED7A1672A515A5200A6C820 /* Resources */,
-				AEA26DB82A55BD99003E8AA0 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);

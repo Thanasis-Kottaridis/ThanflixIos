@@ -82,6 +82,44 @@ end
 
 # ====================================
 #
+# MOVIES PODS
+#
+# ====================================
+target 'Movies' do
+  project './Movies/Movies.project'
+  use_frameworks!
+  presentation_pods
+
+  target 'MoviesTests' do
+    inherit! :search_paths
+    # Pods for testing
+    presentation_pods
+    unit_test_pods
+  end
+end
+
+# ====================================
+#
+# SERIES PODS
+#
+# ====================================
+
+target 'Series' do
+  project './Series/Series.project'
+  use_frameworks!
+  presentation_pods
+  data_pods
+  
+  target 'SeriesTests' do
+    inherit! :search_paths
+    # Pods for testing
+    presentation_pods
+    unit_test_pods
+  end
+end
+
+# ====================================
+#
 # APPLICATION TARGET
 #
 # ====================================
