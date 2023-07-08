@@ -52,6 +52,10 @@
 		AEA26DBC2A55BDA4003E8AA0 /* Domain.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = AED7A1EF2A515B2800A6C820 /* Domain.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		AED6FA632A58C46800AB8F92 /* InjectBoundaries.swift in Sources */ = {isa = PBXBuildFile; fileRef = AED6FA622A58C46800AB8F92 /* InjectBoundaries.swift */; };
 		AED6FA662A58C47B00AB8F92 /* PresentationBoundary.swift in Sources */ = {isa = PBXBuildFile; fileRef = AED6FA652A58C47A00AB8F92 /* PresentationBoundary.swift */; };
+		AED6FA772A59499A00AB8F92 /* ApplicationStateManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AED6FA732A59499A00AB8F92 /* ApplicationStateManager.swift */; };
+		AED6FA782A59499A00AB8F92 /* ApplicationStates.swift in Sources */ = {isa = PBXBuildFile; fileRef = AED6FA752A59499A00AB8F92 /* ApplicationStates.swift */; };
+		AED6FA792A59499A00AB8F92 /* ApplicationStateEvents.swift in Sources */ = {isa = PBXBuildFile; fileRef = AED6FA762A59499A00AB8F92 /* ApplicationStateEvents.swift */; };
+		AED6FA7B2A594B9600AB8F92 /* InjectManagers.swift in Sources */ = {isa = PBXBuildFile; fileRef = AED6FA7A2A594B9600AB8F92 /* InjectManagers.swift */; };
 		AED7A1B62A515AD200A6C820 /* Presentation.docc in Sources */ = {isa = PBXBuildFile; fileRef = AED7A1B52A515AD200A6C820 /* Presentation.docc */; };
 		AED7A1BC2A515AD200A6C820 /* Presentation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AED7A1B12A515AD200A6C820 /* Presentation.framework */; };
 		AED7A1C12A515AD200A6C820 /* PresentationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AED7A1C02A515AD200A6C820 /* PresentationTests.swift */; };
@@ -144,6 +148,10 @@
 		AE53D3942A58C2510017C9EE /* SwiftUIBaseVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftUIBaseVC.swift; sourceTree = "<group>"; };
 		AED6FA622A58C46800AB8F92 /* InjectBoundaries.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InjectBoundaries.swift; sourceTree = "<group>"; };
 		AED6FA652A58C47A00AB8F92 /* PresentationBoundary.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PresentationBoundary.swift; sourceTree = "<group>"; };
+		AED6FA732A59499A00AB8F92 /* ApplicationStateManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApplicationStateManager.swift; sourceTree = "<group>"; };
+		AED6FA752A59499A00AB8F92 /* ApplicationStates.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApplicationStates.swift; sourceTree = "<group>"; };
+		AED6FA762A59499A00AB8F92 /* ApplicationStateEvents.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApplicationStateEvents.swift; sourceTree = "<group>"; };
+		AED6FA7A2A594B9600AB8F92 /* InjectManagers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InjectManagers.swift; sourceTree = "<group>"; };
 		AED7A1B12A515AD200A6C820 /* Presentation.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Presentation.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AED7A1B42A515AD200A6C820 /* Presentation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Presentation.h; sourceTree = "<group>"; };
 		AED7A1B52A515AD200A6C820 /* Presentation.docc */ = {isa = PBXFileReference; lastKnownFileType = folder.documentationcatalog; path = Presentation.docc; sourceTree = "<group>"; };
@@ -206,6 +214,7 @@
 		AE53D3242A58B4F40017C9EE /* Application */ = {
 			isa = PBXGroup;
 			children = (
+				AED6FA722A59499A00AB8F92 /* StateMachine */,
 				AE53D3252A58B4F40017C9EE /* BaseAppDelegate.swift */,
 			);
 			path = Application;
@@ -360,6 +369,7 @@
 			isa = PBXGroup;
 			children = (
 				AED6FA622A58C46800AB8F92 /* InjectBoundaries.swift */,
+				AED6FA7A2A594B9600AB8F92 /* InjectManagers.swift */,
 			);
 			path = Di;
 			sourceTree = "<group>";
@@ -370,6 +380,24 @@
 				AED6FA652A58C47A00AB8F92 /* PresentationBoundary.swift */,
 			);
 			path = Boundaries;
+			sourceTree = "<group>";
+		};
+		AED6FA722A59499A00AB8F92 /* StateMachine */ = {
+			isa = PBXGroup;
+			children = (
+				AED6FA742A59499A00AB8F92 /* Interactors */,
+				AED6FA732A59499A00AB8F92 /* ApplicationStateManager.swift */,
+			);
+			path = StateMachine;
+			sourceTree = "<group>";
+		};
+		AED6FA742A59499A00AB8F92 /* Interactors */ = {
+			isa = PBXGroup;
+			children = (
+				AED6FA752A59499A00AB8F92 /* ApplicationStates.swift */,
+				AED6FA762A59499A00AB8F92 /* ApplicationStateEvents.swift */,
+			);
+			path = Interactors;
 			sourceTree = "<group>";
 		};
 		AED7A1A72A515AD200A6C820 = {
@@ -612,6 +640,9 @@
 			files = (
 				AE53D3832A58BBD60017C9EE /* Ext_UIView.swift in Sources */,
 				AE53D3262A58B4F40017C9EE /* BaseAppDelegate.swift in Sources */,
+				AED6FA792A59499A00AB8F92 /* ApplicationStateEvents.swift in Sources */,
+				AED6FA782A59499A00AB8F92 /* ApplicationStates.swift in Sources */,
+				AED6FA772A59499A00AB8F92 /* ApplicationStateManager.swift in Sources */,
 				AE53D3952A58C2510017C9EE /* SwiftUIBaseVC.swift in Sources */,
 				AED6FA632A58C46800AB8F92 /* InjectBoundaries.swift in Sources */,
 				AE53D3292A58B56E0017C9EE /* BaseWindow.swift in Sources */,
@@ -619,6 +650,7 @@
 				AE53D3602A58B7A80017C9EE /* Font.swift in Sources */,
 				AE53D3322A58B58F0017C9EE /* CoordinatorKeys.swift in Sources */,
 				AE53D3932A58C1640017C9EE /* Ext_FeedbackMessage.swift in Sources */,
+				AED6FA7B2A594B9600AB8F92 /* InjectManagers.swift in Sources */,
 				AE53D3312A58B58F0017C9EE /* BaseNavigation.swift in Sources */,
 				AED7A1B62A515AD200A6C820 /* Presentation.docc in Sources */,
 				AE53D3442A58B70A0017C9EE /* FeedbackMessageView.swift in Sources */,

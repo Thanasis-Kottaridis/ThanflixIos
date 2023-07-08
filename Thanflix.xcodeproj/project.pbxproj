@@ -22,10 +22,13 @@
 		AEA26DCE2A55CC92003E8AA0 /* RequestHeadersBuilderImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEA26DCD2A55CC92003E8AA0 /* RequestHeadersBuilderImpl.swift */; };
 		AEA26DD22A55CDCF003E8AA0 /* Ext_UIDevice.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEA26DD12A55CDCF003E8AA0 /* Ext_UIDevice.swift */; };
 		AED6FA6E2A58C50500AB8F92 /* BaseErrorDispatcherImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = AED6FA672A58C50500AB8F92 /* BaseErrorDispatcherImpl.swift */; };
+		AED6FA712A59489200AB8F92 /* MasterCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = AED6FA702A59489200AB8F92 /* MasterCoordinator.swift */; };
+		AED6FA7D2A594D2000AB8F92 /* MainAppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = AED6FA7C2A594D2000AB8F92 /* MainAppCoordinator.swift */; };
+		AED6FA7F2A59510B00AB8F92 /* MoviesCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = AED6FA7E2A59510B00AB8F92 /* MoviesCoordinator.swift */; };
+		AED6FA812A5951BA00AB8F92 /* SeriesCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = AED6FA802A5951BA00AB8F92 /* SeriesCoordinator.swift */; };
 		AED7A06A2A5153CC00A6C820 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AED7A0692A5153CC00A6C820 /* AppDelegate.swift */; };
 		AED7A06C2A5153CC00A6C820 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AED7A06B2A5153CC00A6C820 /* SceneDelegate.swift */; };
 		AED7A06E2A5153CC00A6C820 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AED7A06D2A5153CC00A6C820 /* ViewController.swift */; };
-		AED7A0712A5153CC00A6C820 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AED7A06F2A5153CC00A6C820 /* Main.storyboard */; };
 		AED7A0732A5153D000A6C820 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AED7A0722A5153D000A6C820 /* Assets.xcassets */; };
 		AED7A0762A5153D000A6C820 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AED7A0742A5153D000A6C820 /* LaunchScreen.storyboard */; };
 		AED7A0812A5153D000A6C820 /* ThanflixTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AED7A0802A5153D000A6C820 /* ThanflixTests.swift */; };
@@ -120,11 +123,14 @@
 		AEA26DCD2A55CC92003E8AA0 /* RequestHeadersBuilderImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestHeadersBuilderImpl.swift; sourceTree = "<group>"; };
 		AEA26DD12A55CDCF003E8AA0 /* Ext_UIDevice.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Ext_UIDevice.swift; sourceTree = "<group>"; };
 		AED6FA672A58C50500AB8F92 /* BaseErrorDispatcherImpl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseErrorDispatcherImpl.swift; sourceTree = "<group>"; };
+		AED6FA702A59489200AB8F92 /* MasterCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MasterCoordinator.swift; sourceTree = "<group>"; };
+		AED6FA7C2A594D2000AB8F92 /* MainAppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainAppCoordinator.swift; sourceTree = "<group>"; };
+		AED6FA7E2A59510B00AB8F92 /* MoviesCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviesCoordinator.swift; sourceTree = "<group>"; };
+		AED6FA802A5951BA00AB8F92 /* SeriesCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeriesCoordinator.swift; sourceTree = "<group>"; };
 		AED7A0662A5153CC00A6C820 /* Thanflix.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Thanflix.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AED7A0692A5153CC00A6C820 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AED7A06B2A5153CC00A6C820 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		AED7A06D2A5153CC00A6C820 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		AED7A0702A5153CC00A6C820 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		AED7A0722A5153D000A6C820 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AED7A0752A5153D000A6C820 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		AED7A0772A5153D000A6C820 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -231,6 +237,17 @@
 			path = Extensions;
 			sourceTree = "<group>";
 		};
+		AED6FA6F2A59487D00AB8F92 /* Coordinators */ = {
+			isa = PBXGroup;
+			children = (
+				AED6FA702A59489200AB8F92 /* MasterCoordinator.swift */,
+				AED6FA7C2A594D2000AB8F92 /* MainAppCoordinator.swift */,
+				AED6FA7E2A59510B00AB8F92 /* MoviesCoordinator.swift */,
+				AED6FA802A5951BA00AB8F92 /* SeriesCoordinator.swift */,
+			);
+			path = Coordinators;
+			sourceTree = "<group>";
+		};
 		AED7A05D2A5153CC00A6C820 = {
 			isa = PBXGroup;
 			children = (
@@ -258,6 +275,7 @@
 			isa = PBXGroup;
 			children = (
 				AED7A22C2A515E8200A6C820 /* Application */,
+				AED6FA6F2A59487D00AB8F92 /* Coordinators */,
 				AED7A2342A515EB600A6C820 /* Controllers */,
 				AEA26DCC2A55CC77003E8AA0 /* Utils */,
 				AED7A2332A515E9300A6C820 /* Resources */,
@@ -333,7 +351,6 @@
 			isa = PBXGroup;
 			children = (
 				AE53D3772A58BB0E0017C9EE /* Localization */,
-				AED7A06F2A5153CC00A6C820 /* Main.storyboard */,
 				AED7A0722A5153D000A6C820 /* Assets.xcassets */,
 				AED7A0742A5153D000A6C820 /* LaunchScreen.storyboard */,
 				AED7A0772A5153D000A6C820 /* Info.plist */,
@@ -522,7 +539,6 @@
 				AED7A0762A5153D000A6C820 /* LaunchScreen.storyboard in Resources */,
 				AE53D3792A58BB0E0017C9EE /* Localizable.strings in Resources */,
 				AED7A0732A5153D000A6C820 /* Assets.xcassets in Resources */,
-				AED7A0712A5153CC00A6C820 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -671,9 +687,13 @@
 				AED7A06E2A5153CC00A6C820 /* ViewController.swift in Sources */,
 				AEA26DC92A55CA27003E8AA0 /* Enviroments.swift in Sources */,
 				AEA26DC02A55C8E2003E8AA0 /* AppConfig.swift in Sources */,
+				AED6FA7F2A59510B00AB8F92 /* MoviesCoordinator.swift in Sources */,
+				AED6FA812A5951BA00AB8F92 /* SeriesCoordinator.swift in Sources */,
 				AED7A06A2A5153CC00A6C820 /* AppDelegate.swift in Sources */,
+				AED6FA7D2A594D2000AB8F92 /* MainAppCoordinator.swift in Sources */,
 				AED7A06C2A5153CC00A6C820 /* SceneDelegate.swift in Sources */,
 				AED6FA6E2A58C50500AB8F92 /* BaseErrorDispatcherImpl.swift in Sources */,
+				AED6FA712A59489200AB8F92 /* MasterCoordinator.swift in Sources */,
 				AEA26DD22A55CDCF003E8AA0 /* Ext_UIDevice.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -711,14 +731,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		AED7A06F2A5153CC00A6C820 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				AED7A0702A5153CC00A6C820 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		AED7A0742A5153D000A6C820 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -858,8 +870,8 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Thanflix/Resources/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UILaunchStoryboardName = "";
+				INFOPLIST_KEY_UIMainStoryboardFile = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
@@ -893,8 +905,8 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Thanflix/Resources/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UILaunchStoryboardName = "";
+				INFOPLIST_KEY_UIMainStoryboardFile = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				IPHONEOS_DEPLOYMENT_TARGET = 15.0;

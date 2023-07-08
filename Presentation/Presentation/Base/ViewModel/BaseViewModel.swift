@@ -35,7 +35,7 @@ public protocol BaseErrorHandler: AnyObject, BaseActionDispatcher {
 }
 
 // MARK: - SwiftUI Base View Model
-public protocol SwiftUIBaseViewModel: ObservableObject, BaseErrorHandler {
+public protocol BaseViewModel: ObservableObject, BaseErrorHandler {
     associatedtype State: BaseState
     associatedtype Event
     

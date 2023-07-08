@@ -9,7 +9,7 @@ import Foundation
 import Domain
 import Combine
 
-extension SwiftUIBaseViewModel {
+extension BaseViewModel {
     
     public func commonInit() {
         setUpLoadingObserver()
