@@ -53,7 +53,7 @@ struct GenericLoader {
                                 .flexibleBottomMargin,
                                 .flexibleRightMargin]
             isOpaque = false
-            backgroundColor = ColorPalette.White.withAlpha(0.8)
+            backgroundColor = ColorPalette.TintPrimary.withAlpha(0.8)
         }
         
         fileprivate func addLottieView(_ lottieType: LottieLoaders) {

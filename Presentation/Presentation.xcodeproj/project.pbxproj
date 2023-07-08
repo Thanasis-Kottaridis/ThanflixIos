@@ -57,6 +57,10 @@
 		AED6FA792A59499A00AB8F92 /* ApplicationStateEvents.swift in Sources */ = {isa = PBXBuildFile; fileRef = AED6FA762A59499A00AB8F92 /* ApplicationStateEvents.swift */; };
 		AED6FA7B2A594B9600AB8F92 /* InjectManagers.swift in Sources */ = {isa = PBXBuildFile; fileRef = AED6FA7A2A594B9600AB8F92 /* InjectManagers.swift */; };
 		AED6FA832A59580E00AB8F92 /* BaseTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AED6FA822A59580E00AB8F92 /* BaseTabBarController.swift */; };
+		AED6FA872A59C6D600AB8F92 /* KeyboardLayoutConstraint.swift in Sources */ = {isa = PBXBuildFile; fileRef = AED6FA862A59C6D600AB8F92 /* KeyboardLayoutConstraint.swift */; };
+		AED6FA8A2A59C6DE00AB8F92 /* PagingDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = AED6FA892A59C6DE00AB8F92 /* PagingDataSource.swift */; };
+		AED6FA8E2A59C6E400AB8F92 /* AdaptedVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = AED6FA8C2A59C6E400AB8F92 /* AdaptedVC.swift */; };
+		AED6FA8F2A59C6E400AB8F92 /* AdaptedConstraint.swift in Sources */ = {isa = PBXBuildFile; fileRef = AED6FA8D2A59C6E400AB8F92 /* AdaptedConstraint.swift */; };
 		AED7A1B62A515AD200A6C820 /* Presentation.docc in Sources */ = {isa = PBXBuildFile; fileRef = AED7A1B52A515AD200A6C820 /* Presentation.docc */; };
 		AED7A1BC2A515AD200A6C820 /* Presentation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AED7A1B12A515AD200A6C820 /* Presentation.framework */; };
 		AED7A1C12A515AD200A6C820 /* PresentationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AED7A1C02A515AD200A6C820 /* PresentationTests.swift */; };
@@ -154,6 +158,10 @@
 		AED6FA762A59499A00AB8F92 /* ApplicationStateEvents.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApplicationStateEvents.swift; sourceTree = "<group>"; };
 		AED6FA7A2A594B9600AB8F92 /* InjectManagers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InjectManagers.swift; sourceTree = "<group>"; };
 		AED6FA822A59580E00AB8F92 /* BaseTabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseTabBarController.swift; sourceTree = "<group>"; };
+		AED6FA862A59C6D600AB8F92 /* KeyboardLayoutConstraint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeyboardLayoutConstraint.swift; sourceTree = "<group>"; };
+		AED6FA892A59C6DE00AB8F92 /* PagingDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PagingDataSource.swift; sourceTree = "<group>"; };
+		AED6FA8C2A59C6E400AB8F92 /* AdaptedVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AdaptedVC.swift; sourceTree = "<group>"; };
+		AED6FA8D2A59C6E400AB8F92 /* AdaptedConstraint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AdaptedConstraint.swift; sourceTree = "<group>"; };
 		AED7A1B12A515AD200A6C820 /* Presentation.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Presentation.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AED7A1B42A515AD200A6C820 /* Presentation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Presentation.h; sourceTree = "<group>"; };
 		AED7A1B52A515AD200A6C820 /* Presentation.docc */ = {isa = PBXFileReference; lastKnownFileType = folder.documentationcatalog; path = Presentation.docc; sourceTree = "<group>"; };
@@ -350,6 +358,7 @@
 		AE53D37A2A58BBD60017C9EE /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				AED6FA842A59C6C400AB8F92 /* Helpers */,
 				AE53D37B2A58BBD60017C9EE /* Extensions */,
 			);
 			path = Utils;
@@ -401,6 +410,41 @@
 				AED6FA762A59499A00AB8F92 /* ApplicationStateEvents.swift */,
 			);
 			path = Interactors;
+			sourceTree = "<group>";
+		};
+		AED6FA842A59C6C400AB8F92 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				AED6FA8B2A59C6E400AB8F92 /* Scaling */,
+				AED6FA882A59C6DE00AB8F92 /* Paging */,
+				AED6FA852A59C6D600AB8F92 /* Constraint */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		AED6FA852A59C6D600AB8F92 /* Constraint */ = {
+			isa = PBXGroup;
+			children = (
+				AED6FA862A59C6D600AB8F92 /* KeyboardLayoutConstraint.swift */,
+			);
+			path = Constraint;
+			sourceTree = "<group>";
+		};
+		AED6FA882A59C6DE00AB8F92 /* Paging */ = {
+			isa = PBXGroup;
+			children = (
+				AED6FA892A59C6DE00AB8F92 /* PagingDataSource.swift */,
+			);
+			path = Paging;
+			sourceTree = "<group>";
+		};
+		AED6FA8B2A59C6E400AB8F92 /* Scaling */ = {
+			isa = PBXGroup;
+			children = (
+				AED6FA8C2A59C6E400AB8F92 /* AdaptedVC.swift */,
+				AED6FA8D2A59C6E400AB8F92 /* AdaptedConstraint.swift */,
+			);
+			path = Scaling;
 			sourceTree = "<group>";
 		};
 		AED7A1A72A515AD200A6C820 = {
@@ -651,17 +695,21 @@
 				AE53D3292A58B56E0017C9EE /* BaseWindow.swift in Sources */,
 				AE53D3822A58BBD60017C9EE /* Ext_UINavigationController.swift in Sources */,
 				AE53D3602A58B7A80017C9EE /* Font.swift in Sources */,
+				AED6FA8F2A59C6E400AB8F92 /* AdaptedConstraint.swift in Sources */,
 				AE53D3322A58B58F0017C9EE /* CoordinatorKeys.swift in Sources */,
 				AE53D3932A58C1640017C9EE /* Ext_FeedbackMessage.swift in Sources */,
 				AED6FA832A59580E00AB8F92 /* BaseTabBarController.swift in Sources */,
+				AED6FA872A59C6D600AB8F92 /* KeyboardLayoutConstraint.swift in Sources */,
 				AED6FA7B2A594B9600AB8F92 /* InjectManagers.swift in Sources */,
 				AE53D3312A58B58F0017C9EE /* BaseNavigation.swift in Sources */,
 				AED7A1B62A515AD200A6C820 /* Presentation.docc in Sources */,
 				AE53D3442A58B70A0017C9EE /* FeedbackMessageView.swift in Sources */,
+				AED6FA8E2A59C6E400AB8F92 /* AdaptedVC.swift in Sources */,
 				AE53D33A2A58B5E00017C9EE /* BaseErrorDispatcher.swift in Sources */,
 				AE53D3842A58BBD60017C9EE /* Ext_String.swift in Sources */,
 				AE53D3392A58B5E00017C9EE /* BaseViewModel.swift in Sources */,
 				AE53D33C2A58B5E00017C9EE /* BaseState.swift in Sources */,
+				AED6FA8A2A59C6DE00AB8F92 /* PagingDataSource.swift in Sources */,
 				AED6FA662A58C47B00AB8F92 /* PresentationBoundary.swift in Sources */,
 				AE53D3452A58B70A0017C9EE /* GenericLoader.swift in Sources */,
 				AE53D3612A58B7A80017C9EE /* ColorPalette.swift in Sources */,

@@ -8,15 +8,26 @@
 import UIKit
 
 public indirect enum ColorPalette {
-    case DarkBlue
-    case RegularBlue
-    case LightBlue
-    case Black
-    case White
-    case DarkGray
-    case Gray
-    case Green
-    case Red
+    
+    case BrandPrimary
+    case BrandSecondary
+    case TintPrimary
+    case TintSecondary
+    case TintTertiary
+    case TintWhite
+    case TintRed
+    case TintBlue
+    case TintYellow
+    case TintGreen
+    case FillPrimary
+    case FillSecondary
+    case BackgroundDefaultPrimary
+    case BackgroundGroupedPrimary
+    case BackgroundGroupedSecondary
+    case SeperatorPrimary
+    case ShadowPrimary
+    case EffectBlur
+    case EffectShadow
     case CustomAlpha(color: ColorPalette ,alpha: Double)
     
     public func withAlpha(_ alpha: Double) -> UIColor {
@@ -29,26 +40,47 @@ public extension ColorPalette {
         var instanceColor = UIColor.clear
         
         switch self {
-        case .DarkBlue:
-            instanceColor = UIColor(hexString:"#00265E")
-        case .RegularBlue:
-            instanceColor = UIColor(hexString: "#003476")
-        case .LightBlue:
-            instanceColor = UIColor(hexString: "#00AEEF")
-        case .Black:
-            instanceColor = UIColor(hexString: "#212529")
-        case .White:
-            instanceColor = UIColor(hexString: "#FFFFFF")
-        case .Gray:
-            instanceColor = UIColor(hexString: "#F4F4F4")
-        case .DarkGray:
-            instanceColor = UIColor(hexString: "#2C2C2E")
-        case .Green:
-            instanceColor = UIColor(hexString: "#80C479")
-        case .Red:
-            instanceColor = UIColor(hexString: "#C4324A")
+        case .BrandPrimary:
+            instanceColor = UIColor(hexString:"#1EC7FA")
+        case .BrandSecondary:
+            instanceColor = UIColor(hexString:"#1E6FF1")
+        case .TintPrimary:
+            instanceColor = UIColor(hexString:"#000000")
+        case .TintSecondary:
+            instanceColor = UIColor(hexString:"#7F7F7F")
+        case .TintTertiary:
+            instanceColor = UIColor(hexString:"#BFBFBF")
+        case .TintWhite:
+            instanceColor = UIColor(hexString:"#FFFFFF")
+        case .TintRed:
+            instanceColor = UIColor(hexString:"#FF3B30")
+        case .TintBlue:
+            instanceColor = UIColor(hexString:"#007AFF")
+        case .TintYellow:
+            instanceColor = UIColor(hexString:"#FFCC00")
+        case .TintGreen:
+            instanceColor = UIColor(hexString:"#34C759")
+        case .FillPrimary:
+            instanceColor = UIColor(hexString:"#D8D8D8")
+        case .FillSecondary:
+            instanceColor = UIColor(hexString:"#BFBFBF")
+        case .BackgroundDefaultPrimary:
+            instanceColor = UIColor(hexString:"#F2F2F2")
+        case .BackgroundGroupedPrimary:
+            instanceColor = UIColor(hexString:"#FFFFFF")
+        case .BackgroundGroupedSecondary:
+            instanceColor = UIColor(hexString:"#FFFFFF")
+        case .SeperatorPrimary:
+            instanceColor = UIColor(hexString:"#D8D8D8")
+        case .ShadowPrimary:
+            instanceColor = UIColor(hexString:"#000000").withAlphaComponent(0.25)
         case .CustomAlpha(let color, let alpha):
             instanceColor = color.withAlpha(alpha)
+        case .EffectBlur:
+            instanceColor = UIColor(hexString:"#F0F0F0").withAlphaComponent(0.38)
+        case .EffectShadow:
+            instanceColor = UIColor(hexString:"#464646").withAlphaComponent(0.5)
+
         }
         
         return instanceColor

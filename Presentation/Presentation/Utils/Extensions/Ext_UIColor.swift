@@ -7,6 +7,7 @@
 
 import Foundation
 import UIKit
+import SwiftUI
 
 public extension UIColor {
     convenience init(hexString: String) {
@@ -29,5 +30,11 @@ public extension UIColor {
         let green = CGFloat(g) / 255.0
         let blue  = CGFloat(b) / 255.0
         self.init(red: red, green: green, blue: blue, alpha: 1)
+    }
+}
+
+extension UIColor {
+    public var swiftUIColor: Color {
+        return Color(self)
     }
 }

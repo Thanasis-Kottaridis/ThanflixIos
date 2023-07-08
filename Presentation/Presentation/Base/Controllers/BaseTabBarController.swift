@@ -52,19 +52,18 @@ public class BaseTabBarController: UITabBarController, UITabBarControllerDelegat
         //TabBar UI
         let appearance = UITabBarAppearance()
         appearance.backgroundImage = nil
-        appearance.backgroundColor = ColorPalette.White.value
-        appearance.selectionIndicatorTintColor = ColorPalette.Red.value
+        appearance.backgroundColor = ColorPalette.BackgroundDefaultPrimary.value
+        appearance.selectionIndicatorTintColor = ColorPalette.BrandPrimary.value
 
         tabBar.standardAppearance = appearance
-        tabBar.tintColor = .systemCyan
+        tabBar.tintColor = ColorPalette.BrandPrimary.value
 
         if #available(iOS 15.0, *) {
             self.tabBar.scrollEdgeAppearance = appearance
         }
         //Set Shadows
         tabBar.layer.shadowOffset = CGSize(width: 0, height: 0)
-        tabBar.layer.shadowRadius = 20
-        tabBar.layer.shadowColor = UIColor.black.cgColor
-        tabBar.layer.shadowOpacity = 0.16
+        tabBar.layer.shadowRadius = 20.adapted()
+        tabBar.layer.shadowColor = ColorPalette.EffectShadow.value.cgColor
     }
 }

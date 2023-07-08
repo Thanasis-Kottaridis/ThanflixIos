@@ -66,20 +66,20 @@ class FeedbackMessageView: UIView {
     func setUpView(message: FeedbackMessage) {
         self.message = message
         messageLbl.attributedText = message.message
-            .with(.style_16_20(
+            .with(.body1(
                 weight: .REGULAR,
-                color: .White
+                color: .TintWhite
             ))
         
         switch message.type {
         case .success:
-            contentView.backgroundColor = ColorPalette.Green.value
+            contentView.backgroundColor = ColorPalette.TintGreen.value
         case .error:
-            contentView.backgroundColor = ColorPalette.Red.value
+            contentView.backgroundColor = ColorPalette.TintRed.value
         case .info:
-            contentView.backgroundColor = ColorPalette.Gray.value
+            contentView.backgroundColor = ColorPalette.BrandPrimary.value
         case .network(let isError):
-            contentView.backgroundColor = isError ? ColorPalette.Red.value : ColorPalette.Green.value
+            contentView.backgroundColor = isError ? ColorPalette.TintRed.value : ColorPalette.TintGreen.value
             
             wifiIcon.image = isError ? UIImage(named: "nowifi") :
             UIImage(named: "wifi")

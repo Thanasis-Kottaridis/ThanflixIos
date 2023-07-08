@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import SwiftUI
 import BonMot
 
 public struct TextStyle {
@@ -40,109 +41,65 @@ public struct TextStyle {
     
     public enum Style {
         // MARK: - Figma
-        case style_64_80(weight: StyleWeight, color: ColorPalette? = .Black)
-        case style_48_56(weight: StyleWeight, color: ColorPalette? = .Black)
-        case style_40_48(weight: StyleWeight, color: ColorPalette? = .Black)
-        case style_32_40(weight: StyleWeight, color: ColorPalette? = .Black)
-        case style_28_32(weight: StyleWeight, color: ColorPalette? = .Black)
-        case style_24_32(weight: StyleWeight, color: ColorPalette? = .Black)
-        case style_20_28(weight: StyleWeight, color: ColorPalette? = .Black)
-        case style_18_24(weight: StyleWeight, color: ColorPalette? = .Black)
-        case style_16_24(weight: StyleWeight, color: ColorPalette? = .Black)
-        case style_16_20(weight: StyleWeight, color: ColorPalette? = .Black)
-        case style_14_18(weight: StyleWeight, color: ColorPalette? = .Black)
-        case style_14_24(weight: StyleWeight, color: ColorPalette? = .Black)
-        case style_12_16(weight: StyleWeight, color: ColorPalette? = .Black)
+        case title1(weight: StyleWeight, color: ColorPalette? = .TintPrimary)
+        case title2(weight: StyleWeight, color: ColorPalette? = .TintPrimary)
+        case title3(weight: StyleWeight, color: ColorPalette? = .TintPrimary)
+        case body1(weight: StyleWeight, color: ColorPalette? = .TintPrimary)
+        case body2(weight: StyleWeight, color: ColorPalette? = .TintPrimary)
+        case body3(weight: StyleWeight, color: ColorPalette? = .TintPrimary)
+        case body4(weight: StyleWeight, color: ColorPalette? = .TintPrimary)
         case custom(
             weight: StyleWeight,
             size: Int,
             ColorPalette: CGFloat,
             lineHeight: CGFloat,
-            color: ColorPalette = .Black
+            color: ColorPalette? = .TintPrimary
         )
         
         public func stringStyle() -> BonMot.StringStyle {
             switch self {
-            case .style_64_80(let weight, let color):
-                return getStyle(weight: weight,
-                                size: 64,
-                                letterSpacing: 0.02,
-                                lineHeight: 80.0,
-                                color: color
-                        )
-            case .style_48_56(let weight, let color):
-                return getStyle(weight: weight, size: 48,
-                                letterSpacing: 0,
-                                lineHeight: 56.0,
-                                color: color
-                        )
-            case .style_40_48(let weight, let color):
-                return getStyle(weight: weight, size: 40,
-                                letterSpacing: 0,
-                                lineHeight: 48.0,
-                                color: color
-                        )
-            case .style_32_40(let weight, let color):
-                return getStyle(weight: weight, size: 32,
-                                letterSpacing: 0.02,
-                                lineHeight: 40.0,
-                                color: color
-                        )
-            case .style_28_32(let weight, let color):
+            case .title1(weight: let weight, color: let color):
+                return getStyle(weight: weight, size: 34,
+                         letterSpacing: 0.02,
+                         lineHeight: 41.0,
+                         color: color
+                )
+            case .title2(weight: let weight, color: let color):
                 return getStyle(weight: weight, size: 28,
-                                letterSpacing: 0.02,
-                                lineHeight: 32.0,
-                                color: color
-                        )
-            case .style_24_32(let weight, let color):
-                return getStyle(weight: weight, size: 24,
-                                letterSpacing: 0.02,
-                                lineHeight: 32.0,
-                                color: color
-                        )
-            case .style_20_28(let weight, let color):
-                return getStyle(weight: weight, size: 20,
-                                letterSpacing: 0.02,
-                                lineHeight: 28.0,
-                                color: color
-                        )
-            case .style_18_24(let weight, let color):
-                return getStyle(weight: weight, size: 18,
-                                letterSpacing: 0,
-                                lineHeight: 24.0,
-                                color: color
-                        )
-            case .style_16_24(let weight, let color):
-                return getStyle(weight: weight, size: 16,
-                                letterSpacing: 0.01,
-                                lineHeight: 24.0,
-                                color: color
-                        )
-            case .style_16_20(let weight, let color):
-                return getStyle(weight: weight, size: 16,
-                                letterSpacing: 0.01,
-                                lineHeight: 20.0,
-                                color: color
-                        )
-            case .style_14_18(let weight, let color):
-                return getStyle(weight: weight, size: 14,
-                                letterSpacing: 0.02,
-                                lineHeight: 18.0,
-                                color: color
-                        )
-            case .style_14_24(let weight, let color):
-                return getStyle(weight: weight, size: 14,
-                                letterSpacing: 0,
-                                lineHeight: 24.0,
-                                color: color
-                
-                        )
-            case .style_12_16(let weight, let color):
-                return getStyle(weight: weight, size: 12,
-                                letterSpacing: 0.01,
-                                lineHeight: 16.0,
-                                color: color
-                        )
+                         letterSpacing: 0.02,
+                         lineHeight: 34.0,
+                         color: color
+                )
+            case .title3(weight: let weight, color: let color):
+                return getStyle(weight: weight, size: 22,
+                         letterSpacing: 0.02,
+                         lineHeight: 28.0,
+                         color: color
+                )
+            case .body1(weight: let weight, color: let color):
+                return getStyle(weight: weight, size: 17,
+                         letterSpacing: 0.02,
+                         lineHeight: 22.0,
+                         color: color
+                )
+            case .body2(weight: let weight, color: let color):
+                return getStyle(weight: weight, size: 15,
+                         letterSpacing: 0.02,
+                         lineHeight: 20.0,
+                         color: color
+                )
+            case .body3(weight: let weight, color: let color):
+                return getStyle(weight: weight, size: 13,
+                         letterSpacing: 0.02,
+                         lineHeight: 18.0,
+                         color: color
+                )
+            case .body4(weight: let weight, color: let color):
+                return getStyle(weight: weight, size: 11,
+                         letterSpacing: 0.02,
+                         lineHeight: 13.0,
+                         color: color
+                )
             case .custom(let weight, let size, let letterSpacing, let lineHeight, let color):
                 return getStyle(weight: weight, size: size,
                                 letterSpacing: letterSpacing,
@@ -158,7 +115,7 @@ public struct TextStyle {
         weight: StyleWeight, size: Int,
         letterSpacing: CGFloat,
         lineHeight: CGFloat,
-        color: ColorPalette? = .Black
+        color: ColorPalette? = .TintPrimary
     ) -> BonMot.StringStyle {
         if let color = color {
             return StringStyle(
@@ -173,7 +130,78 @@ public struct TextStyle {
             )
         }
     }
+}
+
+// MARK: TextStyle.Style Attributes EXT
+public extension TextStyle.Style {
     
+    var weight: TextStyle.StyleWeight {
+        switch self {
+        case let .title1(weight, _),
+            let .title2(weight, _),
+            let .title3(weight, _),
+            let .body1(weight, _),
+            let .body2(weight, _),
+            let .body3(weight, _),
+            let .body4(weight, _),
+            let .custom(weight, _, _, _, _):
+            return weight
+        }
+    }
+    
+    var color: ColorPalette? {
+        switch self {
+        case let .title1(_, color),
+            let .title2(_, color),
+            let .title3(_, color),
+            let .body1(_, color),
+            let .body2(_, color),
+            let .body3(_, color),
+            let .body4(_, color),
+            let .custom(_, _, _, _, color):
+            return color
+        }
+    }
+    
+    var adaptedSize: CGFloat {
+        switch self {
+        case  .title1: return 34.getAdjustedFontSize()
+        case .title2: return 28.getAdjustedFontSize()
+        case .title3: return 22.getAdjustedFontSize()
+        case .body1: return 17.getAdjustedFontSize()
+        case .body2: return 15.getAdjustedFontSize()
+        case .body3: return 13.getAdjustedFontSize()
+        case .body4: return 11.getAdjustedFontSize()
+        case .custom(_, let size, _, _, _): return CGFloat(size)
+        }
+    }
+    
+    var letterSpacing: CGFloat {
+        switch self {
+        case  .title1: return CGFloat(0.02)
+        case .title2: return CGFloat(0)
+        case .title3: return CGFloat(0)
+        case .body1: return CGFloat(0.02)
+        case .body2: return CGFloat(0.02)
+        case .body3: return CGFloat(0.02)
+        case .body4: return CGFloat(0.02)
+        case .custom(_, _,  let letterSpacing, _, _): return letterSpacing
+        }
+    }
+    
+    var lineHeight: CGFloat {
+        switch self {
+        case .title1: return CGFloat(41)
+        case .title2: return CGFloat(34)
+        case .title3: return CGFloat(28)
+        case .body1: return CGFloat(22)
+        case .body2: return CGFloat(20)
+        case .body3: return CGFloat(18)
+        case .body4: return CGFloat(13)
+        case .custom(_, _, _, let lineHeight, _): return lineHeight
+        }
+    }
+
 }
 
 // MARK: - EXTENSIONS
@@ -202,5 +230,23 @@ public extension Int {
         let finalFontSize: CGFloat = (currentSize * CGFloat(self)) / projectSize
         
         return finalFontSize
+    }
+}
+
+// MARK: SwiftUI Font Modifier
+public struct CustomTextStyle: ViewModifier {
+    public var style: TextStyle.Style
+    
+    public init(style: TextStyle.Style) {
+        self.style = style
+    }
+    
+    public func body(content: Content) -> some View {
+        let uiKitFont = style.weight.returnFont().of(size: style.adaptedSize)
+        let lineSpacing = style.lineHeight - uiKitFont.lineHeight
+        content
+            .font(.custom(style.weight.returnFont().rawValue, size: style.adaptedSize))
+            .foregroundColor(style.color?.value.swiftUIColor)
+            .lineSpacing(lineSpacing)
     }
 }
