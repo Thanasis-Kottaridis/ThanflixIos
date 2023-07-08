@@ -11,7 +11,12 @@ import Presentation
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
     var window: UIWindow?
-    private var coordinator: MasterCoordinator?
+    private var mainCoordinator: MasterCoordinator
+    
+    override init() {
+        mainCoordinator = MasterCoordinator()
+        super .init()
+    }
 
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
         // Use this method to optionally configure and attach the UIWindow `window` to the provided UIWindowScene `scene`.
@@ -20,9 +25,14 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         
         guard let windowScene = scene as? UIWindowScene else { return }
         let window = BaseWindow(windowScene: windowScene)
-        coordinator = MasterCoordinator()
-        coordinator?.start()
         self.window = window
+        
+        // create a base UIWindow and activate it
+        window.backgroundColor = .white
+        window.rootViewController = mainCoordinator.navigationController
+        window.makeKeyAndVisible()
+        
+        mainCoordinator.start()
         
     }
 

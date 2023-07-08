@@ -37,7 +37,7 @@ class MainAppCoordinator: NSObject, Coordinator {
         super.init()
         
         // init tab bar
-        tabController =  UITabBarController()
+        tabController =  BaseTabBarController(parentCoordinator: self)
     }
 
     func start() {

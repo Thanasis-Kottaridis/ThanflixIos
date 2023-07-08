@@ -56,6 +56,7 @@
 		AED6FA782A59499A00AB8F92 /* ApplicationStates.swift in Sources */ = {isa = PBXBuildFile; fileRef = AED6FA752A59499A00AB8F92 /* ApplicationStates.swift */; };
 		AED6FA792A59499A00AB8F92 /* ApplicationStateEvents.swift in Sources */ = {isa = PBXBuildFile; fileRef = AED6FA762A59499A00AB8F92 /* ApplicationStateEvents.swift */; };
 		AED6FA7B2A594B9600AB8F92 /* InjectManagers.swift in Sources */ = {isa = PBXBuildFile; fileRef = AED6FA7A2A594B9600AB8F92 /* InjectManagers.swift */; };
+		AED6FA832A59580E00AB8F92 /* BaseTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AED6FA822A59580E00AB8F92 /* BaseTabBarController.swift */; };
 		AED7A1B62A515AD200A6C820 /* Presentation.docc in Sources */ = {isa = PBXBuildFile; fileRef = AED7A1B52A515AD200A6C820 /* Presentation.docc */; };
 		AED7A1BC2A515AD200A6C820 /* Presentation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AED7A1B12A515AD200A6C820 /* Presentation.framework */; };
 		AED7A1C12A515AD200A6C820 /* PresentationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AED7A1C02A515AD200A6C820 /* PresentationTests.swift */; };
@@ -152,6 +153,7 @@
 		AED6FA752A59499A00AB8F92 /* ApplicationStates.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApplicationStates.swift; sourceTree = "<group>"; };
 		AED6FA762A59499A00AB8F92 /* ApplicationStateEvents.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApplicationStateEvents.swift; sourceTree = "<group>"; };
 		AED6FA7A2A594B9600AB8F92 /* InjectManagers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InjectManagers.swift; sourceTree = "<group>"; };
+		AED6FA822A59580E00AB8F92 /* BaseTabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseTabBarController.swift; sourceTree = "<group>"; };
 		AED7A1B12A515AD200A6C820 /* Presentation.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Presentation.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AED7A1B42A515AD200A6C820 /* Presentation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Presentation.h; sourceTree = "<group>"; };
 		AED7A1B52A515AD200A6C820 /* Presentation.docc */ = {isa = PBXFileReference; lastKnownFileType = folder.documentationcatalog; path = Presentation.docc; sourceTree = "<group>"; };
@@ -231,6 +233,7 @@
 		AE53D32A2A58B57F0017C9EE /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				AED6FA822A59580E00AB8F92 /* BaseTabBarController.swift */,
 				AE53D32B2A58B57F0017C9EE /* BaseVC.swift */,
 				AE53D3942A58C2510017C9EE /* SwiftUIBaseVC.swift */,
 			);
@@ -650,6 +653,7 @@
 				AE53D3602A58B7A80017C9EE /* Font.swift in Sources */,
 				AE53D3322A58B58F0017C9EE /* CoordinatorKeys.swift in Sources */,
 				AE53D3932A58C1640017C9EE /* Ext_FeedbackMessage.swift in Sources */,
+				AED6FA832A59580E00AB8F92 /* BaseTabBarController.swift in Sources */,
 				AED6FA7B2A594B9600AB8F92 /* InjectManagers.swift in Sources */,
 				AE53D3312A58B58F0017C9EE /* BaseNavigation.swift in Sources */,
 				AED7A1B62A515AD200A6C820 /* Presentation.docc in Sources */,
