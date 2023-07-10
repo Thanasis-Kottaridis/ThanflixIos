@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AE2E8D422A5CB080004FC80C /* GenericHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE2E8D412A5CB080004FC80C /* GenericHeaderView.swift */; };
+		AE2E8D442A5CB089004FC80C /* GenericHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = AE2E8D432A5CB089004FC80C /* GenericHeaderView.xib */; };
 		AE53D3262A58B4F40017C9EE /* BaseAppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE53D3252A58B4F40017C9EE /* BaseAppDelegate.swift */; };
 		AE53D3292A58B56E0017C9EE /* BaseWindow.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE53D3282A58B56D0017C9EE /* BaseWindow.swift */; };
 		AE53D32C2A58B57F0017C9EE /* BaseVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE53D32B2A58B57F0017C9EE /* BaseVC.swift */; };
@@ -95,6 +97,8 @@
 		1602AD75357EAE33AE852489 /* Pods-Presentation.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Presentation.debug.xcconfig"; path = "Target Support Files/Pods-Presentation/Pods-Presentation.debug.xcconfig"; sourceTree = "<group>"; };
 		1C0EB74AEFDC46228B34C960 /* Pods_Presentation.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Presentation.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3BEFE8A06268BE02B54F6964 /* Pods-Presentation.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Presentation.release.xcconfig"; path = "Target Support Files/Pods-Presentation/Pods-Presentation.release.xcconfig"; sourceTree = "<group>"; };
+		AE2E8D412A5CB080004FC80C /* GenericHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenericHeaderView.swift; sourceTree = "<group>"; };
+		AE2E8D432A5CB089004FC80C /* GenericHeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GenericHeaderView.xib; sourceTree = "<group>"; };
 		AE53D3252A58B4F40017C9EE /* BaseAppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseAppDelegate.swift; sourceTree = "<group>"; };
 		AE53D3282A58B56D0017C9EE /* BaseWindow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseWindow.swift; sourceTree = "<group>"; };
 		AE53D32B2A58B57F0017C9EE /* BaseVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseVC.swift; sourceTree = "<group>"; };
@@ -194,6 +198,15 @@
 			path = ../Pods;
 			sourceTree = "<group>";
 		};
+		AE2E8D402A5CB068004FC80C /* Headers */ = {
+			isa = PBXGroup;
+			children = (
+				AE2E8D412A5CB080004FC80C /* GenericHeaderView.swift */,
+				AE2E8D432A5CB089004FC80C /* GenericHeaderView.xib */,
+			);
+			path = Headers;
+			sourceTree = "<group>";
+		};
 		AE53D3212A58B4DF0017C9EE /* Base */ = {
 			isa = PBXGroup;
 			children = (
@@ -257,6 +270,7 @@
 		AE53D33D2A58B70A0017C9EE /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				AE2E8D402A5CB068004FC80C /* Headers */,
 				AE53D33E2A58B70A0017C9EE /* FeedbackMessage */,
 				AE53D3412A58B70A0017C9EE /* Loaders */,
 			);
@@ -612,6 +626,7 @@
 				AE53D36D2A58B7A80017C9EE /* Mulish-ExtraLight.ttf in Resources */,
 				AE53D3702A58B7A80017C9EE /* Mulish-SemiBold.ttf in Resources */,
 				AE53D36C2A58B7A80017C9EE /* Mulish-ExtraBold.ttf in Resources */,
+				AE2E8D442A5CB089004FC80C /* GenericHeaderView.xib in Resources */,
 				AE53D3632A58B7A80017C9EE /* Mulish-ExtraBoldItalic.ttf in Resources */,
 				AE53D3662A58B7A80017C9EE /* Mulish-Black.ttf in Resources */,
 				AE53D3622A58B7A80017C9EE /* Mulish-LightItalic.ttf in Resources */,
@@ -680,6 +695,7 @@
 				AE53D3822A58BBD60017C9EE /* Ext_UINavigationController.swift in Sources */,
 				AE53D3602A58B7A80017C9EE /* Font.swift in Sources */,
 				AED6FA8F2A59C6E400AB8F92 /* AdaptedConstraint.swift in Sources */,
+				AE2E8D422A5CB080004FC80C /* GenericHeaderView.swift in Sources */,
 				AE53D3322A58B58F0017C9EE /* CoordinatorKeys.swift in Sources */,
 				AE53D3932A58C1640017C9EE /* Ext_FeedbackMessage.swift in Sources */,
 				AED6FA832A59580E00AB8F92 /* BaseTabBarController.swift in Sources */,

@@ -1,24 +1,24 @@
 //
-//  SeriesCoordinator.swift
+//  MoviesCoordinator.swift
 //  Thanflix
 //
 //  Created by thanos kottaridis on 8/7/23.
 //
 
-import UIKi
+import UIKit
 import Domain
 import Presentation
 
 // MARK: - Actions
-struct GoToSeriesLanding: Action {}
+struct GoToMoviesLanding: Action {}
 
-public class SeriesCoordinator: Coordinator {
+public class MoviesCoordinator: Coordinator {
     
     public weak var parentCoordinator: (any Coordinator)?
     public var childCoordinators: [String : any Coordinator] = [:]
     public var deepLinkedCoordinators = [any Coordinator]()
     public var navigationController: UINavigationController
-    public let coordinatorKey: CoordinatorKey = CoordinatorKeyImpl.seriesCoordinator
+    public let coordinatorKey: CoordinatorKey = CoordinatorKeyImpl.moviesCoordinator
     
     // MARK: - INIT
     //Inject main navigation Controller
@@ -41,12 +41,11 @@ public class SeriesCoordinator: Coordinator {
 }
 
 // MARK: - Handle Actions
-extension SeriesCoordinator {
+extension MoviesCoordinator {
     public func handleAction(action: Action) {
         switch action {
         case _ as GoToMoviesLanding:
-            let vc = ViewController()
-            vc.view.backgroundColor = .orange
+            let vc = MoviesLandingVC()
             navigate(to: vc, with: .push)
         default:
             // Use super implementation of BaseActionHandler

@@ -8,7 +8,8 @@
 import UIKit
 import Domain
 import Presentation
-
+import Series
+import Movies
 
 class MainAppCoordinator: NSObject, Coordinator {
     

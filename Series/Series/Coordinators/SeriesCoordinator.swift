@@ -5,7 +5,7 @@
 //  Created by thanos kottaridis on 8/7/23.
 //
 
-import UIKi
+import UIKit
 import Domain
 import Presentation
 
@@ -36,7 +36,7 @@ public class SeriesCoordinator: Coordinator {
     }
     
     public func start() {
-        handleAction(action: GoToMoviesLanding())
+        handleAction(action: GoToSeriesLanding())
     }
 }
 
@@ -44,9 +44,8 @@ public class SeriesCoordinator: Coordinator {
 extension SeriesCoordinator {
     public func handleAction(action: Action) {
         switch action {
-        case _ as GoToMoviesLanding:
-            let vc = ViewController()
-            vc.view.backgroundColor = .orange
+        case _ as GoToSeriesLanding:
+            let vc = SeriesLandingVC()
             navigate(to: vc, with: .push)
         default:
             // Use super implementation of BaseActionHandler

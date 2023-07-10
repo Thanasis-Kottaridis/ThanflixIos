@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MoviesLandingVC" customModule="Movies" customModuleProvider="target">
+            <connections>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <navigationBar contentMode="scaleToFill" largeTitles="YES" translatesAutoresizingMaskIntoConstraints="NO" id="rWH-si-LQR">
+                    <rect key="frame" x="0.0" y="59" width="393" height="96"/>
+                    <items>
+                        <navigationItem title="Movies" id="oqQ-CJ-oTK"/>
+                    </items>
+                </navigationBar>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yML-eN-sUD" userLabel="ScrollingContent">
+                    <rect key="frame" x="0.0" y="155" width="393" height="697"/>
+                    <subviews>
+                        <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7bN-00-wGd">
+                            <rect key="frame" x="0.0" y="0.0" width="393" height="697"/>
+                            <subviews>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GMi-kl-KkE">
+                                    <rect key="frame" x="0.0" y="0.0" width="393" height="1346.6666666666667"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ms3-94-bng">
+                                            <rect key="frame" x="24" y="24" width="345" height="1298.6666666666667"/>
+                                            <mutableString key="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis commodo convallis elit, vel pulvinar velit ultrices in. Sed dictum justo at enim pharetra, quis lacinia odio auctor. Mauris eu accumsan arcu. In efficitur odio et eros tincidunt rutrum. Sed in risus sed eros auctor lacinia. Vivamus vel accumsan elit. Fusce ultrices lacinia tempor. Suspendisse potenti. Mauris auctor dolor enim, et vehicula ligula malesuada at. Vestibulum non dui justo. Maecenas hendrerit dui sit amet ullamcorper porttitor. Phasellus molestie enim vel sapien scelerisque posuere at ac odio. Integer nibh nunc, hendrerit eu justo quis, gravida dapibus arcu. Maecenas hendrerit consequat velit vel euismod.
+
+Nulla massa nulla, ultrices eget nunc ut, laoreet dignissim mi. In hac habitasse platea dictumst. Morbi euismod libero vitae imperdiet mollis. Aenean ut turpis interdum mauris fermentum lacinia. Morbi sit amet massa interdum, tristique mauris ut, iaculis justo. Etiam consequat sollicitudin viverra. Integer egestas mauris non quam pellentesque ultricies.
+
+Quisque dapibus mauris dui, quis tempus mi volutpat eu. Morbi quis ex sed ex accumsan sodales. Integer lacinia sagittis gravida. Cras facilisis placerat ante vulputate volutpat. Vivamus gravida nunc quis tellus gravida dapibus. Donec congue dui pulvinar, porttitor odio sed, gravida sapien. Mauris at finibus sem. Donec et mi turpis. Sed aliquam mi augue, vel blandit tortor dignissim sed. Donec at mattis magna, non elementum metus. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Pellentesque nec purus cursus, sollicitudin velit ac, finibus est.
+
+Fusce mattis porttitor erat. Fusce vulputate elit ante, et vulputate diam sagittis ac. Sed et semper velit. Suspendisse ac porttitor justo. Nunc elementum lacus sit amet eros sollicitudin, interdum mollis ante vestibulum. Etiam eros ipsum, imperdiet vitae egestas eu, convallis semper erat. Pellentesque eget cursus elit. Sed tincidunt tortor sit amet consequat varius.
+
+Nam eu fringilla leo. Fusce varius est at velit cursus, eget varius neque fermentum. Vestibulum vitae velit ut urna aliquam hendrerit eu non nunc. Nam condimentum lectus velit, quis interdum libero posuere nec. Phasellus eget aliquet magna. Nam fringilla felis purus, nec porta sem mollis et. Proin felis leo, consequat rutrum accumsan sit amet, tincidunt non ex. Phasellus commodo venenatis nibh vel eleifend. Interdum et malesuada fames ac ante ipsum primis in faucibus.</mutableString>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                    <constraints>
+                                        <constraint firstItem="Ms3-94-bng" firstAttribute="leading" secondItem="GMi-kl-KkE" secondAttribute="leading" constant="24" id="Um6-fh-IaP"/>
+                                        <constraint firstAttribute="trailing" secondItem="Ms3-94-bng" secondAttribute="trailing" constant="24" id="kk0-Ka-dTy"/>
+                                        <constraint firstItem="Ms3-94-bng" firstAttribute="top" secondItem="GMi-kl-KkE" secondAttribute="top" constant="24" id="xBA-kC-9gV"/>
+                                        <constraint firstAttribute="bottom" secondItem="Ms3-94-bng" secondAttribute="bottom" constant="24" id="yJG-fm-jyJ"/>
+                                    </constraints>
+                                </view>
+                            </subviews>
+                            <constraints>
+                                <constraint firstItem="GMi-kl-KkE" firstAttribute="top" secondItem="7bN-00-wGd" secondAttribute="top" id="A65-r9-8OG"/>
+                                <constraint firstItem="GMi-kl-KkE" firstAttribute="leading" secondItem="7bN-00-wGd" secondAttribute="leading" id="KIa-WF-HZw"/>
+                                <constraint firstAttribute="bottom" secondItem="GMi-kl-KkE" secondAttribute="bottom" id="OOg-1a-gTm"/>
+                                <constraint firstAttribute="trailing" secondItem="GMi-kl-KkE" secondAttribute="trailing" id="ni8-XM-1eK"/>
+                            </constraints>
+                        </scrollView>
+                    </subviews>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <constraints>
+                        <constraint firstAttribute="bottom" secondItem="7bN-00-wGd" secondAttribute="bottom" id="41w-5E-8l9"/>
+                        <constraint firstItem="GMi-kl-KkE" firstAttribute="width" secondItem="yML-eN-sUD" secondAttribute="width" id="Bdw-Wa-FPy"/>
+                        <constraint firstAttribute="trailing" secondItem="7bN-00-wGd" secondAttribute="trailing" id="Mss-ec-UjP"/>
+                        <constraint firstItem="GMi-kl-KkE" firstAttribute="height" secondItem="yML-eN-sUD" secondAttribute="height" priority="250" id="Sdb-yx-Kia"/>
+                        <constraint firstItem="7bN-00-wGd" firstAttribute="leading" secondItem="yML-eN-sUD" secondAttribute="leading" id="l56-ce-Y24"/>
+                        <constraint firstItem="7bN-00-wGd" firstAttribute="top" secondItem="yML-eN-sUD" secondAttribute="top" id="vx9-ih-ft0"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="yML-eN-sUD" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="3JU-nb-Jf8"/>
+                <constraint firstAttribute="bottom" secondItem="yML-eN-sUD" secondAttribute="bottom" id="4Je-Rg-ZBX"/>
+                <constraint firstItem="yML-eN-sUD" firstAttribute="top" secondItem="rWH-si-LQR" secondAttribute="bottom" id="4ip-gR-bvu"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="yML-eN-sUD" secondAttribute="trailing" id="Dqw-j0-ycM"/>
+                <constraint firstItem="rWH-si-LQR" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="SKn-lY-xMk"/>
+                <constraint firstItem="rWH-si-LQR" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="V7h-nT-Z97"/>
+                <constraint firstItem="rWH-si-LQR" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="rxI-Xc-AAy"/>
+            </constraints>
+            <point key="canvasLocation" x="140" y="21"/>
+        </view>
+    </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
