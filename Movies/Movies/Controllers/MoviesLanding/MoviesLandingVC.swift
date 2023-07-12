@@ -16,6 +16,13 @@ class MoviesLandingVC: BaseVC {
         static let sectionHeader = "MovieCollectionViewSectionHeader"
     }
     
+    private enum ConstraintConstants {
+        static let largeCellsWidth = 256.adapted()
+        static let largeCellsHeght = 384.adapted()
+        static let normalCellsWidth = 150.adapted()
+        static let normalCellsHeight = 225.adapted()
+    }
+    
     // MARK: - Outlets
     @IBOutlet weak var header: GenericHeaderView!
     @IBOutlet weak var collectionView: UICollectionView!
@@ -23,14 +30,6 @@ class MoviesLandingVC: BaseVC {
     // MARK: - Vars
     private(set) var viewModel: MoviesLandingViewModel
     private var anyCancelable = Set<AnyCancellable>()
-    let flowLayout: UICollectionViewFlowLayout = {
-        let layout = UICollectionViewFlowLayout()
-        layout.minimumInteritemSpacing = 5
-        layout.minimumLineSpacing = 5
-        layout.sectionInset = UIEdgeInsets(top: 5, left: 5, bottom: 5, right: 5)
-        return layout
-    }()
-    
     
     init(viewModel: MoviesLandingViewModel) {
         self.viewModel = viewModel
@@ -109,16 +108,21 @@ class MoviesLandingVC: BaseVC {
         // 4. set up compositional layout.
         setUpCompositionalLayout()
     }
+}
+
+// MARK: - UICollectionView Styling
+extension MoviesLandingVC {
     
-    private func setUpCompositionalLayout() {
+    private func setUpCompositionalLayoutItems(forIndex: Int) -> NSCollectionLayoutItem {
         // 1.
         // Set up item Size (Width, Height)
-        // **Note** group dimantion is relevant to its parent (group)
-        // so we want our item to has equal height with its parent group
-        // and 1/3 of it's width
+        // **Note** we use absolut dimentions based on section index
+        let width = forIndex == 0 ? ConstraintConstants.largeCellsWidth : ConstraintConstants.normalCellsWidth
+        let height = forIndex == 0 ? ConstraintConstants.largeCellsHeght : ConstraintConstants.normalCellsHeight
+
         let itemSize = NSCollectionLayoutSize(
-            widthDimension: .fractionalWidth(1/3),
-            heightDimension: .fractionalHeight(1)
+            widthDimension: .absolute(width),
+            heightDimension: .absolute(height)
         )
         
         // 2. Create item
@@ -132,23 +136,31 @@ class MoviesLandingVC: BaseVC {
             trailing: 6.adapted()
         )
         
-        // 3.
+        return item
+    }
+    
+    private func setUpCompositionalLayoutGroups(withItem item: NSCollectionLayoutItem, forIndex: Int) -> NSCollectionLayoutGroup {
+        // 1.
         // Set up group dimantions (Width, Height)
-        // **Note** group dimantion is relevant to its parent (group or section)
-        // in our case we want our group has equal width with our setion
-        // and height 1/3 of its width.
+        // **Note** we use absolut dimentions based on section index
+        
+        let width = forIndex == 0 ? ConstraintConstants.largeCellsWidth : ConstraintConstants.normalCellsWidth
+        let height = forIndex == 0 ? ConstraintConstants.largeCellsHeght : ConstraintConstants.normalCellsHeight
+
         let groupSize = NSCollectionLayoutSize(
-            widthDimension: .fractionalWidth(1),
-            heightDimension: .fractionalWidth(1/3)
+            widthDimension: .absolute(width),
+            heightDimension: .absolute(height)
         )
         
-        // 4. Create group
-        let group = NSCollectionLayoutGroup.horizontal(layoutSize: groupSize, subitems: [item])
-        
-        // 5. create the section that contains this group
+        // 2. Create group
+        return NSCollectionLayoutGroup.horizontal(layoutSize: groupSize, subitems: [item])
+    }
+    
+    private func setUpCompositionalLayoutSection(withGroup group: NSCollectionLayoutGroup, forIndex: Int) -> NSCollectionLayoutSection {
+        // 1. create the section that contains this group
         let section = NSCollectionLayoutSection(group: group)
         
-        // 5.1 Add section conten insets
+        // 2 Add section conten insets
         section.contentInsets = NSDirectionalEdgeInsets(
             top: 4.adapted(),
             leading: 14.adapted(),
@@ -156,10 +168,10 @@ class MoviesLandingVC: BaseVC {
             trailing: 14.adapted()
         )
         
-        // 5.2 make section scrollable
+        // 3 make section scrollable
         section.orthogonalScrollingBehavior = .continuous
         
-        // 6. Create section header view
+        // 4. Create section header view
         let headerItemSize = NSCollectionLayoutSize(
             widthDimension: .fractionalWidth(1),
             heightDimension: .estimated(10.adapted())
@@ -171,12 +183,32 @@ class MoviesLandingVC: BaseVC {
         )
         section.boundarySupplementaryItems = [headerItem]
         
-        // 7. create the compositional layout contains that sections.
-        let layout = UICollectionViewCompositionalLayout(section: section)
+        return section
+    }
+    
+    private func setUpCompositionalLayout() {
         
-        // 8. set up collection view layout
+        // create the compositional layout contains that sections.
+        let layout = UICollectionViewCompositionalLayout { [weak self] (sectionIndex, environment) -> NSCollectionLayoutSection? in
+            
+            guard let self = self else { return nil }
+            
+            // 1. set up items
+            let item = self.setUpCompositionalLayoutItems(forIndex: sectionIndex)
+            
+            // 2. set up groups
+            let group = self.setUpCompositionalLayoutGroups(withItem: item, forIndex: sectionIndex)
+            
+            // 3. create the section that contains this group
+            let section = self.setUpCompositionalLayoutSection(withGroup: group, forIndex: sectionIndex)
+            
+            return section
+        }
+        
+        // set up collection view layout
         collectionView.collectionViewLayout = layout
     }
+
 }
 
 // MARK: - UICollectionViewDataSource
