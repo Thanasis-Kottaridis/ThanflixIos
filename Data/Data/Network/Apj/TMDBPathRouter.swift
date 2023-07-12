@@ -10,7 +10,7 @@ import Alamofire
 import Domain
 
 public enum TMDBPathRouter: URLRequestConvertible {
-   
+    
     // MARK: - Inject DataModule AppConfig.
     private var baseURLPath: String {
         @Injected(\.dataAppConfig)
@@ -24,12 +24,33 @@ public enum TMDBPathRouter: URLRequestConvertible {
         return appConfig.accountId
     }
     
+    /// # Account Endpoint
     case getFavoriteMovies
+    
+    /// # Movies Endpoints
+    case getNowPlayingMovies(page: Int)
+    case getPopularMovies(page: Int)
+    case getTopRatedMovies(page: Int)
+    case getUpcomingMovies(page: Int)
+    
+    /// # Series Endpoints
+    case getAiringTodaySeries(page: Int)
+    case getOnTheAirSeries(page: Int)
+    case getTopRatedSeries(page: Int)
+    case getUpcomingSeries(page: Int)
     
     // MARK: - Method
     var method: HTTPMethod {
         switch self {
-        case .getFavoriteMovies:
+        case .getFavoriteMovies,
+                .getNowPlayingMovies,
+                .getPopularMovies,
+                .getTopRatedMovies,
+                .getUpcomingMovies,
+                .getAiringTodaySeries,
+                .getOnTheAirSeries,
+                .getTopRatedSeries,
+                .getUpcomingSeries:
             return .get
         }
     }
@@ -37,8 +58,27 @@ public enum TMDBPathRouter: URLRequestConvertible {
     // MARK: - Path
     var path: String {
         switch self {
+            /// # Account Endpoint
         case .getFavoriteMovies:
             return "account/\(accountID)/favorite/movies"
+            /// # Movies Endpoints
+        case .getNowPlayingMovies:
+            return "movie/now_playing"
+        case .getPopularMovies:
+            return "movie/popular"
+        case .getTopRatedMovies:
+            return "movie/top_rated"
+        case .getUpcomingMovies:
+            return "movie/upcoming"
+            /// # Series Endpoints
+        case .getAiringTodaySeries:
+            return "tv/airing_today"
+        case .getOnTheAirSeries:
+            return "tv/on_the_air"
+        case .getTopRatedSeries:
+            return "tv/popular"
+        case .getUpcomingSeries:
+            return "tv/top_rated"
         }
     }
     
@@ -47,8 +87,17 @@ public enum TMDBPathRouter: URLRequestConvertible {
         switch method {
         case .put, .post, .get:
             switch self {
-                case .getFavoriteMovies:
+            case .getFavoriteMovies,
+                    .getNowPlayingMovies,
+                    .getPopularMovies,
+                    .getTopRatedMovies,
+                    .getUpcomingMovies,
+                    .getAiringTodaySeries,
+                    .getOnTheAirSeries,
+                    .getTopRatedSeries,
+                    .getUpcomingSeries:
                 return URLEncoding.queryString
+                
             }
         default:
             return URLEncoding.queryString
@@ -82,6 +131,38 @@ public enum TMDBPathRouter: URLRequestConvertible {
                 "language":"en-US",
                 "page":"1",
                 "sort_by":"created_at.asc"
+            ]
+        case .getNowPlayingMovies(page: let page):
+            parameters = [
+                "page":page,
+            ]
+        case .getPopularMovies(page: let page):
+            parameters = [
+                "page":page,
+            ]
+        case .getTopRatedMovies(page: let page):
+            parameters = [
+                "page":page,
+            ]
+        case .getUpcomingMovies(page: let page):
+            parameters = [
+                "page":page,
+            ]
+        case .getAiringTodaySeries(page: let page):
+            parameters = [
+                "page":page,
+            ]
+        case .getOnTheAirSeries(page: let page):
+            parameters = [
+                "page":page,
+            ]
+        case .getTopRatedSeries(page: let page):
+            parameters = [
+                "page":page,
+            ]
+        case .getUpcomingSeries(page: let page):
+            parameters = [
+                "page":page,
             ]
         }
         

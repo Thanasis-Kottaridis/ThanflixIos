@@ -73,7 +73,7 @@ class MoviesLandingViewModel: BaseViewModel {
         dispatchGroup.enter()
         
         Task.init {
-            let result = await moviesDataContext.getFavoriteMovies()
+            let result = await moviesDataContext.getNowPlayingMovies(page: 1)
             ensureMainThread { [weak self] in
                 guard let self = self else { return }
                 dispatchGroup.leave()
@@ -91,7 +91,7 @@ class MoviesLandingViewModel: BaseViewModel {
         dispatchGroup.enter()
         
         Task.init {
-            let result = await moviesDataContext.getFavoriteMovies()
+            let result = await moviesDataContext.getPopularMovies(page: 1)
             ensureMainThread { [weak self] in
                 guard let self = self else { return }
                 dispatchGroup.leave()
@@ -109,7 +109,7 @@ class MoviesLandingViewModel: BaseViewModel {
         dispatchGroup.enter()
 
         Task.init {
-            let result = await moviesDataContext.getFavoriteMovies()
+            let result = await moviesDataContext.getTopRatedMovies(page: 1)
             ensureMainThread { [weak self] in
                 guard let self = self else { return }
                 dispatchGroup.leave()
@@ -127,7 +127,7 @@ class MoviesLandingViewModel: BaseViewModel {
         dispatchGroup.enter()
         
         Task.init {
-            let result = await moviesDataContext.getFavoriteMovies()
+            let result = await moviesDataContext.getUpcomingMovies(page: 1)
             ensureMainThread { [weak self] in
                 guard let self = self else { return }
                 dispatchGroup.leave()

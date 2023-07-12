@@ -10,13 +10,113 @@ import Domain
 import Alamofire
 
 public class MoviesDataContextImpl: MoviesDataContext {
+    
     private let sessionManager: Session = InjectedValues[\.networkProvider].sessionManager
 
     public init() {}
     
+    // MARK: - Acount Endpoints
     public func getFavoriteMovies() async -> Result<PagedListResult<Movie>?, BaseException> {
         return await sessionManager
             .request( TMDBPathRouter.getFavoriteMovies)
+            .validateRawResponseWrapper(
+                fromType: PagedGenericResponse<[Movie]>.self,
+                mapperType: PagedListResult<Movie>.self,
+                mapper: { response in
+                    return GenericPagingMapper<Movie>().domainToPagingData(response: response)
+                }
+            )
+    }
+    
+    // MARK: - Movies Endpoint
+    public func getNowPlayingMovies(page: Int) async -> Result<PagedListResult<Movie>?, BaseException> {
+        return await sessionManager
+            .request( TMDBPathRouter.getNowPlayingMovies(page: page))
+            .validateRawResponseWrapper(
+                fromType: PagedGenericResponse<[Movie]>.self,
+                mapperType: PagedListResult<Movie>.self,
+                mapper: { response in
+                    return GenericPagingMapper<Movie>().domainToPagingData(response: response)
+                }
+            )
+    }
+    
+    public func getPopularMovies(page: Int) async -> Result<PagedListResult<Movie>?, BaseException> {
+        return await sessionManager
+            .request( TMDBPathRouter.getPopularMovies(page: page))
+            .validateRawResponseWrapper(
+                fromType: PagedGenericResponse<[Movie]>.self,
+                mapperType: PagedListResult<Movie>.self,
+                mapper: { response in
+                    return GenericPagingMapper<Movie>().domainToPagingData(response: response)
+                }
+            )
+    }
+    
+    public func getTopRatedMovies(page: Int) async -> Result<PagedListResult<Movie>?, BaseException> {
+        return await sessionManager
+            .request( TMDBPathRouter.getTopRatedMovies(page: page))
+            .validateRawResponseWrapper(
+                fromType: PagedGenericResponse<[Movie]>.self,
+                mapperType: PagedListResult<Movie>.self,
+                mapper: { response in
+                    return GenericPagingMapper<Movie>().domainToPagingData(response: response)
+                }
+            )
+    }
+    
+    public func getUpcomingMovies(page: Int) async -> Result<PagedListResult<Movie>?, BaseException> {
+        return await sessionManager
+            .request( TMDBPathRouter.getUpcomingMovies(page: page))
+            .validateRawResponseWrapper(
+                fromType: PagedGenericResponse<[Movie]>.self,
+                mapperType: PagedListResult<Movie>.self,
+                mapper: { response in
+                    return GenericPagingMapper<Movie>().domainToPagingData(response: response)
+                }
+            )
+    }
+    
+    // MARK: - Series Endpoint
+    public func getAiringTodaySeries(page: Int) async -> Result<PagedListResult<Movie>?, BaseException> {
+        return await sessionManager
+            .request( TMDBPathRouter.getAiringTodaySeries(page: page))
+            .validateRawResponseWrapper(
+                fromType: PagedGenericResponse<[Movie]>.self,
+                mapperType: PagedListResult<Movie>.self,
+                mapper: { response in
+                    return GenericPagingMapper<Movie>().domainToPagingData(response: response)
+                }
+            )
+    }
+    
+    public func getOnTheAirSeries(page: Int) async -> Result<PagedListResult<Movie>?, BaseException> {
+        return await sessionManager
+            .request( TMDBPathRouter.getOnTheAirSeries(page: page))
+            .validateRawResponseWrapper(
+                fromType: PagedGenericResponse<[Movie]>.self,
+                mapperType: PagedListResult<Movie>.self,
+                mapper: { response in
+                    return GenericPagingMapper<Movie>().domainToPagingData(response: response)
+                }
+            )
+    }
+    
+    public func getTopRatedSeries(page: Int) async -> Result<PagedListResult<Movie>?, BaseException> {
+        return await sessionManager
+            .request( TMDBPathRouter.getTopRatedSeries(page: page))
+            .validateRawResponseWrapper(
+                fromType: PagedGenericResponse<[Movie]>.self,
+                mapperType: PagedListResult<Movie>.self,
+                mapper: { response in
+                    return GenericPagingMapper<Movie>().domainToPagingData(response: response)
+                }
+            )
+    }
+    
+    public func getUpcomingSeries(page: Int) async -> Result<PagedListResult<Movie>?, BaseException> {
+        return await sessionManager
+            .request( TMDBPathRouter.getUpcomingSeries(page: page))
             .validateRawResponseWrapper(
                 fromType: PagedGenericResponse<[Movie]>.self,
                 mapperType: PagedListResult<Movie>.self,
