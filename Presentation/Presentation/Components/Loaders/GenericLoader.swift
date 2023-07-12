@@ -57,7 +57,7 @@ struct GenericLoader {
         }
         
         fileprivate func addLottieView(_ lottieType: LottieLoaders) {
-            guard  let keyWindow = UIApplication.shared.windows.filter {$0.isKeyWindow}.first else { return }
+            guard  let keyWindow = UIApplication.shared.windows.filter { $0.isKeyWindow }.first else { return }
             self.type = lottieType
             
             self.addExclusiveConstraints(
