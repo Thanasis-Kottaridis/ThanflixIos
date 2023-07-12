@@ -29,7 +29,8 @@ public class MoviesCoordinator: Coordinator {
     ) {
         self.parentCoordinator = parentCoordinator
         self.navigationController = navigationController ?? UINavigationController()
-        
+        self.navigationController.navigationBar.isHidden = true
+
         if doStart {
             start()
         }
@@ -45,7 +46,8 @@ extension MoviesCoordinator {
     public func handleAction(action: Action) {
         switch action {
         case _ as GoToMoviesLanding:
-            let vc = MoviesLandingVC()
+            let viewModel = MoviesLandingViewModel(actionHandler: self)
+            let vc = MoviesLandingVC(viewModel: viewModel)
             navigate(to: vc, with: .push)
         default:
             // Use super implementation of BaseActionHandler

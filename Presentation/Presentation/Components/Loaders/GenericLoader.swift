@@ -57,10 +57,16 @@ struct GenericLoader {
         }
         
         fileprivate func addLottieView(_ lottieType: LottieLoaders) {
-            guard let keyWindow = UIApplication.shared.keyWindow else { return }
+            guard  let keyWindow = UIApplication.shared.windows.filter {$0.isKeyWindow}.first else { return }
             self.type = lottieType
             
-            self.addExclusiveConstraints(superview: keyWindow, top: (keyWindow.topAnchor, 0), bottom: (keyWindow.bottomAnchor, 0), left: (keyWindow.leadingAnchor, 0), right: (keyWindow.trailingAnchor, 0))
+            self.addExclusiveConstraints(
+                superview: keyWindow,
+                top: (keyWindow.topAnchor, 0),
+                bottom: (keyWindow.bottomAnchor, 0),
+                left: (keyWindow.leadingAnchor, 0),
+                right: (keyWindow.trailingAnchor, 0)
+            )
             
             let animation = Animation.named(
                 lottieType.jsonText,

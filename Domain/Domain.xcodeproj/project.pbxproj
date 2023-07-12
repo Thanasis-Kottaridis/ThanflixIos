@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		17011EA5A5217CFB4088FBF6 /* Pods_Domain.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1FB5B29DC58A46411C3461AE /* Pods_Domain.framework */; };
+		AE2E8D9A2A5E7FAB004FC80C /* SectionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE2E8D992A5E7FAB004FC80C /* SectionModel.swift */; };
 		AE53D29F2A5762A70017C9EE /* PagedGenericResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE53D29E2A5762A70017C9EE /* PagedGenericResponse.swift */; };
 		AE53D2A12A5766680017C9EE /* PagedListResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE53D2A02A5766680017C9EE /* PagedListResult.swift */; };
 		AE53D2A82A5766A00017C9EE /* BaseException.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE53D2A72A5766A00017C9EE /* BaseException.swift */; };
@@ -38,6 +39,7 @@
 
 /* Begin PBXFileReference section */
 		1FB5B29DC58A46411C3461AE /* Pods_Domain.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Domain.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		AE2E8D992A5E7FAB004FC80C /* SectionModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionModel.swift; sourceTree = "<group>"; };
 		AE53D29E2A5762A70017C9EE /* PagedGenericResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PagedGenericResponse.swift; sourceTree = "<group>"; };
 		AE53D2A02A5766680017C9EE /* PagedListResult.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PagedListResult.swift; sourceTree = "<group>"; };
 		AE53D2A72A5766A00017C9EE /* BaseException.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseException.swift; sourceTree = "<group>"; };
@@ -96,6 +98,7 @@
 				AE53D29E2A5762A70017C9EE /* PagedGenericResponse.swift */,
 				AE53D2A72A5766A00017C9EE /* BaseException.swift */,
 				AE53D3722A58BA970017C9EE /* FeedbackMessage.swift */,
+				AE2E8D992A5E7FAB004FC80C /* SectionModel.swift */,
 			);
 			path = Base;
 			sourceTree = "<group>";
@@ -190,9 +193,9 @@
 			isa = PBXGroup;
 			children = (
 				AEA26DA52A55BBF5003E8AA0 /* DI */,
-				AE53D29C2A57628D0017C9EE /* Models */,
 				AE53D2AB2A5768C20017C9EE /* DataContext */,
 				AE53D3862A58BC2E0017C9EE /* Managers */,
+				AE53D29C2A57628D0017C9EE /* Models */,
 				AE53D2B42A5773CC0017C9EE /* Utils */,
 				AED7A1242A51593700A6C820 /* Domain.h */,
 				AED7A1252A51593700A6C820 /* Domain.docc */,
@@ -366,6 +369,7 @@
 				AE53D38A2A58BC3D0017C9EE /* LanguagesManager.swift in Sources */,
 				AE53D3732A58BA980017C9EE /* FeedbackMessage.swift in Sources */,
 				AE53D2A82A5766A00017C9EE /* BaseException.swift in Sources */,
+				AE2E8D9A2A5E7FAB004FC80C /* SectionModel.swift in Sources */,
 				AE53D38B2A58BC3D0017C9EE /* Languages.swift in Sources */,
 				AE53D2B72A5773E20017C9EE /* DomainMapper.swift in Sources */,
 				AED7A1262A51593700A6C820 /* Domain.docc in Sources */,

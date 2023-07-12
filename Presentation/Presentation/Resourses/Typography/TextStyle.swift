@@ -24,7 +24,7 @@ public struct TextStyle {
             case .BLACK:
                 return Font.MulishBlack
             case .BOLD:
-                return Font.MulishBlack
+                return Font.MulishBold
             case .EXTRA_BOLD:
                 return Font.MulishExtraBold
             case .EXTRA_LIGHT:

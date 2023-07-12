@@ -22,12 +22,12 @@ public struct GenericHeaderConfigurations {
     let rightIconTint: ColorPalette?
     
     public init(
-        title: String? = nil,
-        titleColor: ColorPalette? = nil,
-        leftIconName: String? = nil,
-        leftIconTint: ColorPalette? = nil,
-        rightIconName: String? = nil,
-        rightIconTint: ColorPalette? = nil
+        title: String?,
+        titleColor: ColorPalette?,
+        leftIconName: String?,
+        leftIconTint: ColorPalette?,
+        rightIconName: String?,
+        rightIconTint: ColorPalette?
     ) {
         self.title = title
         self.titleColor = titleColor
@@ -88,22 +88,46 @@ public struct GenericHeaderConfigurations {
             self.leftIconTint = color
             return self
         }
+        
+        public func build() -> GenericHeaderConfigurations {
+            GenericHeaderConfigurations(
+                title: title,
+                titleColor: titleColor,
+                leftIconName: leftIconName,
+                leftIconTint: leftIconTint,
+                rightIconName: rightIconName,
+                rightIconTint: rightIconTint
+            )
+        }
     }
 }
 
-class GenericHeaderView: UIView {
+public class GenericHeaderView: UIView {
+    
+    // MARK: - Const
+    private enum ConstraintConstants {
+        static let collapsedHeight = 44.adapted()
+    }
     
     // MARK: - Outlets
     public let kCONTENT_XIB_NAME = "GenericHeaderView"
     public var contentView: UIView?
     @IBOutlet public weak var leftIcon: UIImageView!
     @IBOutlet public weak var rightIcon: UIImageView!
+    @IBOutlet public weak var collapsingView: UIStackView!
     @IBOutlet public weak var collapedTitle: UILabel!
     @IBOutlet public weak var expandTitle: UILabel!
     
+    ///# Constraint Outlets
+    @IBOutlet weak var collapsableViewTopConstraint: NSLayoutConstraint!
+    @IBOutlet weak var safeAreaMaskHeight: NSLayoutConstraint!
+    
     // MARK: - Vars
+    private weak var parentScrollView: UIScrollView?
+    private let blurEffectView = UIVisualEffectView()
     private var configurations: GenericHeaderConfigurations?
-
+    private var contentViewInitialHeight: CGFloat?
+    
     // MARK: - Inits
     override public init(frame: CGRect) {
         super.init(frame: frame)
@@ -124,9 +148,11 @@ class GenericHeaderView: UIView {
         guard let view = loadViewFromNib() else { return }
         view.frame = bounds
         view.autoresizingMask =
-            [.flexibleWidth, .flexibleHeight]
+        [.flexibleWidth, .flexibleHeight]
         addSubview(view)
         contentView = view
+        let topSafeArea = UIApplication.shared.keyWindow?.safeAreaInsets.top
+        safeAreaMaskHeight.constant = topSafeArea ?? 0
     }
     
     func loadViewFromNib() -> UIView? {
@@ -143,8 +169,21 @@ class GenericHeaderView: UIView {
         contentView?.prepareForInterfaceBuilder()
     }
     
-    public func setupView(configurations: GenericHeaderConfigurations) {
+    public func setupView(
+        configurations: GenericHeaderConfigurations,
+        parentScrollView: UIScrollView? = nil
+    ) {
+        // 1. get configurations
         self.configurations = configurations
+        
+        // 2. set up parent scroll view if exists.
+        self.parentScrollView = parentScrollView
+//        self.parentScrollView?.contentInsetAdjustmentBehavior = .never
+
+        // 3. set up UI
+        configureButtons()
+        configureTitles()
+        setBlurEffect()
     }
 }
 
@@ -154,23 +193,23 @@ extension GenericHeaderView {
     private func configureButtons() {
         
         // 1. set up right icon
-        if let rightIconName = configurations?.rightIconName,
-           let rightIconTint = configurations?.rightIconTint {
+        if let iconName = configurations?.rightIconName,
+           let iconTint = configurations?.rightIconTint {
             rightIcon.isHidden = false
-            rightIcon.image = UIImage(named: rightIconName)
-            rightIcon.tintColor = rightIconTint.value
-
+            rightIcon.image = UIImage(named: iconName)
+            rightIcon.tintColor = iconTint.value
+            
         } else {
             rightIcon.isHidden = true
         }
         
         // 2. set up left icon
-        if let iconName = configurations?.rightIconName,
-           let iconTint = configurations?.rightIconTint {
+        if let iconName = configurations?.leftIconName,
+           let iconTint = configurations?.leftIconTint {
             leftIcon.isHidden = false
             leftIcon.image = UIImage(named: iconName)
             leftIcon.tintColor = iconTint.value
-
+            
         } else {
             leftIcon.isHidden = true
         }
@@ -187,8 +226,63 @@ extension GenericHeaderView {
         
         expandTitle.isHidden = false
         expandTitle.attributedText = title.with(.title1(
-            weight: .BOLD,
+            weight: .EXTRA_BOLD,
             color: tintColor
         ))
+    }
+    
+    // MARK: Shape Of Tab Bar
+    func setBlurEffect() {
+        guard let contentView = self.contentView
+        else { return }
+        self.backgroundColor = .clear
+        contentView.backgroundColor = .clear
+        contentView.frame = bounds
+        contentView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
+        contentView.translatesAutoresizingMaskIntoConstraints = true
+        
+        let blurEffectView = UIVisualEffectView()
+        blurEffectView.effect = UIBlurEffect(style: .light)
+        blurEffectView.frame = contentView.bounds
+        blurEffectView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
+        //Add Blur To Tab Bar
+        contentView.insertSubview(blurEffectView, at: 0)
+
+    }
+}
+
+// MARK: - Animation Ext
+extension GenericHeaderView {
+    override public func layoutSubviews() {
+        super.layoutSubviews()
+        let newHeight = (contentView?.frame.height ?? 0) // - safeAreaMaskHeight.constant
+        print("Header debug.... height \(String(describing: contentView?.frame.height)), collapsing View height \(String(describing: newHeight))")
+        
+        guard newHeight != contentViewInitialHeight
+        else { return }
+        
+            self.contentViewInitialHeight = newHeight
+            let topInsets = self.contentViewInitialHeight! - (parentScrollView?.safeAreaInsets.top ?? 0)
+            self.parentScrollView?.contentInset = UIEdgeInsets(
+                top: topInsets,
+                left: 0,
+                bottom: 0,
+                right: 0
+            )
+            
+        DispatchQueue.main.asyncAfter(deadline: .now() + 1) { [weak self] in
+            guard let self = self else { return }
+            self.parentScrollView?.setContentOffset(
+                CGPoint(x: 0, y: -self.contentViewInitialHeight!),
+                animated: false
+            )
+        }
+    }
+    
+    public func handleAnimation(newOffset: CGFloat) {
+        
+        // 1. Get helper vars for animation
+        let y = (-newOffset) - (contentViewInitialHeight ?? 0)
+        print("scroll debug... y = \(y), collapsingViewHeight = \(contentViewInitialHeight), newOffser = \(newOffset)")
     }
 }

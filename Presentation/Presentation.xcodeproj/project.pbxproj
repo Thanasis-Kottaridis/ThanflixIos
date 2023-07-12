@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		AE2E8D422A5CB080004FC80C /* GenericHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE2E8D412A5CB080004FC80C /* GenericHeaderView.swift */; };
 		AE2E8D442A5CB089004FC80C /* GenericHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = AE2E8D432A5CB089004FC80C /* GenericHeaderView.xib */; };
+		AE2E8D9E2A5E8885004FC80C /* InjectDataContexts.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE2E8D9B2A5E8885004FC80C /* InjectDataContexts.swift */; };
 		AE53D3262A58B4F40017C9EE /* BaseAppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE53D3252A58B4F40017C9EE /* BaseAppDelegate.swift */; };
 		AE53D3292A58B56E0017C9EE /* BaseWindow.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE53D3282A58B56D0017C9EE /* BaseWindow.swift */; };
 		AE53D32C2A58B57F0017C9EE /* BaseVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE53D32B2A58B57F0017C9EE /* BaseVC.swift */; };
@@ -99,6 +100,7 @@
 		3BEFE8A06268BE02B54F6964 /* Pods-Presentation.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Presentation.release.xcconfig"; path = "Target Support Files/Pods-Presentation/Pods-Presentation.release.xcconfig"; sourceTree = "<group>"; };
 		AE2E8D412A5CB080004FC80C /* GenericHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenericHeaderView.swift; sourceTree = "<group>"; };
 		AE2E8D432A5CB089004FC80C /* GenericHeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GenericHeaderView.xib; sourceTree = "<group>"; };
+		AE2E8D9B2A5E8885004FC80C /* InjectDataContexts.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InjectDataContexts.swift; sourceTree = "<group>"; };
 		AE53D3252A58B4F40017C9EE /* BaseAppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseAppDelegate.swift; sourceTree = "<group>"; };
 		AE53D3282A58B56D0017C9EE /* BaseWindow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseWindow.swift; sourceTree = "<group>"; };
 		AE53D32B2A58B57F0017C9EE /* BaseVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseVC.swift; sourceTree = "<group>"; };
@@ -379,6 +381,7 @@
 		AED6FA4E2A58C40700AB8F92 /* Di */ = {
 			isa = PBXGroup;
 			children = (
+				AE2E8D9B2A5E8885004FC80C /* InjectDataContexts.swift */,
 				AED6FA622A58C46800AB8F92 /* InjectBoundaries.swift */,
 				AED6FA7A2A594B9600AB8F92 /* InjectManagers.swift */,
 			);
@@ -703,6 +706,7 @@
 				AED6FA7B2A594B9600AB8F92 /* InjectManagers.swift in Sources */,
 				AE53D3312A58B58F0017C9EE /* BaseNavigation.swift in Sources */,
 				AED7A1B62A515AD200A6C820 /* Presentation.docc in Sources */,
+				AE2E8D9E2A5E8885004FC80C /* InjectDataContexts.swift in Sources */,
 				AE53D3442A58B70A0017C9EE /* FeedbackMessageView.swift in Sources */,
 				AED6FA8E2A59C6E400AB8F92 /* AdaptedVC.swift in Sources */,
 				AE53D33A2A58B5E00017C9EE /* BaseErrorDispatcher.swift in Sources */,

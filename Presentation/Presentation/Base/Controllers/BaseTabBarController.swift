@@ -36,34 +36,28 @@ public class BaseTabBarController: UITabBarController, UITabBarControllerDelegat
         blurEffectView.effect = UIBlurEffect(style: .light)
         blurEffectView.frame = view.bounds
         blurEffectView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
-        //Mask For Blur View
-        let maskView = UIView(frame: view.frame)
-        maskView.clipsToBounds = true
-        maskView.backgroundColor = UIColor.clear
-       
-        //Give Mask To BlurView
-        blurEffectView.mask = maskView
+        
         //Add Blur To Tab Bar
-        tabBar.addSubview(blurEffectView)
+        tabBar.insertSubview(blurEffectView, at: 0)
     }
     
     func setTabUI() {
         self.delegate = self
         //TabBar UI
         let appearance = UITabBarAppearance()
+        appearance.shadowImage = nil
+        appearance.shadowColor = .clear
         appearance.backgroundImage = nil
-        appearance.backgroundColor = ColorPalette.BackgroundDefaultPrimary.value
-        appearance.selectionIndicatorTintColor = ColorPalette.BrandPrimary.value
-
+        appearance.backgroundColor = .clear
+        appearance.backgroundEffect = .none
         tabBar.standardAppearance = appearance
+        tabBar.scrollEdgeAppearance = appearance
         tabBar.tintColor = ColorPalette.BrandPrimary.value
-
-        if #available(iOS 15.0, *) {
-            self.tabBar.scrollEdgeAppearance = appearance
-        }
+        
         //Set Shadows
         tabBar.layer.shadowOffset = CGSize(width: 0, height: 0)
         tabBar.layer.shadowRadius = 20.adapted()
         tabBar.layer.shadowColor = ColorPalette.EffectShadow.value.cgColor
+        tabBar.layer.shadowOpacity = 0.16
     }
 }

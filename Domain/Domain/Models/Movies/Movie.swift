@@ -7,11 +7,11 @@
 
 import Foundation
 
-public struct Movie: Codable {
+public struct Movie: Codable, Equatable {
     
     public let adult: Bool?
     public let backdropPath: String?
-    public let genreIDs: [Int]?
+    public let genreID: [Int]?
     public let id: Int?
     public let originalLanguage: String?
     public let originalTitle: String?
@@ -27,7 +27,7 @@ public struct Movie: Codable {
     public init(
         adult: Bool,
         backdropPath: String? = nil,
-        genreIDs: [Int],
+        genreID: [Int],
         id: Int,
         originalLanguage: String,
         originalTitle: String,
@@ -42,7 +42,7 @@ public struct Movie: Codable {
     ) {
         self.adult = adult
         self.backdropPath = backdropPath
-        self.genreIDs = genreIDs
+        self.genreID = genreID
         self.id = id
         self.originalLanguage = originalLanguage
         self.originalTitle = originalTitle
@@ -59,7 +59,7 @@ public struct Movie: Codable {
     private enum CodingKeys: String, CodingKey {
         case adult
         case backdropPath = "backdrop_path"
-        case genreIDs = "genre_ids"
+        case genreID = "genre_ids"
         case id
         case originalLanguage = "original_language"
         case originalTitle = "original_title"
