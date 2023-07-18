@@ -17,10 +17,33 @@ public struct ShowDetails: Codable {
     public let title: String?
     public let voteAverage: Double?
     public let voteCount: Int?
-    public let popularity: Double
-    public let overview: [Overview]
-    public let productionCompanies: [ProductionCompanies]
+    public let popularity: Double?
+    public let overview: [Overview]?
+    public let productionCompanies: [ProductionCompany]?
     
+    public init(
+        id: Int? = nil,
+        posterPath: String? = nil,
+        backdropPath: String? = nil,
+        releaseDate: String? = nil,
+        title: String? = nil,
+        voteAverage: Double? = nil,
+        voteCount: Int? = nil,
+        popularity: Double? = nil,
+        overview: [Overview]? = nil,
+        productionCompanies: [ProductionCompany]? = nil
+    ) {
+        self.id = id
+        self.posterPath = posterPath
+        self.backdropPath = backdropPath
+        self.releaseDate = releaseDate
+        self.title = title
+        self.voteAverage = voteAverage
+        self.voteCount = voteCount
+        self.popularity = popularity
+        self.overview = overview
+        self.productionCompanies = productionCompanies
+    }
     
     private enum CodingKeys: String, CodingKey {
         case id
@@ -46,13 +69,13 @@ public struct Overview: Codable {
     }
 }
 
-public struct ProductionCompanies: Codable {
+public struct ProductionCompany: Codable {
     
-    public let id: Int
+    public let id: Int?
     public let logoPath: String?
     public let name: String?
     
-    public init(id: Int, logoPath: String? = nil, name: String? = nil) {
+    public init(id: Int? = nil, logoPath: String? = nil, name: String? = nil) {
         self.id = id
         self.logoPath = logoPath
         self.name = name

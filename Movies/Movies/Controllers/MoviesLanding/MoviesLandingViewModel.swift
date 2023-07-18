@@ -45,6 +45,10 @@ class MoviesLandingViewModel: BaseViewModel {
         switch event {
         case .fetchData:
             fetchAllData()
+        case .goToMovieDetails(let index):
+            guard let id = state.moviesDisplayable[safe: index.section]?.items[safe: index.row]?.id
+            else { return }
+            actionHandler?.handleAction(action: GoToMovieDetails(id: id))
         }
     }
     

@@ -32,6 +32,7 @@ public enum TMDBPathRouter: URLRequestConvertible {
     case getPopularMovies(page: Int)
     case getTopRatedMovies(page: Int)
     case getUpcomingMovies(page: Int)
+    case getMovieDetails(movieId: Int)
     
     /// # Series Endpoints
     case getAiringTodaySeries(page: Int)
@@ -47,6 +48,7 @@ public enum TMDBPathRouter: URLRequestConvertible {
                 .getPopularMovies,
                 .getTopRatedMovies,
                 .getUpcomingMovies,
+                .getMovieDetails,
                 .getAiringTodaySeries,
                 .getOnTheAirSeries,
                 .getTopRatedSeries,
@@ -70,6 +72,9 @@ public enum TMDBPathRouter: URLRequestConvertible {
             return "movie/top_rated"
         case .getUpcomingMovies:
             return "movie/upcoming"
+        case .getMovieDetails(movieId: let movieId):
+            return "movie/\(movieId)"
+            
             /// # Series Endpoints
         case .getAiringTodaySeries:
             return "tv/airing_today"
@@ -92,6 +97,7 @@ public enum TMDBPathRouter: URLRequestConvertible {
                     .getPopularMovies,
                     .getTopRatedMovies,
                     .getUpcomingMovies,
+                    .getMovieDetails,
                     .getAiringTodaySeries,
                     .getOnTheAirSeries,
                     .getTopRatedSeries,
@@ -164,6 +170,8 @@ public enum TMDBPathRouter: URLRequestConvertible {
             parameters = [
                 "page":page,
             ]
+        default:
+            break
         }
         
         // TODO: - Add Constant headers (device info, language etc)

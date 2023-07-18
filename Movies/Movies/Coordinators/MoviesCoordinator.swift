@@ -11,6 +11,9 @@ import Presentation
 
 // MARK: - Actions
 struct GoToMoviesLanding: Action {}
+struct GoToMovieDetails: Action {
+    let id: Int
+}
 
 public class MoviesCoordinator: Coordinator {
     
@@ -48,6 +51,10 @@ extension MoviesCoordinator {
         case _ as GoToMoviesLanding:
             let viewModel = MoviesLandingViewModel(actionHandler: self)
             let vc = MoviesLandingVC(viewModel: viewModel)
+            navigate(to: vc, with: .push)
+        case let action as GoToMovieDetails:
+            let viewModel = MovieDetailsViewModel(movieId: action.id, actionHandler: self)
+            let vc = MovieDetailsVC(viewModel: viewModel)
             navigate(to: vc, with: .push)
         default:
             // Use super implementation of BaseActionHandler

@@ -7,34 +7,89 @@
 
 import Foundation
 
-struct MovieDetailsDto: Codable {
-    let adult: Bool
-    let backdropPath: String?
-    let belongsToCollection: String?
-    let budget: Int
-    let genres: [GenreDto]
-    let homepage: String
-    let id: Int
-    let imdbID: String
-    let originalLanguage: String
-    let originalTitle: String
-    let overview: String
-    let popularity: Double
-    let posterPath: String?
-    let productionCompanies: [ProductionCompanyDto]
-    let productionCountries: [ProductionCountryDto]
-    let releaseDate: String
-    let revenue: Int
-    let runtime: Int
-    let spokenLanguages: [SpokenLanguageDto]
-    let status: String
-    let tagline: String
-    let title: String
-    let video: Bool
-    let voteAverage: Double
-    let voteCount: Int
+public struct MovieDetailsDto: Codable {
+    
+    public let adult: Bool?
+    public let backdropPath: String?
+    public let belongsToCollection: MovieCollectionDto?
+    public let budget: Int?
+    public let genres: [GenreDto]?
+    public let homepage: String?
+    public let id: Int?
+    public let imdbID: String?
+    public let originalLanguage: String?
+    public let originalTitle: String?
+    public let overview: String?
+    public let popularity: Double?
+    public let posterPath: String?
+    public let productionCompanies: [ProductionCompanyDto]?
+    public let productionCountries: [ProductionCountryDto]?
+    public let releaseDate: String?
+    public let revenue: Int?
+    public let runtime: Int?
+    public let spokenLanguages: [SpokenLanguageDto]?
+    public let status: String?
+    public let tagline: String?
+    public let title: String?
+    public let video: Bool?
+    public let voteAverage: Double?
+    public let voteCount: Int?
 
-    enum CodingKeys: String, CodingKey {
+    public init(
+        adult: Bool? = nil,
+        backdropPath: String? = nil,
+        belongsToCollection: MovieCollectionDto? = nil,
+        budget: Int? = nil,
+        genres: [GenreDto]? = nil,
+        homepage: String? = nil,
+        id: Int? = nil,
+        imdbID: String? = nil,
+        originalLanguage: String? = nil,
+        originalTitle: String? = nil,
+        overview: String? = nil,
+        popularity: Double? = nil,
+        posterPath: String? = nil,
+        productionCompanies: [ProductionCompanyDto]? = nil,
+        productionCountries: [ProductionCountryDto]? = nil,
+        releaseDate: String? = nil,
+        revenue: Int? = nil,
+        runtime: Int? = nil,
+        spokenLanguages: [SpokenLanguageDto]? = nil,
+        status: String? = nil,
+        tagline: String? = nil,
+        title: String? = nil,
+        video: Bool? = nil,
+        voteAverage: Double? = nil,
+        voteCount: Int? = nil
+    ) {
+        self.adult = adult
+        self.backdropPath = backdropPath
+        self.belongsToCollection = belongsToCollection
+        self.budget = budget
+        self.genres = genres
+        self.homepage = homepage
+        self.id = id
+        self.imdbID = imdbID
+        self.originalLanguage = originalLanguage
+        self.originalTitle = originalTitle
+        self.overview = overview
+        self.popularity = popularity
+        self.posterPath = posterPath
+        self.productionCompanies = productionCompanies
+        self.productionCountries = productionCountries
+        self.releaseDate = releaseDate
+        self.revenue = revenue
+        self.runtime = runtime
+        self.spokenLanguages = spokenLanguages
+        self.status = status
+        self.tagline = tagline
+        self.title = title
+        self.video = video
+        self.voteAverage = voteAverage
+        self.voteCount = voteCount
+    }
+    
+    private enum CodingKeys: String, CodingKey {
         case adult
         case backdropPath = "backdrop_path"
         case belongsToCollection = "belongs_to_collection"

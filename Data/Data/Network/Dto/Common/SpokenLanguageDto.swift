@@ -7,11 +7,18 @@
 
 import Foundation
 
-struct SpokenLanguageDto: Codable {
-    let englishName: String
-    let isoCode: String
-    let name: String
+public struct SpokenLanguageDto: Codable {
+    
+    public let englishName: String
+    public let isoCode: String
+    public let name: String
 
+    public init(englishName: String, isoCode: String, name: String) {
+        self.englishName = englishName
+        self.isoCode = isoCode
+        self.name = name
+    }
+    
     enum CodingKeys: String, CodingKey {
         case englishName = "english_name"
         case isoCode = "iso_639_1"

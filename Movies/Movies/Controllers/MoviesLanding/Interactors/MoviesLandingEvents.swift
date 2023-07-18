@@ -12,4 +12,5 @@ import Foundation
 enum MoviesLandingEvents {
     // Set enum cases here
     case fetchData
+    case goToMovieDetails(index: IndexPath)
 }

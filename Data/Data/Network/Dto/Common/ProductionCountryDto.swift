@@ -7,11 +7,16 @@
 
 import Foundation
 
-struct ProductionCountryDto: Codable {
-    let isoCode: String
-    let name: String
+public struct ProductionCountryDto: Codable {
+    public let isoCode: String
+    public let name: String
 
-    enum CodingKeys: String, CodingKey {
+    public init(isoCode: String, name: String) {
+        self.isoCode = isoCode
+        self.name = name
+    }
+    
+    private enum CodingKeys: String, CodingKey {
         case isoCode = "iso_3166_1"
         case name
     }

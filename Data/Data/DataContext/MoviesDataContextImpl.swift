@@ -10,7 +10,7 @@ import Domain
 import Alamofire
 
 public class MoviesDataContextImpl: MoviesDataContext {
-    
+
     private let sessionManager: Session = InjectedValues[\.networkProvider].sessionManager
 
     public init() {}
@@ -76,6 +76,20 @@ public class MoviesDataContextImpl: MoviesDataContext {
                 }
             )
     }
+    
+    public func getMovieDetails(movieId: Int) async -> Result<ShowDetails?, BaseException> {
+        return await sessionManager
+            .request( TMDBPathRouter.getMovieDetails(movieId: movieId))
+            .validateRawResponseWrapper(
+                fromType: MovieDetailsDto.self,
+                mapperType: ShowDetails.self,
+                mapper: { response in
+                    return MovieDetailsMapper().modelToDomain(model: response)
+                }
+            )
+    }
+    
+    
     
     // MARK: - Series Endpoint
     public func getAiringTodaySeries(page: Int) async -> Result<PagedListResult<Show>?, BaseException> {

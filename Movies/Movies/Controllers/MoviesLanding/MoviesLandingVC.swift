@@ -106,7 +106,7 @@ class MoviesLandingVC: BaseVC {
             forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader,
             withReuseIdentifier: CellIdentifiers.sectionHeader
         )
-
+        
         // 4. set up compositional layout.
         setUpCompositionalLayout()
     }
@@ -121,7 +121,7 @@ extension MoviesLandingVC {
         // **Note** we use absolut dimentions based on section index
         let width = forIndex == 0 ? ConstraintConstants.largeCellsWidth : ConstraintConstants.normalCellsWidth
         let height = forIndex == 0 ? ConstraintConstants.largeCellsHeght : ConstraintConstants.normalCellsHeight
-
+        
         let itemSize = NSCollectionLayoutSize(
             widthDimension: .absolute(width),
             heightDimension: .absolute(height)
@@ -148,7 +148,7 @@ extension MoviesLandingVC {
         
         let width = forIndex == 0 ? ConstraintConstants.largeCellsWidth : ConstraintConstants.normalCellsWidth
         let height = forIndex == 0 ? ConstraintConstants.largeCellsHeght : ConstraintConstants.normalCellsHeight
-
+        
         let groupSize = NSCollectionLayoutSize(
             widthDimension: .absolute(width),
             heightDimension: .absolute(height)
@@ -210,7 +210,7 @@ extension MoviesLandingVC {
         // set up collection view layout
         collectionView.collectionViewLayout = layout
     }
-
+    
 }
 
 // MARK: - UICollectionViewDataSource
@@ -254,9 +254,9 @@ extension MoviesLandingVC: UICollectionViewDataSource, UICollectionViewDelegate 
             for: indexPath
         ) as? MovieCollectionViewSectionHeader
         else {
-                return MovieCollectionViewSectionHeader()
-            }
-            
+            return MovieCollectionViewSectionHeader()
+        }
+        
         let title = viewModel.state.moviesDisplayable[indexPath.section].model
         if indexPath.section == 0 {
             headerView.setUpView(
@@ -267,7 +267,11 @@ extension MoviesLandingVC: UICollectionViewDataSource, UICollectionViewDelegate 
             headerView.setUpView(title: title)
         }
         return headerView
-        }
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        viewModel.onTriggeredEvent(event: .goToMovieDetails(index: indexPath))
+    }
     
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
         header.handleAnimation(newOffset: scrollView.contentOffset.y)

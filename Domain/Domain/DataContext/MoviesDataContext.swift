@@ -17,6 +17,7 @@ public protocol MoviesDataContext {
     func getPopularMovies(page: Int) async -> Result<PagedListResult<Show>?, BaseException>
     func getTopRatedMovies(page: Int) async -> Result<PagedListResult<Show>?, BaseException>
     func getUpcomingMovies(page: Int) async -> Result<PagedListResult<Show>?, BaseException>
+    func getMovieDetails(movieId: Int) async -> Result<ShowDetails?, BaseException>
     
     /// # Series Endpoints
     func getAiringTodaySeries(page: Int) async -> Result<PagedListResult<Show>?, BaseException>
@@ -27,6 +28,7 @@ public protocol MoviesDataContext {
 
 
 public class DefaultMoviesDataContext: MoviesDataContext {
+    
     
     public init() {}
     
@@ -47,6 +49,10 @@ public class DefaultMoviesDataContext: MoviesDataContext {
     }
     
     public func getUpcomingMovies(page: Int) async -> Result<PagedListResult<Show>?, BaseException> {
+        fatalError("Not Yet Implemented")
+    }
+    
+    public func getMovieDetails(movieId: Int) async -> Result<ShowDetails?, BaseException>  {
         fatalError("Not Yet Implemented")
     }
     

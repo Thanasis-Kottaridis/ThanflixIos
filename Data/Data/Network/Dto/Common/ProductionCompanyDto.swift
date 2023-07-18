@@ -7,13 +7,21 @@
 
 import Foundation
 
-struct ProductionCompanyDto: Codable {
-    let id: Int
-    let logoPath: String?
-    let name: String?
-    let originCountry: String?
+public struct ProductionCompanyDto: Codable {
+    
+    public let id: Int?
+    public let logoPath: String?
+    public let name: String?
+    public let originCountry: String?
 
-    enum CodingKeys: String, CodingKey {
+    public init(id: Int? = nil, logoPath: String? = nil, name: String? = nil, originCountry: String? = nil) {
+        self.id = id
+        self.logoPath = logoPath
+        self.name = name
+        self.originCountry = originCountry
+    }
+    
+    private enum CodingKeys: String, CodingKey {
         case id
         case logoPath = "logo_path"
         case name
