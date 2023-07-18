@@ -9,7 +9,7 @@ import Foundation
 import Data
 
 final class AppConfig: DataAppConfig {
-    
+        
     lazy var hasAlreadyRun: Bool = false
     
     lazy var appBundleID: String = {
@@ -32,6 +32,10 @@ final class AppConfig: DataAppConfig {
     
     lazy var appApiBaseUrl: String = {
         return path("Environment", "App Api Base URL")
+    }()
+    
+    lazy var mediaApiBaseUrl: String = {
+        return path("Environment", "Media Api Base URL")
     }()
     
     lazy var apiKey: String = {

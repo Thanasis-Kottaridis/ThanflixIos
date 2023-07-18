@@ -62,16 +62,17 @@ end
 #
 # ====================================
 def presentation_pods
-  # Rx pods
-  #  pod 'RxSwift', '6.5.0'
-  #  pod 'RxCocoa', '6.5.0'
-  #  pod 'RxDataSources', '~> 5.0'
+  # Alamofire Image
+  pod 'AlamofireImage', '~> 4.1'
     
   # TextStyling
   pod 'BonMot'
   
   # Lottie
   pod 'lottie-ios', '3.3.0'
+  
+  # Skeletons
+  pod 'SkeletonView'
 end
 
 target 'Presentation' do

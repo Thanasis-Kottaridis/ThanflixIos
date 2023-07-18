@@ -17,6 +17,9 @@
                 <rect key="frame" x="0.0" y="0.0" width="150" height="150"/>
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="0oy-OW-Itc">
+                        <rect key="frame" x="0.0" y="0.0" width="150" height="150"/>
+                    </imageView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zFu-wH-tUM">
                         <rect key="frame" x="8" y="8" width="134" height="134"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -29,12 +32,17 @@
             <constraints>
                 <constraint firstItem="zFu-wH-tUM" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="8" id="0SH-Lo-8E2"/>
                 <constraint firstItem="zFu-wH-tUM" firstAttribute="centerX" secondItem="gTV-IL-0wX" secondAttribute="centerX" id="FtQ-1l-Zpz"/>
+                <constraint firstAttribute="bottom" secondItem="0oy-OW-Itc" secondAttribute="bottom" id="RWA-jq-4SL"/>
                 <constraint firstItem="zFu-wH-tUM" firstAttribute="centerY" secondItem="gTV-IL-0wX" secondAttribute="centerY" id="RvJ-L3-S9K"/>
                 <constraint firstAttribute="trailing" secondItem="zFu-wH-tUM" secondAttribute="trailing" constant="8" id="Tpo-wU-QXs"/>
+                <constraint firstAttribute="trailing" secondItem="0oy-OW-Itc" secondAttribute="trailing" id="atO-ik-k1r"/>
+                <constraint firstItem="0oy-OW-Itc" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="e3G-FG-pAx"/>
                 <constraint firstItem="zFu-wH-tUM" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="8" id="f3W-sT-afN"/>
+                <constraint firstItem="0oy-OW-Itc" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="gtC-33-ZNX"/>
                 <constraint firstAttribute="bottom" secondItem="zFu-wH-tUM" secondAttribute="bottom" constant="8" id="tB8-pB-dco"/>
             </constraints>
             <connections>
+                <outlet property="backgroundImage" destination="0oy-OW-Itc" id="KQj-70-oqp"/>
                 <outlet property="titleLbl" destination="zFu-wH-tUM" id="aRf-IW-MS3"/>
             </connections>
             <point key="canvasLocation" x="14" y="21"/>

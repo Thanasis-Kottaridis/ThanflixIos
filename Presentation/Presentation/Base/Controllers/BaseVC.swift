@@ -60,6 +60,9 @@ open class BaseVC: UIViewController {
     
     open override func viewDidLoad() {
         super.viewDidLoad()
+        
+        // set up background color
+        view.backgroundColor = ColorPalette.BackgroundDefaultPrimary.value
 
         // call template functions in proper order
         setupView()

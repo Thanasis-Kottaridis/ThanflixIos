@@ -7,7 +7,7 @@
 
 import Foundation
 
-public struct Movie: Codable, Equatable {
+public struct MovieDto: Codable, Equatable {
     
     public let adult: Bool?
     public let backdropPath: String?
@@ -24,21 +24,21 @@ public struct Movie: Codable, Equatable {
     public let voteAverage: Double?
     public let voteCount: Int?
     
-    public init(
-        adult: Bool,
+    init(
+        adult: Bool? = nil,
         backdropPath: String? = nil,
-        genreID: [Int],
-        id: Int,
-        originalLanguage: String,
-        originalTitle: String,
-        overview: String,
-        popularity: Double,
+        genreID: [Int]? = nil,
+        id: Int? = nil,
+        originalLanguage: String? = nil,
+        originalTitle: String? = nil,
+        overview: String? = nil,
+        popularity: Double? = nil,
         posterPath: String? = nil,
-        releaseDate: String,
-        title: String,
-        video: Bool,
-        voteAverage: Double,
-        voteCount: Int
+        releaseDate: String? = nil,
+        title: String? = nil,
+        video: Bool? = nil,
+        voteAverage: Double? = nil,
+        voteCount: Int? = nil
     ) {
         self.adult = adult
         self.backdropPath = backdropPath

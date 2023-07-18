@@ -30,6 +30,12 @@
                         <size key="footerReferenceSize" width="0.0" height="0.0"/>
                         <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                     </collectionViewFlowLayout>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="skeletonCornerRadius">
+                            <real key="value" value="0.0"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="boolean" keyPath="isSkeletonable" value="NO"/>
+                    </userDefinedRuntimeAttributes>
                 </collectionView>
                 <view contentMode="scaleToFill" placeholderIntrinsicWidth="393" placeholderIntrinsicHeight="88" translatesAutoresizingMaskIntoConstraints="NO" id="EJO-rQ-svw" customClass="GenericHeaderView" customModule="Presentation">
                     <rect key="frame" x="0.0" y="0.0" width="393" height="88"/>

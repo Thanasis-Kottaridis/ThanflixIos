@@ -9,6 +9,7 @@ import Foundation
 
 public protocol DataAppConfig {
     var appApiBaseUrl: String { get }
+    var mediaApiBaseUrl: String { get }
     var apiKey: String { get }
     var environmentName: String { get }
     var appAbsoluteVersion: String { get }
@@ -21,10 +22,13 @@ public protocol DataAppConfig {
 
 public class DefaultDataAppConfig: DataAppConfig {
     
-    
     public init() {}
     
     public var appApiBaseUrl: String {
+        return "not yet implemented"
+    }
+    
+    public var mediaApiBaseUrl: String {
         return "not yet implemented"
     }
     

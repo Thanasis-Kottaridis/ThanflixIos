@@ -59,6 +59,7 @@ extension AppDelegate {
         
         PresentationBoundary(
             errorDispatcher: BaseErrorDispatcherImpl(),
+            photosManager: PhotosManagerImpl(),
             moviesDataContext: MoviesDataContextImpl()
         ).initialize()
     }

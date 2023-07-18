@@ -12,6 +12,7 @@ PODS:
   - Realm/Headers (10.25.0)
   - RealmSwift (10.25.0):
     - Realm (= 10.25.0)
+  - SkeletonView (1.30.4)
 
 DEPENDENCIES:
   - Alamofire (~> 5.4)
@@ -22,6 +23,7 @@ DEPENDENCIES:
   - Mocker (~> 2.5.4)
   - Realm (= 10.25.0)
   - RealmSwift (= 10.25.0)
+  - SkeletonView
 
 SPEC REPOS:
   trunk:
@@ -33,6 +35,7 @@ SPEC REPOS:
     - Mocker
     - Realm
     - RealmSwift
+    - SkeletonView
 
 SPEC CHECKSUMS:
   Alamofire: f3b09a368f1582ab751b3fff5460276e0d2cf5c9
@@ -43,7 +46,8 @@ SPEC CHECKSUMS:
   Mocker: 8c731a8104962f246cadf2b02556218e9edc1390
   Realm: 22a82aaa0e73f3483e3a6df32549c4c5cd34aa63
   RealmSwift: c2a635212400923edd3f828b8a37d55d3eb31863
+  SkeletonView: 5a050f6411e697abd4cda0a8d767013399dccd69
 
-PODFILE CHECKSUM: 99fbead243f8ace305de31e7a446541d115f340a
+PODFILE CHECKSUM: 84f088e9de9f239737e888943775d387fbebbdeb
 
 COCOAPODS: 1.12.1

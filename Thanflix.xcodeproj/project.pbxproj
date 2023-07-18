@@ -962,6 +962,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
+				MEDIA_BASE_URL = "https://image.tmdb.org/t/p/";
 				PRODUCT_BUNDLE_IDENTIFIER = gr.thanflix;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
@@ -997,6 +998,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
+				MEDIA_BASE_URL = "https://image.tmdb.org/t/p/";
 				PRODUCT_BUNDLE_IDENTIFIER = gr.thanflix;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";

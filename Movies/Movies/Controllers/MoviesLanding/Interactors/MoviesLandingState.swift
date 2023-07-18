@@ -16,17 +16,17 @@ class MoviesLandingState: BaseState {
     // Set variables here
     let isLoading: Bool
     let isOnline: Bool
-    let nowPlayingMovies: [Movie]
-    let popularMovies: [Movie]
-    let topRatedMovies: [Movie]
-    let upcomingMovies: [Movie]
+    let nowPlayingMovies: [Show]
+    let popularMovies: [Show]
+    let topRatedMovies: [Show]
+    let upcomingMovies: [Show]
     
-    var moviesDisplayable: [SectionModel<String, Movie>] {
+    var moviesDisplayable: [SectionModel<String, Show>] {
         
-        var sections: [SectionModel<String, Movie>] = []
+        var sections: [SectionModel<String, Show>] = []
         
         if !nowPlayingMovies.isEmpty {
-            let section = SectionModel(model: "Now Playing", items: popularMovies)
+            let section = SectionModel(model: "Now Playing", items: nowPlayingMovies)
             sections.append(section)
         }
         
@@ -51,10 +51,10 @@ class MoviesLandingState: BaseState {
     init(
          isLoading: Bool = false,
          isOnline: Bool = true,
-         nowPlayingMovies: [Movie] = [],
-         popularMovies: [Movie] = [],
-         topRatedMovies: [Movie] = [],
-         upcomingMovies: [Movie] = []
+         nowPlayingMovies: [Show] = [],
+         popularMovies: [Show] = [],
+         topRatedMovies: [Show] = [],
+         upcomingMovies: [Show] = []
      ) {
          self.isLoading = isLoading
          self.isOnline = isOnline
@@ -67,10 +67,10 @@ class MoviesLandingState: BaseState {
     func copy(
         isLoading: Bool? = nil,
         isOnline: Bool? = nil,
-        nowPlayingMovies: [Movie]? = nil,
-        popularMovies: [Movie]? = nil,
-        topRatedMovies: [Movie]? = nil,
-        upcomingMovies: [Movie]? = nil
+        nowPlayingMovies: [Show]? = nil,
+        popularMovies: [Show]? = nil,
+        topRatedMovies: [Show]? = nil,
+        upcomingMovies: [Show]? = nil
     ) -> MoviesLandingState {
         return MoviesLandingState(
             isLoading: isLoading ?? self.isLoading,

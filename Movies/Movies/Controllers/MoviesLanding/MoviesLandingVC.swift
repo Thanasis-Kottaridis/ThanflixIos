@@ -19,8 +19,10 @@ class MoviesLandingVC: BaseVC {
     private enum ConstraintConstants {
         static let largeCellsWidth = 256.adapted()
         static let largeCellsHeght = 384.adapted()
+        static let largelCornerRadius = 24.adapted()
         static let normalCellsWidth = 150.adapted()
         static let normalCellsHeight = 225.adapted()
+        static let normalCornerRadius = 16.adapted()
     }
     
     // MARK: - Outlets
@@ -233,7 +235,10 @@ extension MoviesLandingVC: UICollectionViewDataSource, UICollectionViewDelegate 
         
         let sections = viewModel.state.moviesDisplayable
         let movie = sections[indexPath.section].items[indexPath.item]
-        cell.setUpCell(movie: movie, indexPath: indexPath)
+        cell.setUpCell(
+            show: movie,
+            indexPath: indexPath
+        )
         
         return cell
     }
