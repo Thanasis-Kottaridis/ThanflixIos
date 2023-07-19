@@ -53,21 +53,8 @@ class MoviesLandingVC: BaseVC {
     
     override func setupView() {
         super.setupView()
-        
+        setUpHeader()
         setCollectionView()
-        
-        // Set up header
-        let headerConfigs = GenericHeaderConfigurations.Builder()
-            .addTitle(title: "Movies")
-            .addLeftIcon(iconName: "kebab-menu")
-            .addRightIcon(iconName: "magnifyingglass")
-            .build()
-        
-        header.setupView(
-            configurations: headerConfigs,
-            parentScrollView: collectionView
-        )
-        
     }
     
     override func setUpObservers() {
@@ -79,6 +66,25 @@ class MoviesLandingVC: BaseVC {
                 self?.collectionView.reloadData()
             }
             .store(in: &anyCancelable)
+    }
+    
+    private func setUpHeader() {
+        let headerConfigs = GenericHeaderConfigurations.Builder()
+            .addTitle(title: "Movies")
+            .addLeftIcon(iconName: "kebab-menu")
+            .addLeftIconAction(action: {
+                // TODO: - ADD ACTION
+            })
+            .addRightIcon(iconName: "magnifyingglass")
+            .addRightIconAction(action: {
+                // TODO: - ADD ACTION
+            })
+            .build()
+        
+        header.setupView(
+            configurations: headerConfigs,
+            parentScrollView: collectionView
+        )
     }
     
     private func setCollectionView() {

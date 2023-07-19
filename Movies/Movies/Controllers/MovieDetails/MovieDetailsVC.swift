@@ -11,9 +11,12 @@ import Combine
 
 class MovieDetailsVC: BaseVC {
 
+    // MARK: - Outlets
+    @IBOutlet weak var header: GenericHeaderView!
+    @IBOutlet weak var scrollView: UIScrollView!
+    
     // MARK: - Vars
     private(set) var viewModel: MovieDetailsViewModel
-
     private var anyCancelable = Set<AnyCancellable>()
     
     init(viewModel: MovieDetailsViewModel) {
@@ -35,8 +38,24 @@ class MovieDetailsVC: BaseVC {
     
     override func setupView() {
         super.setupView()
+        setUpHeader()
     }
     
     override func setUpObservers() {
+        super.setUpObservers()
+    }
+    
+    private func setUpHeader() {
+        // Set up header
+        let headerConfigs = GenericHeaderConfigurations.Builder()
+            .addBackBtn(action: { [weak self] in
+                self?.viewModel.onTriggeredEvent(event: .goBack)
+            })
+            .build()
+        
+        header.setupView(
+            configurations: headerConfigs,
+            parentScrollView: scrollView
+        )
     }
 }

@@ -11,5 +11,6 @@ import Foundation
 
 enum MovieDetailsViewModelEvents {
     // Set enum cases here
+    case goBack
     case fetchData
 }

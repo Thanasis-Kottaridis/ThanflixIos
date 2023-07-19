@@ -43,6 +43,8 @@ class MovieDetailsViewModel: BaseViewModel {
     
     func onTriggeredEvent(event: Event) {
         switch event {
+        case .goBack:
+            actionHandler?.handleAction(action: PopAction())
         case .fetchData:
             fetchMovieDetails()
         }

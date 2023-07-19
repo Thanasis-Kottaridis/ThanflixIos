@@ -18,23 +18,29 @@ public struct GenericHeaderConfigurations {
     let titleColor: ColorPalette?
     let leftIconName: String?
     let leftIconTint: ColorPalette?
+    let leftIconAction: (() -> Void)?
     let rightIconName: String?
     let rightIconTint: ColorPalette?
+    let rightIconAction: (() -> Void)?
     
     public init(
         title: String?,
         titleColor: ColorPalette?,
         leftIconName: String?,
         leftIconTint: ColorPalette?,
+        leftIconAction: (() -> Void)?,
         rightIconName: String?,
-        rightIconTint: ColorPalette?
+        rightIconTint: ColorPalette?,
+        rightIconAction: (() -> Void)?
     ) {
         self.title = title
         self.titleColor = titleColor
         self.leftIconName = leftIconName
         self.leftIconTint = leftIconTint
+        self.leftIconAction = leftIconAction
         self.rightIconName = rightIconName
         self.rightIconTint = rightIconTint
+        self.rightIconAction = rightIconAction
     }
     
     public class Builder {
@@ -42,9 +48,11 @@ public struct GenericHeaderConfigurations {
         private var titleColor: ColorPalette? = .TintPrimary
         private var leftIconName: String?
         private var leftIconTint: ColorPalette? = .TintSecondary
+        private var leftIconAction: (() -> Void)?
         private var rightIconName: String?
         private var rightIconTint: ColorPalette? = .TintSecondary
-        
+        private var rightIconAction: (() -> Void)?
+
         public init() {}
         
         @discardableResult
@@ -72,8 +80,15 @@ public struct GenericHeaderConfigurations {
         }
         
         @discardableResult
-        public func addBackBtn() -> Self {
+        public func addLeftIconAction(action: @escaping () -> Void) -> Self {
+            self.leftIconAction = action
+            return self
+        }
+        
+        @discardableResult
+        public func addBackBtn(action: @escaping () -> Void) -> Self {
             self.leftIconName = "chevron-left"
+            self.leftIconAction = action
             return self
         }
         
@@ -89,14 +104,22 @@ public struct GenericHeaderConfigurations {
             return self
         }
         
+        @discardableResult
+        public func addRightIconAction(action: @escaping () -> Void) -> Self {
+            self.rightIconAction = action
+            return self
+        }
+        
         public func build() -> GenericHeaderConfigurations {
             GenericHeaderConfigurations(
                 title: title,
                 titleColor: titleColor,
                 leftIconName: leftIconName,
                 leftIconTint: leftIconTint,
+                leftIconAction: leftIconAction,
                 rightIconName: rightIconName,
-                rightIconTint: rightIconTint
+                rightIconTint: rightIconTint,
+                rightIconAction: rightIconAction
             )
         }
     }
@@ -194,10 +217,13 @@ extension GenericHeaderView {
         
         // 1. set up right icon
         if let iconName = configurations?.rightIconName,
-           let iconTint = configurations?.rightIconTint {
+           let iconTint = configurations?.rightIconTint,
+           let action = configurations?.rightIconAction
+        {
             rightIcon.isHidden = false
             rightIcon.image = UIImage(named: iconName)
             rightIcon.tintColor = iconTint.value
+            rightIcon.addTapGestureRecognizer(action: action)
             
         } else {
             rightIcon.isHidden = true
@@ -205,10 +231,12 @@ extension GenericHeaderView {
         
         // 2. set up left icon
         if let iconName = configurations?.leftIconName,
-           let iconTint = configurations?.leftIconTint {
+           let iconTint = configurations?.leftIconTint,
+           let action = configurations?.leftIconAction{
             leftIcon.isHidden = false
             leftIcon.image = UIImage(named: iconName)
             leftIcon.tintColor = iconTint.value
+            leftIcon.addTapGestureRecognizer(action: action)
             
         } else {
             leftIcon.isHidden = true

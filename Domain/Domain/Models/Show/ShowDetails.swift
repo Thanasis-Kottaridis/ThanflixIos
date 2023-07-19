@@ -60,10 +60,10 @@ public struct ShowDetails: Codable {
 }
 
 public struct Overview: Codable {
-    public let key: String?
+    public let key: String
     public let value: String?
     
-    public init(key: String? = nil, value: String? = nil) {
+    public init(key: String, value: String? = nil) {
         self.key = key
         self.value = value
     }
