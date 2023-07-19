@@ -11,3 +11,19 @@
 "LOGIN_SESSION_INVALIDATED" = "Oops! Your login session timed out...\nTry to login again.";
 "NETWORK_ERROR" = "Internet connection lost.\nThe application has no internet access.";
 "NETWORK_RESTORED" = "Connection has been restored.";
+
+// MARK: SHOW DETAILS INFO
+"RELEASE_DATE_INFO" = "RELEASED";
+"WATCHED_BUTTON_TITLE" = "Watched";
+"VOTE_AVERAGE_TITLE" = "Vote\nAverage";
+"VOTE_COUNT_TITLE" = "Vote\nCount";
+"VOTE_POPULARITY_TITLE" = "Popularity";
+
+// MARK: SHOW DETAILS OVERVIEW
+"OVERVIEW_RUNTIME" = "RUNTIME";
+"OVERVIEW_COUNTRIES" = "COUNTRIES";
+"OVERVIEW_LANGUAGE" = "LANGUAGE";
+"OVERVIEW_GENERS" = "GENERS";
+"OVERVIEW_BUDGET" = "BUDGET";
+"OVERVIEW_REVENUE" = "REVENUE";
+"OVERVIEW_SYNOPSIS" = "SYNOPSIS";

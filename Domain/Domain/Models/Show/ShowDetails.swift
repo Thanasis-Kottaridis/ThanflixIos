@@ -8,7 +8,7 @@
 import Foundation
 
 
-public struct ShowDetails: Codable {
+public struct ShowDetails: Codable, Equatable {
     
     public let id: Int?
     public let posterPath: String?
@@ -59,7 +59,7 @@ public struct ShowDetails: Codable {
     }
 }
 
-public struct Overview: Codable {
+public struct Overview: Codable, Equatable {
     public let key: String
     public let value: String?
     
@@ -69,7 +69,7 @@ public struct Overview: Codable {
     }
 }
 
-public struct ProductionCompany: Codable {
+public struct ProductionCompany: Codable, Equatable {
     
     public let id: Int?
     public let logoPath: String?

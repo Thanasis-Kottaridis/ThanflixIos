@@ -14,6 +14,7 @@ class MovieDetailsVC: BaseVC {
     // MARK: - Outlets
     @IBOutlet weak var header: GenericHeaderView!
     @IBOutlet weak var scrollView: UIScrollView!
+    @IBOutlet weak var movieInfoView: MovieInfoView!
     
     // MARK: - Vars
     private(set) var viewModel: MovieDetailsViewModel
@@ -43,6 +44,14 @@ class MovieDetailsVC: BaseVC {
     
     override func setUpObservers() {
         super.setUpObservers()
+        viewModel.statePublisher
+            .receive(on: DispatchQueue.main) // observe on main thread
+            .map { $0.details }
+            .removeDuplicates()
+            .sink { [weak self] showDetails in
+                self?.movieInfoView.setupView(showDetails: showDetails)
+            }
+            .store(in: &anyCancelable)
     }
     
     private func setUpHeader() {
