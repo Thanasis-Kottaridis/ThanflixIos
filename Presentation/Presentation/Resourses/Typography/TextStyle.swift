@@ -204,15 +204,109 @@ public extension TextStyle.Style {
 
 }
 
+public struct StringAttribute {
+    var boldText: [String]?
+    var underlineText: [String]?
+    var strikeThroughtText: [String]?
+    var boldStyle: TextStyle.Style?
+    var underlineStyle: TextStyle.Style?
+    var strikeThroughtStyle: TextStyle.Style?
+    var specificColor: ColorPalette?
+    var aStyle: AttributeStyle?
+    
+    public init(boldText: [String]? = nil,
+                underlineText: [String]? = nil,
+                strikeThroughtText: [String]? = nil,
+                boldStyle: TextStyle.Style? = nil,
+                underlineStyle: TextStyle.Style? = nil,
+                strikeThroughtStyle: TextStyle.Style? = nil,
+                specificColor: ColorPalette? = nil,
+                aStyle: AttributeStyle? = nil
+    ) {
+        self.boldText = boldText
+        self.underlineText = underlineText
+        self.strikeThroughtText = strikeThroughtText
+        self.boldStyle = boldStyle
+        self.underlineStyle = underlineStyle
+        self.strikeThroughtStyle = strikeThroughtStyle
+        self.specificColor = specificColor
+        self.aStyle = aStyle
+    }
+}
+
+public enum AttributeStyle {
+    case bold
+    case underline
+    case strikeThrough
+}
+
+
 // MARK: - EXTENSIONS
 public extension String {
     /**
-    # Attributed Text Style util.
+     # Attributed Text Style util.
      Use .with method in order to get preferable  `TextStyle.Style` attributed text
      */
     func with(_ style: TextStyle.Style) -> NSAttributedString {
         return self.styled(with: style.stringStyle())
     }
+
+    func with(style: TextStyle.Style, attributes: [StringAttribute]? = nil) -> NSAttributedString {
+        let subtitleAttributedString = self.styled(with: style.stringStyle())
+        let ss: NSMutableAttributedString = NSMutableAttributedString(attributedString: subtitleAttributedString)
+        
+        if attributes?.isEmpty == false {
+            attributes?.forEach { attribute in
+                switch attribute.aStyle {
+                case .bold:
+                    attribute.boldText?.forEach { s in
+                        let boldStringRange = (subtitleAttributedString.string.lowercased() as NSString).range(of: s.lowercased())
+                        if let boldStyle = attribute.boldStyle {
+                            ss.addAttributes(boldStyle.stringStyle().attributes, range: boldStringRange)
+                        }
+                        
+                        if let specificColor = attribute.specificColor {
+                            ss.addAttribute(NSAttributedString.Key.foregroundColor, value: specificColor.value, range: boldStringRange)
+                        }
+                    }
+                case .underline:
+                    attribute.underlineText?.forEach { s in
+                        let underineStringRange = (subtitleAttributedString.string.lowercased() as NSString).range(of: s.lowercased())
+                        ss.addAttribute(NSAttributedString.Key.underlineStyle, value: 1, range: underineStringRange)
+                        if let underlineStyle = attribute.underlineStyle {
+                            ss.addAttributes(underlineStyle.stringStyle().attributes, range: underineStringRange)
+                        }
+                        
+                        if let specificColor = attribute.specificColor {
+                            ss.addAttribute(NSAttributedString.Key.foregroundColor, value: specificColor.value, range: underineStringRange)
+                        }
+                    }
+                case .strikeThrough:
+                    attribute.strikeThroughtText?.forEach { s in
+                        let strikethroughtStringRange = (subtitleAttributedString.string.lowercased() as NSString).range(of: s.lowercased())
+                        if let strikeThroughtStyle = attribute.strikeThroughtStyle {
+                            ss.addAttributes(strikeThroughtStyle.stringStyle().attributes, range: strikethroughtStringRange)
+                        }
+                        ss.addAttribute(NSAttributedString.Key.baselineOffset, value: 0, range: strikethroughtStringRange)
+                        ss.addAttribute(
+                            NSAttributedString.Key.strikethroughColor,
+                            value: attribute.specificColor?.value ?? style.stringStyle().color?.cgColor ?? ColorPalette.TintPrimary.value,
+                            range: strikethroughtStringRange)
+                        ss.addAttribute(NSAttributedString.Key.strikethroughStyle, value: 1, range: strikethroughtStringRange)
+                        
+                        if let specificColor = attribute.specificColor {
+                            ss.addAttribute(NSAttributedString.Key.foregroundColor, value: specificColor.value, range: strikethroughtStringRange)
+                        }
+                    }
+                case .none:
+                    break
+                }
+            }
+        }
+        return ss
+    }
+
+    
 }
 
 public extension Int {

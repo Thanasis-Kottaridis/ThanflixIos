@@ -15,7 +15,8 @@ class MovieDetailsVC: BaseVC {
     @IBOutlet weak var header: GenericHeaderView!
     @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet weak var movieInfoView: MovieInfoView!
-    
+    @IBOutlet weak var movieOverviewView: MovieOverviewView!
+
     // MARK: - Vars
     private(set) var viewModel: MovieDetailsViewModel
     private var anyCancelable = Set<AnyCancellable>()
@@ -50,6 +51,7 @@ class MovieDetailsVC: BaseVC {
             .removeDuplicates()
             .sink { [weak self] showDetails in
                 self?.movieInfoView.setupView(showDetails: showDetails)
+                self?.movieOverviewView.setupView(showDetails: showDetails)
             }
             .store(in: &anyCancelable)
     }

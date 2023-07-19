@@ -13,6 +13,7 @@
             <connections>
                 <outlet property="header" destination="CLa-LC-HYd" id="RyM-0g-3Wf"/>
                 <outlet property="movieInfoView" destination="r2f-ae-DRu" id="bbo-e3-EVb"/>
+                <outlet property="movieOverviewView" destination="gxj-y2-iPO" id="Zl0-rW-Ppq"/>
                 <outlet property="scrollView" destination="1Gi-1q-SMQ" id="zuA-WX-J1Y"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
@@ -26,10 +27,14 @@
                     <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                     <subviews>
                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="vi4-sm-zbI" userLabel="Content Stack View">
-                            <rect key="frame" x="0.0" y="0.0" width="393" height="550"/>
+                            <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                             <subviews>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="r2f-ae-DRu" userLabel="Movie Info View" customClass="MovieInfoView" customModule="Movies" customModuleProvider="target">
                                     <rect key="frame" x="0.0" y="0.0" width="393" height="550"/>
+                                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                </view>
+                                <view contentMode="scaleToFill" placeholderIntrinsicWidth="393" placeholderIntrinsicHeight="128" translatesAutoresizingMaskIntoConstraints="NO" id="gxj-y2-iPO" userLabel="MovieOverview" customClass="MovieOverviewView" customModule="Movies" customModuleProvider="target">
+                                    <rect key="frame" x="0.0" y="550" width="393" height="302"/>
                                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 </view>
                             </subviews>

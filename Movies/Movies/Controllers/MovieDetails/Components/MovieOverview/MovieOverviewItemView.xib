@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MovieOverviewItemView" customModule="Movies" customModuleProvider="target">
+            <connections>
+                <outlet property="descriptionLbl" destination="pHA-Yz-lnq" id="SKU-XC-fbL"/>
+                <outlet property="readMoreLbl" destination="i6s-it-87o" id="Krk-Mp-Kcs"/>
+                <outlet property="separatorView" destination="yW7-Ex-YMc" id="73g-b5-qtt"/>
+                <outlet property="titleLbl" destination="gNF-2w-0L7" id="jZF-xN-mRY"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="393" height="113"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="0DG-w9-o24">
+                    <rect key="frame" x="15" y="10" width="363" height="92.666666666666671"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gNF-2w-0L7">
+                            <rect key="frame" x="0.0" y="0.0" width="363" height="20.333333333333332"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pHA-Yz-lnq">
+                            <rect key="frame" x="0.0" y="20.333333333333336" width="363" height="20.333333333333336"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="i6s-it-87o" userLabel="read more lbl">
+                            <rect key="frame" x="0.0" y="40.666666666666657" width="363" height="52"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                </stackView>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yW7-Ex-YMc" userLabel="Separetor">
+                    <rect key="frame" x="15" y="112.66666666666667" width="363" height="0.3333333333333286"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="0.5" id="QDI-6I-sjK" customClass="AdaptedConstraint" customModule="Presentation"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="yW7-Ex-YMc" secondAttribute="bottom" id="Bhj-Jy-nBa"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="0DG-w9-o24" secondAttribute="trailing" constant="15" id="KRW-qc-s0z" customClass="AdaptedConstraint" customModule="Presentation"/>
+                <constraint firstAttribute="trailing" secondItem="yW7-Ex-YMc" secondAttribute="trailing" constant="15" id="NWH-bx-qky" customClass="AdaptedConstraint" customModule="Presentation"/>
+                <constraint firstItem="yW7-Ex-YMc" firstAttribute="top" secondItem="0DG-w9-o24" secondAttribute="bottom" constant="10" id="WuP-Vm-0Yd" customClass="AdaptedConstraint" customModule="Presentation"/>
+                <constraint firstItem="0DG-w9-o24" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="15" id="ho1-Ds-f8y" customClass="AdaptedConstraint" customModule="Presentation"/>
+                <constraint firstItem="0DG-w9-o24" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="10" id="uAg-U5-9N5" customClass="AdaptedConstraint" customModule="Presentation"/>
+                <constraint firstItem="yW7-Ex-YMc" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="15" id="yhn-BC-DlE" customClass="AdaptedConstraint" customModule="Presentation"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="55.725190839694655" y="-260.21126760563379"/>
+        </view>
+    </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

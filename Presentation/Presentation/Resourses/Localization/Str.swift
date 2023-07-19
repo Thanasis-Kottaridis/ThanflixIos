@@ -20,4 +20,6 @@ public struct Str {
     public static var voteAverageTitle: String { Languages.tr("VOTE_AVERAGE_TITLE") }
     public static var voteCountTitle: String { Languages.tr("VOTE_COUNT_TITLE") }
     public static var popularityTitle: String { Languages.tr("VOTE_POPULARITY_TITLE") }
+    public static var overviewTitle: String { Languages.tr("OVERVIEW_TITLE") }
+    public static var readMoreTitle: String { Languages.tr("READ_MORE_TITLE") }
 }
