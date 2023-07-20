@@ -23,10 +23,6 @@ class MovieOverviewView: UIView {
     // MARK: - Vars
     public let kCONTENT_XIB_NAME = "MovieOverviewView"
     private var showDetails: ShowDetails?
-
-    // MARK: - DI
-    @Injected(\.photosManager)
-    private var photosManager: PhotosManager
     
     // MARK: - Inits
     override public init(frame: CGRect) {

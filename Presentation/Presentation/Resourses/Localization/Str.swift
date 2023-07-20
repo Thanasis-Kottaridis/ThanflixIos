@@ -22,4 +22,5 @@ public struct Str {
     public static var popularityTitle: String { Languages.tr("VOTE_POPULARITY_TITLE") }
     public static var overviewTitle: String { Languages.tr("OVERVIEW_TITLE") }
     public static var readMoreTitle: String { Languages.tr("READ_MORE_TITLE") }
+    public static var productionCompaniesTitle: String { Languages.tr("PRODUCTION_COMPANIES_TITLE") }
 }

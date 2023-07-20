@@ -14,6 +14,7 @@
                 <outlet property="header" destination="CLa-LC-HYd" id="RyM-0g-3Wf"/>
                 <outlet property="movieInfoView" destination="r2f-ae-DRu" id="bbo-e3-EVb"/>
                 <outlet property="movieOverviewView" destination="gxj-y2-iPO" id="Zl0-rW-Ppq"/>
+                <outlet property="productionCompaniesView" destination="fMY-w6-yrJ" id="Ceh-9T-GLV"/>
                 <outlet property="scrollView" destination="1Gi-1q-SMQ" id="zuA-WX-J1Y"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
@@ -34,7 +35,11 @@
                                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 </view>
                                 <view contentMode="scaleToFill" placeholderIntrinsicWidth="393" placeholderIntrinsicHeight="128" translatesAutoresizingMaskIntoConstraints="NO" id="gxj-y2-iPO" userLabel="MovieOverview" customClass="MovieOverviewView" customModule="Movies" customModuleProvider="target">
-                                    <rect key="frame" x="0.0" y="550" width="393" height="302"/>
+                                    <rect key="frame" x="0.0" y="550" width="393" height="174"/>
+                                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                </view>
+                                <view contentMode="scaleToFill" placeholderIntrinsicWidth="393" placeholderIntrinsicHeight="128" translatesAutoresizingMaskIntoConstraints="NO" id="fMY-w6-yrJ" userLabel="ProductionCompanies" customClass="ProductionCompaniesView" customModule="Movies" customModuleProvider="target">
+                                    <rect key="frame" x="0.0" y="724" width="393" height="128"/>
                                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 </view>
                             </subviews>

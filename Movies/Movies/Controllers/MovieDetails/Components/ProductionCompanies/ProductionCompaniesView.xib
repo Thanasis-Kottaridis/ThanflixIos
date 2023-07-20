@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ProductionCompaniesView" customModule="Movies" customModuleProvider="target">
+            <connections>
+                <outlet property="collectionView" destination="UDe-bb-rgq" id="GYg-Kq-xFx"/>
+                <outlet property="titleLbl" destination="G6F-by-Lrx" id="LR2-ur-GfH"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="393" height="236"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="9ad-kJ-v7g">
+                    <rect key="frame" x="0.0" y="0.0" width="393" height="236"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="G6F-by-Lrx">
+                            <rect key="frame" x="20" y="0.0" width="353" height="146"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="UDe-bb-rgq">
+                            <rect key="frame" x="0.0" y="146" width="393" height="90"/>
+                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="90" id="gF7-ZW-2IM"/>
+                            </constraints>
+                            <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="TYA-Vw-wLV">
+                                <size key="itemSize" width="128" height="128"/>
+                                <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                            </collectionViewFlowLayout>
+                        </collectionView>
+                    </subviews>
+                    <constraints>
+                        <constraint firstItem="G6F-by-Lrx" firstAttribute="leading" secondItem="9ad-kJ-v7g" secondAttribute="leading" constant="20" id="HWu-qZ-PO0"/>
+                        <constraint firstAttribute="trailing" secondItem="UDe-bb-rgq" secondAttribute="trailing" id="MrZ-vc-oaW"/>
+                        <constraint firstItem="UDe-bb-rgq" firstAttribute="leading" secondItem="9ad-kJ-v7g" secondAttribute="leading" id="dlN-tp-tA3"/>
+                        <constraint firstAttribute="trailing" secondItem="G6F-by-Lrx" secondAttribute="trailing" constant="20" id="mVs-EP-99y"/>
+                    </constraints>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="adaptedSpacing">
+                            <real key="value" value="10"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                </stackView>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="9ad-kJ-v7g" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="LP9-qK-Kbg"/>
+                <constraint firstAttribute="trailing" secondItem="9ad-kJ-v7g" secondAttribute="trailing" id="UtE-6a-rWr"/>
+                <constraint firstAttribute="bottom" secondItem="9ad-kJ-v7g" secondAttribute="bottom" id="Wvy-t8-AIt"/>
+                <constraint firstItem="9ad-kJ-v7g" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="cBo-UE-DXl"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="125.95419847328243" y="-216.90140845070422"/>
+        </view>
+    </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

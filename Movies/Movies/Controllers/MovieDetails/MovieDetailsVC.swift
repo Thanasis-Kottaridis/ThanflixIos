@@ -16,6 +16,7 @@ class MovieDetailsVC: BaseVC {
     @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet weak var movieInfoView: MovieInfoView!
     @IBOutlet weak var movieOverviewView: MovieOverviewView!
+    @IBOutlet weak var productionCompaniesView: ProductionCompaniesView!
 
     // MARK: - Vars
     private(set) var viewModel: MovieDetailsViewModel
@@ -52,6 +53,7 @@ class MovieDetailsVC: BaseVC {
             .sink { [weak self] showDetails in
                 self?.movieInfoView.setupView(showDetails: showDetails)
                 self?.movieOverviewView.setupView(showDetails: showDetails)
+                self?.productionCompaniesView.setupView(showDetails: showDetails)
             }
             .store(in: &anyCancelable)
     }

@@ -18,6 +18,7 @@
 "VOTE_AVERAGE_TITLE" = "Vote\nAverage";
 "VOTE_COUNT_TITLE" = "Vote\nCount";
 "VOTE_POPULARITY_TITLE" = "Popularity";
+"PRODUCTION_COMPANIES_TITLE"  = "Companies";
 
 // MARK: SHOW DETAILS OVERVIEW
 "OVERVIEW_TITLE" = "Overview";
