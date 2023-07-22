@@ -26,7 +26,7 @@ public struct Str {
     public static var seriesLandingToday: String { Languages.tr("SERIES_LANDING_TODAY") }
     public static var seriesLandingOnTheAir: String { Languages.tr("SERIES_LANDING_ON_THE_AIR") }
     public static var seriesLandingTopRated: String { Languages.tr("SERIES_LANDING_TOP_RATED") }
-    public static var seriesLandingUpcoming: String { Languages.tr("SERIES_LANDING_UPCOMING") }
+    public static var seriesLandingPopular: String { Languages.tr("SERIES_LANDING_POPULAR") }
     
     // MARK: SHOW DETAILS INFO
     public static var releaseDateInfo: String { Languages.tr("RELEASE_DATE_INFO") }

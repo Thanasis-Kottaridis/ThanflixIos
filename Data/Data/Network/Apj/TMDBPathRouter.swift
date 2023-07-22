@@ -38,7 +38,7 @@ public enum TMDBPathRouter: URLRequestConvertible {
     case getAiringTodaySeries(page: Int)
     case getOnTheAirSeries(page: Int)
     case getTopRatedSeries(page: Int)
-    case getUpcomingSeries(page: Int)
+    case getPopularSeries(page: Int)
     
     // MARK: - Method
     var method: HTTPMethod {
@@ -52,7 +52,7 @@ public enum TMDBPathRouter: URLRequestConvertible {
                 .getAiringTodaySeries,
                 .getOnTheAirSeries,
                 .getTopRatedSeries,
-                .getUpcomingSeries:
+                .getPopularSeries:
             return .get
         }
     }
@@ -81,9 +81,9 @@ public enum TMDBPathRouter: URLRequestConvertible {
         case .getOnTheAirSeries:
             return "tv/on_the_air"
         case .getTopRatedSeries:
-            return "tv/popular"
-        case .getUpcomingSeries:
             return "tv/top_rated"
+        case .getPopularSeries:
+            return "tv/popular"
         }
     }
     
@@ -101,7 +101,7 @@ public enum TMDBPathRouter: URLRequestConvertible {
                     .getAiringTodaySeries,
                     .getOnTheAirSeries,
                     .getTopRatedSeries,
-                    .getUpcomingSeries:
+                    .getPopularSeries:
                 return URLEncoding.queryString
                 
             }
@@ -166,7 +166,7 @@ public enum TMDBPathRouter: URLRequestConvertible {
             parameters = [
                 "page":page,
             ]
-        case .getUpcomingSeries(page: let page):
+        case .getPopularSeries(page: let page):
             parameters = [
                 "page":page,
             ]

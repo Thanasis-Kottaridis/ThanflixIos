@@ -18,8 +18,8 @@ class SeriesLandingState: BaseState {
     let isOnline: Bool
     let todaySeries: [Show]
     let onTheAirSeries: [Show]
+    let popularSeries: [Show]
     let topRatedSeries: [Show]
-    let upcomingSeries: [Show]
     
     var seriesDisplayable: [SectionModel<String, Show>] {
         
@@ -35,16 +35,16 @@ class SeriesLandingState: BaseState {
             sections.append(section)
         }
         
+        if !popularSeries.isEmpty {
+            let section = SectionModel(model: Str.seriesLandingPopular, items: popularSeries)
+            sections.append(section)
+        }
+        
         if !topRatedSeries.isEmpty {
             let section = SectionModel(model: Str.seriesLandingTopRated, items: topRatedSeries)
             sections.append(section)
         }
-        
-        if !upcomingSeries.isEmpty {
-            let section = SectionModel(model: Str.seriesLandingUpcoming, items: upcomingSeries)
-            sections.append(section)
-        }
-        
+    
         return sections
     }
     
@@ -53,15 +53,15 @@ class SeriesLandingState: BaseState {
          isOnline: Bool = true,
          todaySeries: [Show] = [],
          onTheAirSeries: [Show] = [],
-         topRatedSeries: [Show] = [],
-         upcomingSeries: [Show] = []
+         popularSeries: [Show] = [],
+         topRatedSeries: [Show] = []
      ) {
          self.isLoading = isLoading
          self.isOnline = isOnline
          self.todaySeries = todaySeries
          self.onTheAirSeries = onTheAirSeries
+         self.popularSeries = popularSeries
          self.topRatedSeries = topRatedSeries
-         self.upcomingSeries = upcomingSeries
      }
     
     func copy(
@@ -69,16 +69,16 @@ class SeriesLandingState: BaseState {
         isOnline: Bool? = nil,
         todaySeries: [Show]? = nil,
         onTheAirSeries: [Show]? = nil,
-        topRatedSeries: [Show]? = nil,
-        upcomingSeries: [Show]? = nil
+        popularSeries: [Show]? = nil,
+        topRatedSeries: [Show]? = nil
     ) -> SeriesLandingState {
         return SeriesLandingState(
             isLoading: isLoading ?? self.isLoading,
             isOnline: isOnline ?? self.isOnline,
             todaySeries: todaySeries ?? self.todaySeries,
             onTheAirSeries: onTheAirSeries ?? self.onTheAirSeries,
-            topRatedSeries: topRatedSeries ?? self.topRatedSeries,
-            upcomingSeries: upcomingSeries ?? self.upcomingSeries
+            popularSeries: popularSeries ?? self.popularSeries,
+            topRatedSeries: topRatedSeries ?? self.topRatedSeries
         )
     }
     

@@ -72,7 +72,6 @@ class MoviesLandingViewModel: BaseViewModel {
         }
     }
     
-    // PRIVATE METHOD IMPLEMENTATION
     private func fetchNowPlayingMovies(dispatchGroup: DispatchGroup) {
         dispatchGroup.enter()
         

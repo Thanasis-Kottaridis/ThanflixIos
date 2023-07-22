@@ -6,44 +6,16 @@
 //
 
 import SwiftUI
+import Domain
 import Presentation
 
 struct SeriesLandingScreen: View {
     
+    // MARK: - Vars
+    @StateObject var viewModel: SeriesLandingViewModel
     @State private var headerHeight: CGFloat = 0.0
-    let text = """
-In the early hours of the morning, as the sun began to rise over the horizon, the sleepy town came to life. Birds chirped merrily from the treetops, and a gentle breeze rustled through the leaves. The aroma of freshly brewed coffee filled the air, drawing people towards the local café.
-
-In the heart of the town, a bustling market was taking shape. Colorful stalls lined the streets, displaying an array of fresh fruits, vegetables, and handmade crafts. The chatter of vendors and customers created a lively atmosphere, echoing through the narrow alleys.
-
-Meanwhile, a group of children played joyfully in the nearby park. Their laughter and giggles resonated with the carefree spirit of youth. Parents sat on the benches, watching their little ones with fond smiles.
-
-As the day progressed, the town's historic buildings stood proudly, each telling its own story of times gone by. Tourists wandered through the cobbled streets, capturing photographs of the picturesque scenery.
-
-In the distance, the majestic mountains loomed, their peaks adorned with a dusting of snow. A hiking trail meandered through the wilderness, inviting adventurers to explore the wonders of nature.
-
-In the evening, the town's lights flickered to life, casting a warm glow over the streets. Restaurants and eateries filled with the tantalizing scents of delicious dishes, enticing visitors and locals alike.
-
-As the night fell, the sky was a canvas of twinkling stars, and the moon bathed the town in a soft, silvery light. Peaceful and serene, the town settled into a gentle slumber, ready to embrace a new day when the sun would rise again."
-
-I hope you enjoyed this little scene! If you have any specific topics or themes in mind, feel free to let me know, and I can generate text accordingly.
-
-In the early hours of the morning, as the sun began to rise over the horizon, the sleepy town came to life. Birds chirped merrily from the treetops, and a gentle breeze rustled through the leaves. The aroma of freshly brewed coffee filled the air, drawing people towards the local café.
-
-In the heart of the town, a bustling market was taking shape. Colorful stalls lined the streets, displaying an array of fresh fruits, vegetables, and handmade crafts. The chatter of vendors and customers created a lively atmosphere, echoing through the narrow alleys.
-
-Meanwhile, a group of children played joyfully in the nearby park. Their laughter and giggles resonated with the carefree spirit of youth. Parents sat on the benches, watching their little ones with fond smiles.
-
-As the day progressed, the town's historic buildings stood proudly, each telling its own story of times gone by. Tourists wandered through the cobbled streets, capturing photographs of the picturesque scenery.
-
-In the distance, the majestic mountains loomed, their peaks adorned with a dusting of snow. A hiking trail meandered through the wilderness, inviting adventurers to explore the wonders of nature.
-
-In the evening, the town's lights flickered to life, casting a warm glow over the streets. Restaurants and eateries filled with the tantalizing scents of delicious dishes, enticing visitors and locals alike.
-
-As the night fell, the sky was a canvas of twinkling stars, and the moon bathed the town in a soft, silvery light. Peaceful and serene, the town settled into a gentle slumber, ready to embrace a new day when the sun would rise again."
-
-I hope you enjoyed this little scene! If you have any specific topics or themes in mind, feel free to let me know, and I can generate text accordingly.
-"""
+    @State private var viewDidLoad: Bool = false
+    
     var body: some View {
         GenericHeaderOverlapWrapper(
             configurations: GenericHeaderConfigurations.Builder()
@@ -65,31 +37,35 @@ I hope you enjoyed this little scene! If you have any specific topics or themes 
                 Spacer()
                     .listRowInsets(EdgeInsets())
                     .frame(height: headerHeight)
-                
-                ForEach(0..<100) { index in
-                    SeriesSectionView()
-                        .listRowInsets(EdgeInsets())
-                        .listRowBackground(Color(.blue))
-                        .listRowSeparator(.hidden, edges: .all)
+                ForEach(
+                    Array(viewModel.state.seriesDisplayable.enumerated()),
+                    id: \.element.model
+                ) { index, section in
+                    SeriesSectionView(
+                        section: section,
+                        isLargeCell: index == 0,
+                        onTapItem: { id in
+                            print("Item Tapped")
+                        }
+                    )
+                    .listRowInsets(EdgeInsets())
+                    .listRowSeparator(.hidden, edges: .all)
                 }
             }
             .listStyle(.plain)
-            
+        }.onAppear {
+            guard !viewDidLoad else { return }
+            UITableView.appearance().showsVerticalScrollIndicator = false
+            self.viewDidLoad = true
+            self.viewModel.onTriggeredEvent(event: .fetchData)
         }
     }
 }
 
-struct SeriesSectionView: View {
-    var body: some View {
-        VStack{
-            Text("row")
-        }.background(.green)
-    }
-}
-    
-    
 struct SeriesLandingScreen_Previews: PreviewProvider {
     static var previews: some View {
-        SeriesLandingScreen()
+        SeriesLandingScreen(
+            viewModel: SeriesLandingViewModel(actionHandler: nil)
+        )
     }
 }

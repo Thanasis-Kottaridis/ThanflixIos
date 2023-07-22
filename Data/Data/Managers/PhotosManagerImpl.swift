@@ -44,6 +44,7 @@ public struct PhotosManagerImpl: PhotosManager {
             AF.request(url).responseImage { response in
                 switch response.result {
                 case .success(let image):
+                    cacheImage(image: image, for: url)
                     continuation.resume(returning: Result.Success(image))
                 case .failure(let error):
                     continuation.resume(returning: .Failure(error))

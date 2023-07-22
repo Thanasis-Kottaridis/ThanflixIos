@@ -11,8 +11,8 @@ public protocol SeriesDataContext {
     /// # Series Endpoints
     func getAiringTodaySeries(page: Int) async -> Result<PagedListResult<Show>?, BaseException>
     func getOnTheAirSeries(page: Int) async -> Result<PagedListResult<Show>?, BaseException>
+    func getPopularSeries(page: Int) async -> Result<PagedListResult<Show>?, BaseException>
     func getTopRatedSeries(page: Int) async -> Result<PagedListResult<Show>?, BaseException>
-    func getUpcomingSeries(page: Int) async -> Result<PagedListResult<Show>?, BaseException>
 }
 
 
@@ -28,11 +28,12 @@ public class DefaultSeriesDataContext: SeriesDataContext {
         fatalError("Not Yet Implemented")
     }
     
-    public func getTopRatedSeries(page: Int) async -> Result<PagedListResult<Show>?, BaseException> {
+    public func getPopularSeries(page: Int) async -> Result<PagedListResult<Show>?, BaseException> {
         fatalError("Not Yet Implemented")
     }
     
-    public func getUpcomingSeries(page: Int) async -> Result<PagedListResult<Show>?, BaseException> {
+    public func getTopRatedSeries(page: Int) async -> Result<PagedListResult<Show>?, BaseException> {
         fatalError("Not Yet Implemented")
     }
+
 }

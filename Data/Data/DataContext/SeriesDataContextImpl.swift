@@ -40,9 +40,9 @@ public class SeriesDataContextImpl: SeriesDataContext {
             )
     }
     
-    public func getTopRatedSeries(page: Int) async -> Result<PagedListResult<Show>?, BaseException> {
+    public func getPopularSeries(page: Int) async -> Result<PagedListResult<Show>?, BaseException> {
         return await sessionManager
-            .request( TMDBPathRouter.getTopRatedSeries(page: page))
+            .request( TMDBPathRouter.getPopularSeries(page: page))
             .validateRawResponseWrapper(
                 fromType: PagedGenericResponse<[SeriesDto]>.self,
                 mapperType: PagedListResult<Show>.self,
@@ -52,9 +52,9 @@ public class SeriesDataContextImpl: SeriesDataContext {
             )
     }
     
-    public func getUpcomingSeries(page: Int) async -> Result<PagedListResult<Show>?, BaseException> {
+    public func getTopRatedSeries(page: Int) async -> Result<PagedListResult<Show>?, BaseException> {
         return await sessionManager
-            .request( TMDBPathRouter.getUpcomingSeries(page: page))
+            .request( TMDBPathRouter.getTopRatedSeries(page: page))
             .validateRawResponseWrapper(
                 fromType: PagedGenericResponse<[SeriesDto]>.self,
                 mapperType: PagedListResult<Show>.self,

@@ -45,7 +45,8 @@ extension SeriesCoordinator {
     public func handleAction(action: Action) {
         switch action {
         case _ as GoToSeriesLanding:
-            let screen = SeriesLandingScreen()
+            let viewModel = SeriesLandingViewModel(actionHandler: self)
+            let screen = SeriesLandingScreen(viewModel: viewModel)
             navigate(
                 to: screen,
                 with: .push,
