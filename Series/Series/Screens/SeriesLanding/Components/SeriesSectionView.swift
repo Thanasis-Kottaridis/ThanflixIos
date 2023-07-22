@@ -35,7 +35,7 @@ struct SeriesSectionView: View {
     // MARK: - Vars
     var section: SectionModel<String, Show>
     var isLargeCell: Bool
-    var onTapItem: (String) -> Void
+    var onTapItem: (Int) -> Void
     
     private var titleStyle: TextStyle.Style {
         return isLargeCell ? .title1(weight: .EXTRA_BOLD, color: .TintSecondary) : .title3(weight: .EXTRA_BOLD, color: .TintSecondary)
@@ -58,6 +58,9 @@ struct SeriesSectionView: View {
                             width: ConstraintConstants.getCellsWidth(isLarge: isLargeCell),
                             height: ConstraintConstants.getCellsHeght(isLarge: isLargeCell)
                         )
+                        .onTapGesture {
+                            onTapItem(show.id ?? -1)
+                        }
                     }
                 }
                 .padding(.horizontal, ConstraintConstants.horizontalPadding)

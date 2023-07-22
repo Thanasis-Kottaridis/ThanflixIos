@@ -11,6 +11,9 @@ import Presentation
 
 // MARK: - Actions
 struct GoToSeriesLanding: Action {}
+struct GoToSeriesDetails: Action {
+    let id: Int
+}
 
 public class SeriesCoordinator: Coordinator {
     
@@ -52,8 +55,12 @@ extension SeriesCoordinator {
                 with: .push,
                 hideNavigationBar: true,
                 hideTabBar: false,
-                isSwipeBackEnable: false
+                isSwipeBackEnable: true
             )
+        case let action as GoToSeriesDetails:
+            let viewModel = SeriesDetailsViewModel(seriesId: action.id, actionHandler: self)
+            let screen = SeriesDetailsScreen(viewModel: viewModel)
+            navigate(to: screen, with: .push)
         default:
             // Use super implementation of BaseActionHandler
             handleBaseAction(action: action)

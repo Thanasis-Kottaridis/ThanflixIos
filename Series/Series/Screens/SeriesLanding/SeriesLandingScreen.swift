@@ -45,7 +45,7 @@ struct SeriesLandingScreen: View {
                         section: section,
                         isLargeCell: index == 0,
                         onTapItem: { id in
-                            print("Item Tapped")
+                            viewModel.onTriggeredEvent(event: .goToShowDetails(id: id))
                         }
                     )
                     .listRowInsets(EdgeInsets())

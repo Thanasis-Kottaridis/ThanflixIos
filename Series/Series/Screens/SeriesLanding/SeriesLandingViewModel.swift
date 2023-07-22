@@ -45,8 +45,8 @@ class SeriesLandingViewModel: BaseViewModel {
             // Event case go here
         case .fetchData:
             fetchAllData()
-        case .goToShowDetails(id: let id):
-            break
+        case .goToShowDetails(let id):
+            actionHandler?.handleAction(action: GoToSeriesDetails(id: id))
         }
     }
     

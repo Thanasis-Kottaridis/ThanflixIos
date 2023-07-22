@@ -20,8 +20,8 @@ class MovieDetailsViewModel: BaseViewModel {
     
     weak var actionHandler: BaseActionHandler?
     
-    typealias State = MovieDetailsViewModelState
-    typealias Event = MovieDetailsViewModelEvents
+    typealias State = MovieDetailsState
+    typealias Event = MovieDetailsEvents
     
     @Published private(set) var state: State
     
@@ -37,7 +37,7 @@ class MovieDetailsViewModel: BaseViewModel {
     
     init(movieId: Int, actionHandler: BaseActionHandler) {
         self.actionHandler = actionHandler
-        state = MovieDetailsViewModelState(movieId: movieId)
+        state = MovieDetailsState(movieId: movieId)
         commonInit()
     }
     

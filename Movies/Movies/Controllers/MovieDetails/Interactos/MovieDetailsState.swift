@@ -11,7 +11,7 @@ import Foundation
 import Domain
 import Presentation
 
-class MovieDetailsViewModelState: BaseState {
+class MovieDetailsState: BaseState {
     
     // Set variables here
     let isLoading: Bool
@@ -36,8 +36,8 @@ class MovieDetailsViewModelState: BaseState {
         isOnline: Bool? = nil,
         movieId: Int? = nil,
         details: ShowDetails? = nil
-    ) -> MovieDetailsViewModelState {
-        return MovieDetailsViewModelState(
+    ) -> MovieDetailsState {
+        return MovieDetailsState(
             isLoading: isLoading ?? self.isLoading,
             isOnline: isOnline ?? self.isOnline,
             movieId: movieId ?? self.movieId,
