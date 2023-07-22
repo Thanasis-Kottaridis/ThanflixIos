@@ -63,4 +63,16 @@ public class SeriesDataContextImpl: SeriesDataContext {
                 }
             )
     }
+    
+    public func getSeriesDetails(seriesId: Int) async -> Domain.Result<ShowDetails?, BaseException> {
+        return await sessionManager
+            .request( TMDBPathRouter.getSeriesDetails(seriesId: seriesId))
+            .validateRawResponseWrapper(
+                fromType: SeriesDetailsDto.self,
+                mapperType: ShowDetails.self,
+                mapper: { response in
+                    return SeriesDetailsMapper().modelToDomain(model: response)
+                }
+            )
+    }
 }

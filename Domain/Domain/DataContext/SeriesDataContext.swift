@@ -13,6 +13,7 @@ public protocol SeriesDataContext {
     func getOnTheAirSeries(page: Int) async -> Result<PagedListResult<Show>?, BaseException>
     func getPopularSeries(page: Int) async -> Result<PagedListResult<Show>?, BaseException>
     func getTopRatedSeries(page: Int) async -> Result<PagedListResult<Show>?, BaseException>
+    func getSeriesDetails(seriesId: Int) async -> Result<ShowDetails?, BaseException>
 }
 
 
@@ -36,4 +37,7 @@ public class DefaultSeriesDataContext: SeriesDataContext {
         fatalError("Not Yet Implemented")
     }
 
+    public func getSeriesDetails(seriesId: Int) async -> Result<ShowDetails?, BaseException> {
+        fatalError("Not Yet Implemented")
+    }
 }

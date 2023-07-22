@@ -14,7 +14,8 @@ struct SeriesDetailsScreen: View {
     // MARK: - Vars
     @StateObject var viewModel: SeriesDetailsViewModel
     @State private var headerHeight: CGFloat = 0.0
-    
+    @State private var viewDidLoad: Bool = false
+
     var body: some View {
         GenericHeaderOverlapWrapper(
             configurations: GenericHeaderConfigurations.Builder()
@@ -27,6 +28,10 @@ struct SeriesDetailsScreen: View {
             ScrollView {
                 
             }
+        }.onAppear {
+            guard !viewDidLoad else { return }
+            self.viewModel.onTriggeredEvent(event: .fetchData)
+
         }
     }
 }

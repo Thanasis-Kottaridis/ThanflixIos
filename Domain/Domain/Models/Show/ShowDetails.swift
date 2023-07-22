@@ -20,6 +20,7 @@ public struct ShowDetails: Codable, Equatable {
     public let popularity: Double?
     public let overview: [Overview]?
     public let productionCompanies: [ProductionCompany]?
+    public let seasons: [Show]?
     
     public init(
         id: Int? = nil,
@@ -31,7 +32,8 @@ public struct ShowDetails: Codable, Equatable {
         voteCount: Int? = nil,
         popularity: Double? = nil,
         overview: [Overview]? = nil,
-        productionCompanies: [ProductionCompany]? = nil
+        productionCompanies: [ProductionCompany]? = nil,
+        seasons: [Show]? = nil
     ) {
         self.id = id
         self.posterPath = posterPath
@@ -43,19 +45,7 @@ public struct ShowDetails: Codable, Equatable {
         self.popularity = popularity
         self.overview = overview
         self.productionCompanies = productionCompanies
-    }
-    
-    private enum CodingKeys: String, CodingKey {
-        case id
-        case backdropPath = "backdrop_path"
-        case posterPath = "poster_path"
-        case releaseDate = "release_date"
-        case title
-        case voteAverage = "vote_average"
-        case voteCount = "vote_count"
-        case popularity
-        case overview
-        case productionCompanies
+        self.seasons = seasons
     }
 }
 
