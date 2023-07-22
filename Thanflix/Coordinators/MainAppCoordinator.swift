@@ -66,14 +66,14 @@ class MainAppCoordinator: NSObject, Coordinator {
         
         let moviesRoot = moviesCoord.navigationController
         moviesRoot.tabBarItem = UITabBarItem(
-            title: "Movies",
+            title: Str.moviesLandingTitle,
             image: UIImage(named: "Movies_unselected"),
             selectedImage: UIImage(named: "Movies_selected")
         )
         
         let seriesRoot = seriesCoord.navigationController
         seriesRoot.tabBarItem = UITabBarItem(
-            title: "Series",
+            title: Str.seriesLandingTitle,
             image: UIImage(named: "Series_unselected"),
             selectedImage: UIImage(named: "Series_selected")
         )

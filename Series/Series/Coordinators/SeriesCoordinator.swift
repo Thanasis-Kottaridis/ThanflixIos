@@ -45,8 +45,14 @@ extension SeriesCoordinator {
     public func handleAction(action: Action) {
         switch action {
         case _ as GoToSeriesLanding:
-            let vc = SeriesLandingVC()
-            navigate(to: vc, with: .push)
+            let screen = SeriesLandingScreen()
+            navigate(
+                to: screen,
+                with: .push,
+                hideNavigationBar: true,
+                hideTabBar: false,
+                isSwipeBackEnable: false
+            )
         default:
             // Use super implementation of BaseActionHandler
             handleBaseAction(action: action)

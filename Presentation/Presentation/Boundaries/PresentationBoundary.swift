@@ -15,15 +15,18 @@ public class PresentationBoundary {
     var errorDispatcher: BaseErrorDispatcher
     var photosManager: PhotosManager
     var moviesDataContext: MoviesDataContext
+    var seriesDataContext: SeriesDataContext
 
     public init(
         errorDispatcher: BaseErrorDispatcher,
         photosManager: PhotosManager,
-        moviesDataContext: MoviesDataContext
+        moviesDataContext: MoviesDataContext,
+        seriesDataContext: SeriesDataContext
     ) {
         self.errorDispatcher = errorDispatcher
         self.photosManager = photosManager
         self.moviesDataContext = moviesDataContext
+        self.seriesDataContext = seriesDataContext
     }
     
     public func initialize() {
@@ -31,5 +34,6 @@ public class PresentationBoundary {
         InjectedValues[\.errorDispatcher] = errorDispatcher
         InjectedValues[\.photosManager] = photosManager
         InjectedValues[\.moviesDataContext] = moviesDataContext
+        InjectedValues[\.seriesDataContext] = seriesDataContext
     }
 }

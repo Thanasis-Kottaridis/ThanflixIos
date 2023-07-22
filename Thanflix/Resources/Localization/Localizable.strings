@@ -12,6 +12,20 @@
 "NETWORK_ERROR" = "Internet connection lost.\nThe application has no internet access.";
 "NETWORK_RESTORED" = "Connection has been restored.";
 
+// MARK: MOVIES LANDING
+"MOVIES_LANDING_TITLE" = "Movies";
+"MOVIES_LANDING_NOW_PLAYING" = "Now Playing";
+"MOVIES_LANDING_MOST_POPULAR" = "Most Popular";
+"MOVIES_LANDING_TOP_RATED" = "Top Rated";
+"MOVIES_LANDING_UPCOMING" = "Upcoming";
+
+// MARK: SERIES LANDING
+"SERIES_LANDING_TITLE" = "Series";
+"SERIES_LANDING_TODAY" = "Today";
+"SERIES_LANDING_ON_THE_AIR" = "On The Air";
+"SERIES_LANDING_TOP_RATED" = "Top Rated";
+"SERIES_LANDING_UPCOMING" = "Upcoming";
+
 // MARK: SHOW DETAILS INFO
 "RELEASE_DATE_INFO" = "RELEASED";
 "WATCHED_BUTTON_TITLE" = "Watched";

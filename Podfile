@@ -62,8 +62,6 @@ end
 #
 # ====================================
 def presentation_pods
-  # Alamofire Image
-  pod 'AlamofireImage', '~> 4.1'
     
   # TextStyling
   pod 'BonMot'
@@ -109,7 +107,6 @@ target 'Series' do
   project './Series/Series.project'
   use_frameworks!
   presentation_pods
-  data_pods
   
   target 'SeriesTests' do
     inherit! :search_paths

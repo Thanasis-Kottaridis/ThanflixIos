@@ -51,6 +51,9 @@
 		AE53D3902A58BECF0017C9EE /* Ext_UIApplication.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE53D38F2A58BECF0017C9EE /* Ext_UIApplication.swift */; };
 		AE53D3932A58C1640017C9EE /* Ext_FeedbackMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE53D3922A58C1640017C9EE /* Ext_FeedbackMessage.swift */; };
 		AE53D3952A58C2510017C9EE /* SwiftUIBaseVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE53D3942A58C2510017C9EE /* SwiftUIBaseVC.swift */; };
+		AE76003A2A6BD35200B84849 /* KeyboardLayoutVStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE7600392A6BD35200B84849 /* KeyboardLayoutVStack.swift */; };
+		AE76003C2A6BDC2C00B84849 /* KeyboardManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE76003B2A6BDC2C00B84849 /* KeyboardManager.swift */; };
+		AE7600442A6BDFFD00B84849 /* GenericHeaderOverlapWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE7600432A6BDFFD00B84849 /* GenericHeaderOverlapWrapper.swift */; };
 		AEA26DBB2A55BDA4003E8AA0 /* Domain.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AED7A1EF2A515B2800A6C820 /* Domain.framework */; };
 		AED6FA632A58C46800AB8F92 /* InjectBoundaries.swift in Sources */ = {isa = PBXBuildFile; fileRef = AED6FA622A58C46800AB8F92 /* InjectBoundaries.swift */; };
 		AED6FA662A58C47B00AB8F92 /* PresentationBoundary.swift in Sources */ = {isa = PBXBuildFile; fileRef = AED6FA652A58C47A00AB8F92 /* PresentationBoundary.swift */; };
@@ -67,6 +70,7 @@
 		AED7A1BC2A515AD200A6C820 /* Presentation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AED7A1B12A515AD200A6C820 /* Presentation.framework */; };
 		AED7A1C12A515AD200A6C820 /* PresentationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AED7A1C02A515AD200A6C820 /* PresentationTests.swift */; };
 		AED7A1C22A515AD200A6C820 /* Presentation.h in Headers */ = {isa = PBXBuildFile; fileRef = AED7A1B42A515AD200A6C820 /* Presentation.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AEFEE1112A6B23C80084B6BD /* GenericHeaderViewRepresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEFEE1102A6B23C80084B6BD /* GenericHeaderViewRepresentable.swift */; };
 		AF7BA0DAD309480C4637F97B /* Pods_Presentation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1C0EB74AEFDC46228B34C960 /* Pods_Presentation.framework */; };
 /* End PBXBuildFile section */
 
@@ -142,6 +146,9 @@
 		AE53D38F2A58BECF0017C9EE /* Ext_UIApplication.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ext_UIApplication.swift; sourceTree = "<group>"; };
 		AE53D3922A58C1640017C9EE /* Ext_FeedbackMessage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ext_FeedbackMessage.swift; sourceTree = "<group>"; };
 		AE53D3942A58C2510017C9EE /* SwiftUIBaseVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftUIBaseVC.swift; sourceTree = "<group>"; };
+		AE7600392A6BD35200B84849 /* KeyboardLayoutVStack.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeyboardLayoutVStack.swift; sourceTree = "<group>"; };
+		AE76003B2A6BDC2C00B84849 /* KeyboardManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardManager.swift; sourceTree = "<group>"; };
+		AE7600432A6BDFFD00B84849 /* GenericHeaderOverlapWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenericHeaderOverlapWrapper.swift; sourceTree = "<group>"; };
 		AED6FA622A58C46800AB8F92 /* InjectBoundaries.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InjectBoundaries.swift; sourceTree = "<group>"; };
 		AED6FA652A58C47A00AB8F92 /* PresentationBoundary.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PresentationBoundary.swift; sourceTree = "<group>"; };
 		AED6FA732A59499A00AB8F92 /* ApplicationStateManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApplicationStateManager.swift; sourceTree = "<group>"; };
@@ -159,6 +166,7 @@
 		AED7A1BB2A515AD200A6C820 /* PresentationTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PresentationTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		AED7A1C02A515AD200A6C820 /* PresentationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresentationTests.swift; sourceTree = "<group>"; };
 		AED7A1E92A515B2800A6C820 /* Domain.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Domain.xcodeproj; path = ../Domain/Domain.xcodeproj; sourceTree = "<group>"; };
+		AEFEE1102A6B23C80084B6BD /* GenericHeaderViewRepresentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenericHeaderViewRepresentable.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -272,9 +280,8 @@
 		AE53D33D2A58B70A0017C9EE /* Components */ = {
 			isa = PBXGroup;
 			children = (
-				AE2E8D402A5CB068004FC80C /* Headers */,
-				AE53D33E2A58B70A0017C9EE /* FeedbackMessage */,
-				AE53D3412A58B70A0017C9EE /* Loaders */,
+				AEFEE10E2A6B1A6E0084B6BD /* SwiftUI */,
+				AEFEE10B2A6B1A540084B6BD /* UIKit */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -378,6 +385,16 @@
 			path = Extensions;
 			sourceTree = "<group>";
 		};
+		AE7600382A6BD33D00B84849 /* Keyboard */ = {
+			isa = PBXGroup;
+			children = (
+				AE76003B2A6BDC2C00B84849 /* KeyboardManager.swift */,
+				AE7600392A6BD35200B84849 /* KeyboardLayoutVStack.swift */,
+				AED6FA862A59C6D600AB8F92 /* KeyboardLayoutConstraint.swift */,
+			);
+			path = Keyboard;
+			sourceTree = "<group>";
+		};
 		AED6FA4E2A58C40700AB8F92 /* Di */ = {
 			isa = PBXGroup;
 			children = (
@@ -417,19 +434,11 @@
 		AED6FA842A59C6C400AB8F92 /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
+				AE7600382A6BD33D00B84849 /* Keyboard */,
 				AED6FA8B2A59C6E400AB8F92 /* Scaling */,
 				AED6FA882A59C6DE00AB8F92 /* Paging */,
-				AED6FA852A59C6D600AB8F92 /* Constraint */,
 			);
 			path = Helpers;
-			sourceTree = "<group>";
-		};
-		AED6FA852A59C6D600AB8F92 /* Constraint */ = {
-			isa = PBXGroup;
-			children = (
-				AED6FA862A59C6D600AB8F92 /* KeyboardLayoutConstraint.swift */,
-			);
-			path = Constraint;
 			sourceTree = "<group>";
 		};
 		AED6FA882A59C6DE00AB8F92 /* Paging */ = {
@@ -508,6 +517,33 @@
 				AED7A1F12A515B2800A6C820 /* DomainTests.xctest */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		AEFEE10B2A6B1A540084B6BD /* UIKit */ = {
+			isa = PBXGroup;
+			children = (
+				AE2E8D402A5CB068004FC80C /* Headers */,
+				AE53D33E2A58B70A0017C9EE /* FeedbackMessage */,
+				AE53D3412A58B70A0017C9EE /* Loaders */,
+			);
+			path = UIKit;
+			sourceTree = "<group>";
+		};
+		AEFEE10E2A6B1A6E0084B6BD /* SwiftUI */ = {
+			isa = PBXGroup;
+			children = (
+				AEFEE10F2A6B1AC00084B6BD /* Headers */,
+			);
+			path = SwiftUI;
+			sourceTree = "<group>";
+		};
+		AEFEE10F2A6B1AC00084B6BD /* Headers */ = {
+			isa = PBXGroup;
+			children = (
+				AEFEE1102A6B23C80084B6BD /* GenericHeaderViewRepresentable.swift */,
+				AE7600432A6BDFFD00B84849 /* GenericHeaderOverlapWrapper.swift */,
+			);
+			path = Headers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -695,6 +731,7 @@
 				AE53D3952A58C2510017C9EE /* SwiftUIBaseVC.swift in Sources */,
 				AED6FA632A58C46800AB8F92 /* InjectBoundaries.swift in Sources */,
 				AE53D3292A58B56E0017C9EE /* BaseWindow.swift in Sources */,
+				AE76003A2A6BD35200B84849 /* KeyboardLayoutVStack.swift in Sources */,
 				AE53D3822A58BBD60017C9EE /* Ext_UINavigationController.swift in Sources */,
 				AE53D3602A58B7A80017C9EE /* Font.swift in Sources */,
 				AED6FA8F2A59C6E400AB8F92 /* AdaptedConstraint.swift in Sources */,
@@ -707,12 +744,15 @@
 				AE53D3312A58B58F0017C9EE /* BaseNavigation.swift in Sources */,
 				AED7A1B62A515AD200A6C820 /* Presentation.docc in Sources */,
 				AE2E8D9E2A5E8885004FC80C /* InjectDataContexts.swift in Sources */,
+				AEFEE1112A6B23C80084B6BD /* GenericHeaderViewRepresentable.swift in Sources */,
 				AE53D3442A58B70A0017C9EE /* FeedbackMessageView.swift in Sources */,
 				AED6FA8E2A59C6E400AB8F92 /* AdaptedVC.swift in Sources */,
+				AE76003C2A6BDC2C00B84849 /* KeyboardManager.swift in Sources */,
 				AE53D33A2A58B5E00017C9EE /* BaseErrorDispatcher.swift in Sources */,
 				AE53D3842A58BBD60017C9EE /* Ext_String.swift in Sources */,
 				AE53D3392A58B5E00017C9EE /* BaseViewModel.swift in Sources */,
 				AE53D33C2A58B5E00017C9EE /* BaseState.swift in Sources */,
+				AE7600442A6BDFFD00B84849 /* GenericHeaderOverlapWrapper.swift in Sources */,
 				AED6FA8A2A59C6DE00AB8F92 /* PagingDataSource.swift in Sources */,
 				AED6FA662A58C47B00AB8F92 /* PresentationBoundary.swift in Sources */,
 				AE53D3452A58B70A0017C9EE /* GenericLoader.swift in Sources */,

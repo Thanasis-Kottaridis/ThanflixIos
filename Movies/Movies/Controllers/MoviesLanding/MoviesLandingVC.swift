@@ -70,7 +70,7 @@ class MoviesLandingVC: BaseVC {
     
     private func setUpHeader() {
         let headerConfigs = GenericHeaderConfigurations.Builder()
-            .addTitle(title: "Movies")
+            .addTitle(title: Str.moviesLandingTitle)
             .addLeftIcon(iconName: "kebab-menu")
             .addLeftIconAction(action: {
                 // TODO: - ADD ACTION

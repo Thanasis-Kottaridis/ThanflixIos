@@ -26,22 +26,22 @@ class MoviesLandingState: BaseState {
         var sections: [SectionModel<String, Show>] = []
         
         if !nowPlayingMovies.isEmpty {
-            let section = SectionModel(model: "Now Playing", items: nowPlayingMovies)
+            let section = SectionModel(model: Str.moviesLandingNowPlaying, items: nowPlayingMovies)
             sections.append(section)
         }
         
         if !popularMovies.isEmpty {
-            let section = SectionModel(model: "Most Popular", items: popularMovies)
+            let section = SectionModel(model: Str.moviesLandingMostPopular, items: popularMovies)
             sections.append(section)
         }
         
         if !topRatedMovies.isEmpty {
-            let section = SectionModel(model: "Top Rated", items: topRatedMovies)
+            let section = SectionModel(model: Str.moviesLandingTopRated, items: topRatedMovies)
             sections.append(section)
         }
         
         if !upcomingMovies.isEmpty {
-            let section = SectionModel(model: "Upcoming", items: upcomingMovies)
+            let section = SectionModel(model: Str.moviesLandingUpcoming, items: upcomingMovies)
             sections.append(section)
         }
         

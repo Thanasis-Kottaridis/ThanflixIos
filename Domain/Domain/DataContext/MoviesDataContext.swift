@@ -18,12 +18,6 @@ public protocol MoviesDataContext {
     func getTopRatedMovies(page: Int) async -> Result<PagedListResult<Show>?, BaseException>
     func getUpcomingMovies(page: Int) async -> Result<PagedListResult<Show>?, BaseException>
     func getMovieDetails(movieId: Int) async -> Result<ShowDetails?, BaseException>
-    
-    /// # Series Endpoints
-    func getAiringTodaySeries(page: Int) async -> Result<PagedListResult<Show>?, BaseException>
-    func getOnTheAirSeries(page: Int) async -> Result<PagedListResult<Show>?, BaseException>
-    func getTopRatedSeries(page: Int) async -> Result<PagedListResult<Show>?, BaseException>
-    func getUpcomingSeries(page: Int) async -> Result<PagedListResult<Show>?, BaseException>
 }
 
 
@@ -53,22 +47,6 @@ public class DefaultMoviesDataContext: MoviesDataContext {
     }
     
     public func getMovieDetails(movieId: Int) async -> Result<ShowDetails?, BaseException>  {
-        fatalError("Not Yet Implemented")
-    }
-    
-    public func getAiringTodaySeries(page: Int) async -> Result<PagedListResult<Show>?, BaseException> {
-        fatalError("Not Yet Implemented")
-    }
-    
-    public func getOnTheAirSeries(page: Int) async -> Result<PagedListResult<Show>?, BaseException> {
-        fatalError("Not Yet Implemented")
-    }
-    
-    public func getTopRatedSeries(page: Int) async -> Result<PagedListResult<Show>?, BaseException> {
-        fatalError("Not Yet Implemented")
-    }
-    
-    public func getUpcomingSeries(page: Int) async -> Result<PagedListResult<Show>?, BaseException> {
         fatalError("Not Yet Implemented")
     }
 }

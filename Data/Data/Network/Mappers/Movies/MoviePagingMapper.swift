@@ -8,10 +8,7 @@
 import Foundation
 import Domain
 
-
 public class MoviePagingMapper: PagingDataDomainMapper {
-   
-    
     
     public typealias Model = MovieDto // TODO ADD DTO (API RESPONSE) MODEL
     

@@ -10,12 +10,14 @@
 		492A5C570F2E8BC3185D200E /* Pods_Series.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA71ED0AC762CD9FCD80D21B /* Pods_Series.framework */; };
 		AE0137062A59CDC300C38013 /* Presentation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AE0137022A59CDB600C38013 /* Presentation.framework */; };
 		AE2E8D0C2A5CAB4A004FC80C /* SeriesCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE2E8D0B2A5CAB4A004FC80C /* SeriesCoordinator.swift */; };
-		AE2E8D1C2A5CABC3004FC80C /* SeriesLandingVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE2E8D1A2A5CABC3004FC80C /* SeriesLandingVC.swift */; };
-		AE2E8D1D2A5CABC3004FC80C /* SeriesLandingVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = AE2E8D1B2A5CABC3004FC80C /* SeriesLandingVC.xib */; };
+		AE79D45C2A6C0E7800341F45 /* SeriesLandingEvents.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE79D4592A6C0E7800341F45 /* SeriesLandingEvents.swift */; };
+		AE79D45D2A6C0E7800341F45 /* SeriesLandingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE79D45A2A6C0E7800341F45 /* SeriesLandingViewModel.swift */; };
+		AE79D45E2A6C0E7800341F45 /* SeriesLandingState.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE79D45B2A6C0E7800341F45 /* SeriesLandingState.swift */; };
 		AED6FB1E2A59CCF800AB8F92 /* Series.docc in Sources */ = {isa = PBXBuildFile; fileRef = AED6FB1D2A59CCF800AB8F92 /* Series.docc */; };
 		AED6FB242A59CCF900AB8F92 /* Series.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AED6FB192A59CCF800AB8F92 /* Series.framework */; };
 		AED6FB292A59CCF900AB8F92 /* SeriesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AED6FB282A59CCF900AB8F92 /* SeriesTests.swift */; };
 		AED6FB2A2A59CCF900AB8F92 /* Series.h in Headers */ = {isa = PBXBuildFile; fileRef = AED6FB1C2A59CCF800AB8F92 /* Series.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AEFEE0FA2A6B18530084B6BD /* SeriesLandingScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEFEE0F92A6B18530084B6BD /* SeriesLandingScreen.swift */; };
 		E19A9CC81E28A45D08B3A38F /* Pods_SeriesTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CA6F7322A165D73A652B9A36 /* Pods_SeriesTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -49,13 +51,15 @@
 		8374EC4C79EE6F9D75C82BF6 /* Pods-SeriesTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SeriesTests.debug.xcconfig"; path = "Target Support Files/Pods-SeriesTests/Pods-SeriesTests.debug.xcconfig"; sourceTree = "<group>"; };
 		AE0136FC2A59CDB600C38013 /* Presentation.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Presentation.xcodeproj; path = ../Presentation/Presentation.xcodeproj; sourceTree = "<group>"; };
 		AE2E8D0B2A5CAB4A004FC80C /* SeriesCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SeriesCoordinator.swift; sourceTree = "<group>"; };
-		AE2E8D1A2A5CABC3004FC80C /* SeriesLandingVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeriesLandingVC.swift; sourceTree = "<group>"; };
-		AE2E8D1B2A5CABC3004FC80C /* SeriesLandingVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SeriesLandingVC.xib; sourceTree = "<group>"; };
+		AE79D4592A6C0E7800341F45 /* SeriesLandingEvents.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeriesLandingEvents.swift; sourceTree = "<group>"; };
+		AE79D45A2A6C0E7800341F45 /* SeriesLandingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeriesLandingViewModel.swift; sourceTree = "<group>"; };
+		AE79D45B2A6C0E7800341F45 /* SeriesLandingState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeriesLandingState.swift; sourceTree = "<group>"; };
 		AED6FB192A59CCF800AB8F92 /* Series.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Series.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AED6FB1C2A59CCF800AB8F92 /* Series.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Series.h; sourceTree = "<group>"; };
 		AED6FB1D2A59CCF800AB8F92 /* Series.docc */ = {isa = PBXFileReference; lastKnownFileType = folder.documentationcatalog; path = Series.docc; sourceTree = "<group>"; };
 		AED6FB232A59CCF900AB8F92 /* SeriesTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SeriesTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		AED6FB282A59CCF900AB8F92 /* SeriesTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeriesTests.swift; sourceTree = "<group>"; };
+		AEFEE0F92A6B18530084B6BD /* SeriesLandingScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeriesLandingScreen.swift; sourceTree = "<group>"; };
 		CA6F7322A165D73A652B9A36 /* Pods_SeriesTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SeriesTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EA71ED0AC762CD9FCD80D21B /* Pods_Series.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Series.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FB13A9CA5EE863A546FF95B3 /* Pods-Series.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Series.debug.xcconfig"; path = "Target Support Files/Pods-Series/Pods-Series.debug.xcconfig"; sourceTree = "<group>"; };
@@ -121,18 +125,26 @@
 			path = Coordinators;
 			sourceTree = "<group>";
 		};
-		AE2E8D132A5CAB5B004FC80C /* Controllers */ = {
+		AE76FFF82A6B320900B84849 /* New Group */ = {
 			isa = PBXGroup;
 			children = (
-				AE2E8D1A2A5CABC3004FC80C /* SeriesLandingVC.swift */,
-				AE2E8D1B2A5CABC3004FC80C /* SeriesLandingVC.xib */,
 			);
-			path = Controllers;
+			path = "New Group";
+			sourceTree = "<group>";
+		};
+		AE79D4612A6C0E7C00341F45 /* Interactors */ = {
+			isa = PBXGroup;
+			children = (
+				AE79D4592A6C0E7800341F45 /* SeriesLandingEvents.swift */,
+				AE79D45B2A6C0E7800341F45 /* SeriesLandingState.swift */,
+			);
+			path = Interactors;
 			sourceTree = "<group>";
 		};
 		AED6FB0F2A59CCF800AB8F92 = {
 			isa = PBXGroup;
 			children = (
+				AE76FFF82A6B320900B84849 /* New Group */,
 				AED6FB352A59CD4400AB8F92 /* Dependencies */,
 				AED6FB1B2A59CCF800AB8F92 /* Series */,
 				AED6FB272A59CCF900AB8F92 /* SeriesTests */,
@@ -155,7 +167,7 @@
 			isa = PBXGroup;
 			children = (
 				AE2E8D082A5CAB35004FC80C /* Coordinators */,
-				AE2E8D132A5CAB5B004FC80C /* Controllers */,
+				AEFEE0F52A6B181F0084B6BD /* Screens */,
 				AED6FB1C2A59CCF800AB8F92 /* Series.h */,
 				AED6FB1D2A59CCF800AB8F92 /* Series.docc */,
 			);
@@ -176,6 +188,24 @@
 				AE0136FC2A59CDB600C38013 /* Presentation.xcodeproj */,
 			);
 			name = Dependencies;
+			sourceTree = "<group>";
+		};
+		AEFEE0F52A6B181F0084B6BD /* Screens */ = {
+			isa = PBXGroup;
+			children = (
+				AEFEE0F82A6B18310084B6BD /* SeriesLanding */,
+			);
+			path = Screens;
+			sourceTree = "<group>";
+		};
+		AEFEE0F82A6B18310084B6BD /* SeriesLanding */ = {
+			isa = PBXGroup;
+			children = (
+				AE79D4612A6C0E7C00341F45 /* Interactors */,
+				AEFEE0F92A6B18530084B6BD /* SeriesLandingScreen.swift */,
+				AE79D45A2A6C0E7800341F45 /* SeriesLandingViewModel.swift */,
+			);
+			path = SeriesLanding;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -296,7 +326,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AE2E8D1D2A5CABC3004FC80C /* SeriesLandingVC.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -378,7 +407,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AE2E8D1C2A5CABC3004FC80C /* SeriesLandingVC.swift in Sources */,
+				AE79D45E2A6C0E7800341F45 /* SeriesLandingState.swift in Sources */,
+				AE79D45D2A6C0E7800341F45 /* SeriesLandingViewModel.swift in Sources */,
+				AEFEE0FA2A6B18530084B6BD /* SeriesLandingScreen.swift in Sources */,
+				AE79D45C2A6C0E7800341F45 /* SeriesLandingEvents.swift in Sources */,
 				AED6FB1E2A59CCF800AB8F92 /* Series.docc in Sources */,
 				AE2E8D0C2A5CAB4A004FC80C /* SeriesCoordinator.swift in Sources */,
 			);

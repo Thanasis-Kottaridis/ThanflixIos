@@ -101,10 +101,18 @@ extension Coordinator {
         with navigationStyle: NavigationStyle,
         animated: Bool = true,
         resetingStack: Bool = false,
+        hideNavigationBar: Bool = true,
+        hideTabBar: Bool = true,
+        isSwipeBackEnable: Bool = true,
         completion: (() -> Void)? = nil
     ) {
         
-        let viewController = SwiftUIBaseVC(rootView: view)
+        let viewController = SwiftUIBaseVC(
+            rootView: view,
+            hideNavigationBar: hideNavigationBar,
+            hideTabBar: hideTabBar,
+            isSwipeBackEnable: isSwipeBackEnable
+        )
         
         navigate(
             to: viewController,
