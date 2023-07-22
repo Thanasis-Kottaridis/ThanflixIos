@@ -7,9 +7,8 @@
 
 import UIKit
 import Domain
-import Presentation
 
-class ShowOverviewView: UIView {
+public class ShowOverviewView: UIView {
     
     private enum ConstraintConstants {
         static let cornerRadius = 16.adapted()
@@ -40,7 +39,7 @@ class ShowOverviewView: UIView {
         xibSetup()
     }
     
-    func xibSetup() {
+    private func xibSetup() {
         guard let view = loadViewFromNib() else { return }
         view.frame = bounds
         view.autoresizingMask =
@@ -49,7 +48,7 @@ class ShowOverviewView: UIView {
         contentView = view
     }
     
-    func loadViewFromNib() -> UIView? {
+    private func loadViewFromNib() -> UIView? {
         let bundle = Bundle(for: type(of: self))
         let nib = UINib(nibName: kCONTENT_XIB_NAME, bundle: bundle)
         return nib.instantiate(

@@ -7,9 +7,8 @@
 
 import UIKit
 import Domain
-import Presentation
 
-class ProductionCompaniesView: UIView {
+public class ProductionCompaniesView: UIView {
     
     private enum CellIdentifiers {
         static let companyCell = "ProductionCompanyCell"
@@ -49,7 +48,7 @@ class ProductionCompaniesView: UIView {
         xibSetup()
     }
     
-    func xibSetup() {
+    private func xibSetup() {
         guard let view = loadViewFromNib() else { return }
         view.frame = bounds
         view.autoresizingMask =
@@ -58,7 +57,7 @@ class ProductionCompaniesView: UIView {
         contentView = view
     }
     
-    func loadViewFromNib() -> UIView? {
+    private func loadViewFromNib() -> UIView? {
         let bundle = Bundle(for: type(of: self))
         let nib = UINib(nibName: kCONTENT_XIB_NAME, bundle: bundle)
         return nib.instantiate(
@@ -103,15 +102,15 @@ class ProductionCompaniesView: UIView {
 extension ProductionCompaniesView: UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
     
     // MARK: - UICollectionViewDelegateFlowLayout
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+    public func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         return CGSize(width: 150.adapted(), height: 90.adapted())
     }
     
-    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+    public func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return showDetails?.productionCompanies?.count ?? 0
     }
     
-    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+    public func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         guard let cell = collectionView.dequeueReusableCell(
             withReuseIdentifier: CellIdentifiers.companyCell, for: indexPath
         ) as? ProductionCompanyCell,

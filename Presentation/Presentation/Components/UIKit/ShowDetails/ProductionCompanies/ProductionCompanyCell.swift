@@ -7,7 +7,6 @@
 
 import UIKit
 import Domain
-import Presentation
 
 class ProductionCompanyCell: UICollectionViewCell {
 

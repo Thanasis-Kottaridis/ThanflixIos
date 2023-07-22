@@ -54,6 +54,14 @@
 		AE76003A2A6BD35200B84849 /* KeyboardLayoutVStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE7600392A6BD35200B84849 /* KeyboardLayoutVStack.swift */; };
 		AE76003C2A6BDC2C00B84849 /* KeyboardManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE76003B2A6BDC2C00B84849 /* KeyboardManager.swift */; };
 		AE7600442A6BDFFD00B84849 /* GenericHeaderOverlapWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE7600432A6BDFFD00B84849 /* GenericHeaderOverlapWrapper.swift */; };
+		AE79D4EE2A6C916500341F45 /* ProductionCompanyCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE79D4EA2A6C916500341F45 /* ProductionCompanyCell.swift */; };
+		AE79D4EF2A6C916500341F45 /* ProductionCompanyCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AE79D4EB2A6C916500341F45 /* ProductionCompanyCell.xib */; };
+		AE79D4F02A6C916500341F45 /* ProductionCompaniesView.xib in Resources */ = {isa = PBXBuildFile; fileRef = AE79D4EC2A6C916500341F45 /* ProductionCompaniesView.xib */; };
+		AE79D4F12A6C916500341F45 /* ProductionCompaniesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE79D4ED2A6C916500341F45 /* ProductionCompaniesView.swift */; };
+		AE79D4F72A6C916A00341F45 /* ShowOverviewItemView.xib in Resources */ = {isa = PBXBuildFile; fileRef = AE79D4F32A6C916A00341F45 /* ShowOverviewItemView.xib */; };
+		AE79D4F82A6C916A00341F45 /* ShowOverviewView.xib in Resources */ = {isa = PBXBuildFile; fileRef = AE79D4F42A6C916A00341F45 /* ShowOverviewView.xib */; };
+		AE79D4F92A6C916A00341F45 /* ShowOverviewItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE79D4F52A6C916A00341F45 /* ShowOverviewItemView.swift */; };
+		AE79D4FA2A6C916A00341F45 /* ShowOverviewView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE79D4F62A6C916A00341F45 /* ShowOverviewView.swift */; };
 		AEA26DBB2A55BDA4003E8AA0 /* Domain.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AED7A1EF2A515B2800A6C820 /* Domain.framework */; };
 		AED6FA632A58C46800AB8F92 /* InjectBoundaries.swift in Sources */ = {isa = PBXBuildFile; fileRef = AED6FA622A58C46800AB8F92 /* InjectBoundaries.swift */; };
 		AED6FA662A58C47B00AB8F92 /* PresentationBoundary.swift in Sources */ = {isa = PBXBuildFile; fileRef = AED6FA652A58C47A00AB8F92 /* PresentationBoundary.swift */; };
@@ -149,6 +157,14 @@
 		AE7600392A6BD35200B84849 /* KeyboardLayoutVStack.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeyboardLayoutVStack.swift; sourceTree = "<group>"; };
 		AE76003B2A6BDC2C00B84849 /* KeyboardManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardManager.swift; sourceTree = "<group>"; };
 		AE7600432A6BDFFD00B84849 /* GenericHeaderOverlapWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenericHeaderOverlapWrapper.swift; sourceTree = "<group>"; };
+		AE79D4EA2A6C916500341F45 /* ProductionCompanyCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProductionCompanyCell.swift; sourceTree = "<group>"; };
+		AE79D4EB2A6C916500341F45 /* ProductionCompanyCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ProductionCompanyCell.xib; sourceTree = "<group>"; };
+		AE79D4EC2A6C916500341F45 /* ProductionCompaniesView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ProductionCompaniesView.xib; sourceTree = "<group>"; };
+		AE79D4ED2A6C916500341F45 /* ProductionCompaniesView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProductionCompaniesView.swift; sourceTree = "<group>"; };
+		AE79D4F32A6C916A00341F45 /* ShowOverviewItemView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ShowOverviewItemView.xib; sourceTree = "<group>"; };
+		AE79D4F42A6C916A00341F45 /* ShowOverviewView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ShowOverviewView.xib; sourceTree = "<group>"; };
+		AE79D4F52A6C916A00341F45 /* ShowOverviewItemView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShowOverviewItemView.swift; sourceTree = "<group>"; };
+		AE79D4F62A6C916A00341F45 /* ShowOverviewView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShowOverviewView.swift; sourceTree = "<group>"; };
 		AED6FA622A58C46800AB8F92 /* InjectBoundaries.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InjectBoundaries.swift; sourceTree = "<group>"; };
 		AED6FA652A58C47A00AB8F92 /* PresentationBoundary.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PresentationBoundary.swift; sourceTree = "<group>"; };
 		AED6FA732A59499A00AB8F92 /* ApplicationStateManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApplicationStateManager.swift; sourceTree = "<group>"; };
@@ -395,6 +411,44 @@
 			path = Keyboard;
 			sourceTree = "<group>";
 		};
+		AE79D4E92A6C916500341F45 /* ProductionCompanies */ = {
+			isa = PBXGroup;
+			children = (
+				AE79D4EA2A6C916500341F45 /* ProductionCompanyCell.swift */,
+				AE79D4EB2A6C916500341F45 /* ProductionCompanyCell.xib */,
+				AE79D4EC2A6C916500341F45 /* ProductionCompaniesView.xib */,
+				AE79D4ED2A6C916500341F45 /* ProductionCompaniesView.swift */,
+			);
+			path = ProductionCompanies;
+			sourceTree = "<group>";
+		};
+		AE79D4F22A6C916A00341F45 /* ShowOverview */ = {
+			isa = PBXGroup;
+			children = (
+				AE79D4F32A6C916A00341F45 /* ShowOverviewItemView.xib */,
+				AE79D4F42A6C916A00341F45 /* ShowOverviewView.xib */,
+				AE79D4F52A6C916A00341F45 /* ShowOverviewItemView.swift */,
+				AE79D4F62A6C916A00341F45 /* ShowOverviewView.swift */,
+			);
+			path = ShowOverview;
+			sourceTree = "<group>";
+		};
+		AE79D4FB2A6C916D00341F45 /* ShowDetails */ = {
+			isa = PBXGroup;
+			children = (
+				AE79D4F22A6C916A00341F45 /* ShowOverview */,
+				AE79D4E92A6C916500341F45 /* ProductionCompanies */,
+			);
+			path = ShowDetails;
+			sourceTree = "<group>";
+		};
+		AE79D4FC2A6C918300341F45 /* ShowDetails */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ShowDetails;
+			sourceTree = "<group>";
+		};
 		AED6FA4E2A58C40700AB8F92 /* Di */ = {
 			isa = PBXGroup;
 			children = (
@@ -525,6 +579,7 @@
 				AE2E8D402A5CB068004FC80C /* Headers */,
 				AE53D33E2A58B70A0017C9EE /* FeedbackMessage */,
 				AE53D3412A58B70A0017C9EE /* Loaders */,
+				AE79D4FB2A6C916D00341F45 /* ShowDetails */,
 			);
 			path = UIKit;
 			sourceTree = "<group>";
@@ -533,6 +588,7 @@
 			isa = PBXGroup;
 			children = (
 				AEFEE10F2A6B1AC00084B6BD /* Headers */,
+				AE79D4FC2A6C918300341F45 /* ShowDetails */,
 			);
 			path = SwiftUI;
 			sourceTree = "<group>";
@@ -666,21 +722,25 @@
 				AE53D3702A58B7A80017C9EE /* Mulish-SemiBold.ttf in Resources */,
 				AE53D36C2A58B7A80017C9EE /* Mulish-ExtraBold.ttf in Resources */,
 				AE2E8D442A5CB089004FC80C /* GenericHeaderView.xib in Resources */,
+				AE79D4F02A6C916500341F45 /* ProductionCompaniesView.xib in Resources */,
 				AE53D3632A58B7A80017C9EE /* Mulish-ExtraBoldItalic.ttf in Resources */,
 				AE53D3662A58B7A80017C9EE /* Mulish-Black.ttf in Resources */,
 				AE53D3622A58B7A80017C9EE /* Mulish-LightItalic.ttf in Resources */,
 				AE53D35E2A58B7A80017C9EE /* loading.json in Resources */,
+				AE79D4EF2A6C916500341F45 /* ProductionCompanyCell.xib in Resources */,
 				AE53D3692A58B7A80017C9EE /* Mulish-ExtraLightItalic.ttf in Resources */,
 				AE53D36E2A58B7A80017C9EE /* Mulish-Medium.ttf in Resources */,
 				AE53D3672A58B7A80017C9EE /* Mulish-BlackItalic.ttf in Resources */,
 				AE53D36F2A58B7A80017C9EE /* Mulish-MediumItalic.ttf in Resources */,
 				AE53D3682A58B7A80017C9EE /* Mulish-SemiBoldItalic.ttf in Resources */,
+				AE79D4F82A6C916A00341F45 /* ShowOverviewView.xib in Resources */,
 				AE53D36B2A58B7A80017C9EE /* Mulish-Light.ttf in Resources */,
 				AE53D3652A58B7A80017C9EE /* Mulish-Regular.ttf in Resources */,
 				AE53D3432A58B70A0017C9EE /* FeedbackMessageView.xib in Resources */,
 				AE53D3712A58B7A80017C9EE /* Mulish-BoldItalic.ttf in Resources */,
 				AE53D36A2A58B7A80017C9EE /* Mulish-Bold.ttf in Resources */,
 				AE53D3642A58B7A80017C9EE /* Mulish-Italic.ttf in Resources */,
+				AE79D4F72A6C916A00341F45 /* ShowOverviewItemView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -729,11 +789,13 @@
 				AED6FA782A59499A00AB8F92 /* ApplicationStates.swift in Sources */,
 				AED6FA772A59499A00AB8F92 /* ApplicationStateManager.swift in Sources */,
 				AE53D3952A58C2510017C9EE /* SwiftUIBaseVC.swift in Sources */,
+				AE79D4FA2A6C916A00341F45 /* ShowOverviewView.swift in Sources */,
 				AED6FA632A58C46800AB8F92 /* InjectBoundaries.swift in Sources */,
 				AE53D3292A58B56E0017C9EE /* BaseWindow.swift in Sources */,
 				AE76003A2A6BD35200B84849 /* KeyboardLayoutVStack.swift in Sources */,
 				AE53D3822A58BBD60017C9EE /* Ext_UINavigationController.swift in Sources */,
 				AE53D3602A58B7A80017C9EE /* Font.swift in Sources */,
+				AE79D4F12A6C916500341F45 /* ProductionCompaniesView.swift in Sources */,
 				AED6FA8F2A59C6E400AB8F92 /* AdaptedConstraint.swift in Sources */,
 				AE2E8D422A5CB080004FC80C /* GenericHeaderView.swift in Sources */,
 				AE53D3322A58B58F0017C9EE /* CoordinatorKeys.swift in Sources */,
@@ -751,7 +813,9 @@
 				AE53D33A2A58B5E00017C9EE /* BaseErrorDispatcher.swift in Sources */,
 				AE53D3842A58BBD60017C9EE /* Ext_String.swift in Sources */,
 				AE53D3392A58B5E00017C9EE /* BaseViewModel.swift in Sources */,
+				AE79D4EE2A6C916500341F45 /* ProductionCompanyCell.swift in Sources */,
 				AE53D33C2A58B5E00017C9EE /* BaseState.swift in Sources */,
+				AE79D4F92A6C916A00341F45 /* ShowOverviewItemView.swift in Sources */,
 				AE7600442A6BDFFD00B84849 /* GenericHeaderOverlapWrapper.swift in Sources */,
 				AED6FA8A2A59C6DE00AB8F92 /* PagingDataSource.swift in Sources */,
 				AED6FA662A58C47B00AB8F92 /* PresentationBoundary.swift in Sources */,
