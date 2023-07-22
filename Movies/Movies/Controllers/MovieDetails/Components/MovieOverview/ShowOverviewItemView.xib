@@ -9,7 +9,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MovieOverviewItemView" customModule="Movies" customModuleProvider="target">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ShowOverviewItemView" customModule="Movies" customModuleProvider="target">
             <connections>
                 <outlet property="descriptionLbl" destination="pHA-Yz-lnq" id="SKU-XC-fbL"/>
                 <outlet property="readMoreLbl" destination="i6s-it-87o" id="Krk-Mp-Kcs"/>

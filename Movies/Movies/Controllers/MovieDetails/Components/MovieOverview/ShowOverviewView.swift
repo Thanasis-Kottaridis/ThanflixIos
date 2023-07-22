@@ -1,5 +1,5 @@
 //
-//  MovieOverviewView.swift
+//  ShowOverviewView.swift
 //  Movies
 //
 //  Created by thanos kottaridis on 20/7/23.
@@ -9,7 +9,7 @@ import UIKit
 import Domain
 import Presentation
 
-class MovieOverviewView: UIView {
+class ShowOverviewView: UIView {
     
     private enum ConstraintConstants {
         static let cornerRadius = 16.adapted()
@@ -21,7 +21,7 @@ class MovieOverviewView: UIView {
     @IBOutlet public weak var contentStackView: UIStackView!
 
     // MARK: - Vars
-    public let kCONTENT_XIB_NAME = "MovieOverviewView"
+    public let kCONTENT_XIB_NAME = "ShowOverviewView"
     private var showDetails: ShowDetails?
     
     // MARK: - Inits
@@ -77,7 +77,7 @@ class MovieOverviewView: UIView {
         contentStackView.backgroundColor = ColorPalette.BackgroundDefaultPrimary.value
         
         for (index, overview) in overviewList.enumerated() {
-            let view = MovieOverviewItemView(frame: .zero)
+            let view = ShowOverviewItemView(frame: .zero)
             view.setUpView(overview: overview)
             view.separatorView.isHidden = index == overviewList.count - 1
             contentStackView.addArrangedSubview(view)

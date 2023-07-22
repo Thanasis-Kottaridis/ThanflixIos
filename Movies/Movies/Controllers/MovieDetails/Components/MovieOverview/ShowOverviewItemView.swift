@@ -1,5 +1,5 @@
 //
-//  MovieOverviewCell.swift
+//  ShowOverviewItemView.swift
 //  Movies
 //
 //  Created by thanos kottaridis on 19/7/23.
@@ -9,7 +9,7 @@ import UIKit
 import Domain
 import Presentation
 
-class MovieOverviewItemView: UIView {
+class ShowOverviewItemView: UIView {
 
     // MARK: - Outlets
     public var contentView: UIView?
@@ -20,7 +20,7 @@ class MovieOverviewItemView: UIView {
    
 
     // MARK: - Vars
-    public let kCONTENT_XIB_NAME = "MovieOverviewItemView"
+    public let kCONTENT_XIB_NAME = "ShowOverviewItemView"
     private var overview: Overview?
     private let maxCharacters = 150
 
