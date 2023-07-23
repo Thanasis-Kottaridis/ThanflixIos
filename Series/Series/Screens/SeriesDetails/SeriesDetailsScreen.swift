@@ -39,6 +39,13 @@ struct SeriesDetailsScreen: View {
                         .frame(height: headerHeight)
                     
                     // 2. Add series Info
+                    ShowInfoWrapperView(
+                        configurations: ObservedObject(
+                            wrappedValue: ShowInfoConfigurations(
+                                showDetails: viewModel.state.details
+                            )
+                        )
+                    )
                     
                     // 3. Add Overview List
                     ShowOverviewWrapperView(

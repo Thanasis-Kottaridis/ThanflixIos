@@ -165,7 +165,6 @@
 		AE79D4702A6C6F3800341F45 /* SeriesDetails */ = {
 			isa = PBXGroup;
 			children = (
-				AE79D48D2A6C8DE700341F45 /* Components */,
 				AE79D4792A6C70D700341F45 /* Interactors */,
 				AE79D4742A6C70D300341F45 /* SeriesDetailsViewModel.swift */,
 				AE79D4712A6C6F5600341F45 /* SeriesDetailsScreen.swift */,
@@ -180,13 +179,6 @@
 				AE79D4732A6C70D300341F45 /* SeriesDetailsEvents.swift */,
 			);
 			path = Interactors;
-			sourceTree = "<group>";
-		};
-		AE79D48D2A6C8DE700341F45 /* Components */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Components;
 			sourceTree = "<group>";
 		};
 		AED6FB0F2A59CCF800AB8F92 = {

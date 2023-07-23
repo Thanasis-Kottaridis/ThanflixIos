@@ -30,7 +30,7 @@
                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="vi4-sm-zbI" userLabel="Content Stack View">
                             <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                             <subviews>
-                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="r2f-ae-DRu" userLabel="Movie Info View" customClass="MovieInfoView" customModule="Movies" customModuleProvider="target">
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="r2f-ae-DRu" userLabel="Movie Info View" customClass="ShowInfoView" customModule="Presentation">
                                     <rect key="frame" x="0.0" y="0.0" width="393" height="550"/>
                                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 </view>

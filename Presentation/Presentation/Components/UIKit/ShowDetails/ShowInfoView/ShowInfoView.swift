@@ -1,5 +1,5 @@
 //
-//  MovieInfoView.swift
+//  ShowInfoView.swift
 //  Movies
 //
 //  Created by thanos kottaridis on 19/7/23.
@@ -7,9 +7,8 @@
 
 import UIKit
 import Domain
-import Presentation
 
-class MovieInfoView: UIView {
+public class ShowInfoView: UIView {
     private enum ConstraintConstants {
         static let cornerRadius = 16.adapted()
     }
@@ -42,7 +41,7 @@ class MovieInfoView: UIView {
 
     
     // MARK: - Vars
-    public let kCONTENT_XIB_NAME = "MovieInfoView"
+    public let kCONTENT_XIB_NAME = "ShowInfoView"
     private var showDetails: ShowDetails?
 
     // MARK: - DI
@@ -65,7 +64,7 @@ class MovieInfoView: UIView {
         xibSetup()
     }
     
-    func xibSetup() {
+    private func xibSetup() {
         guard let view = loadViewFromNib() else { return }
         view.frame = bounds
         view.autoresizingMask =
@@ -74,7 +73,7 @@ class MovieInfoView: UIView {
         contentView = view
     }
     
-    func loadViewFromNib() -> UIView? {
+    private func loadViewFromNib() -> UIView? {
         let bundle = Bundle(for: type(of: self))
         let nib = UINib(nibName: kCONTENT_XIB_NAME, bundle: bundle)
         return nib.instantiate(

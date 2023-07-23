@@ -14,7 +14,7 @@ class MovieDetailsVC: BaseVC {
     // MARK: - Outlets
     @IBOutlet weak var header: GenericHeaderView!
     @IBOutlet weak var scrollView: UIScrollView!
-    @IBOutlet weak var movieInfoView: MovieInfoView!
+    @IBOutlet weak var movieInfoView: ShowInfoView!
     @IBOutlet weak var movieOverviewView: ShowOverviewView!
     @IBOutlet weak var productionCompaniesView: ProductionCompaniesView!
 

@@ -65,6 +65,9 @@
 		AE79D4FE2A6C936000341F45 /* ShowOverviewViewRepresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE79D4FD2A6C936000341F45 /* ShowOverviewViewRepresentable.swift */; };
 		AE79D5002A6C937600341F45 /* ProductionCompaniesViewRepresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE79D4FF2A6C937600341F45 /* ProductionCompaniesViewRepresentable.swift */; };
 		AE79D5152A6D3BD200341F45 /* Ext_UIStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE79D5142A6D3BD200341F45 /* Ext_UIStackView.swift */; };
+		AE79D51D2A6D4F6500341F45 /* ShowInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE79D51B2A6D4F6500341F45 /* ShowInfoView.swift */; };
+		AE79D51E2A6D4F6500341F45 /* ShowInfoView.xib in Resources */ = {isa = PBXBuildFile; fileRef = AE79D51C2A6D4F6500341F45 /* ShowInfoView.xib */; };
+		AE79D5202A6D4FB300341F45 /* ShowInfoViewRepresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE79D51F2A6D4FB300341F45 /* ShowInfoViewRepresentable.swift */; };
 		AEA26DBB2A55BDA4003E8AA0 /* Domain.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AED7A1EF2A515B2800A6C820 /* Domain.framework */; };
 		AED6FA632A58C46800AB8F92 /* InjectBoundaries.swift in Sources */ = {isa = PBXBuildFile; fileRef = AED6FA622A58C46800AB8F92 /* InjectBoundaries.swift */; };
 		AED6FA662A58C47B00AB8F92 /* PresentationBoundary.swift in Sources */ = {isa = PBXBuildFile; fileRef = AED6FA652A58C47A00AB8F92 /* PresentationBoundary.swift */; };
@@ -171,6 +174,9 @@
 		AE79D4FD2A6C936000341F45 /* ShowOverviewViewRepresentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowOverviewViewRepresentable.swift; sourceTree = "<group>"; };
 		AE79D4FF2A6C937600341F45 /* ProductionCompaniesViewRepresentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductionCompaniesViewRepresentable.swift; sourceTree = "<group>"; };
 		AE79D5142A6D3BD200341F45 /* Ext_UIStackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ext_UIStackView.swift; sourceTree = "<group>"; };
+		AE79D51B2A6D4F6500341F45 /* ShowInfoView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShowInfoView.swift; sourceTree = "<group>"; };
+		AE79D51C2A6D4F6500341F45 /* ShowInfoView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ShowInfoView.xib; sourceTree = "<group>"; };
+		AE79D51F2A6D4FB300341F45 /* ShowInfoViewRepresentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowInfoViewRepresentable.swift; sourceTree = "<group>"; };
 		AED6FA622A58C46800AB8F92 /* InjectBoundaries.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InjectBoundaries.swift; sourceTree = "<group>"; };
 		AED6FA652A58C47A00AB8F92 /* PresentationBoundary.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PresentationBoundary.swift; sourceTree = "<group>"; };
 		AED6FA732A59499A00AB8F92 /* ApplicationStateManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApplicationStateManager.swift; sourceTree = "<group>"; };
@@ -443,6 +449,7 @@
 		AE79D4FB2A6C916D00341F45 /* ShowDetails */ = {
 			isa = PBXGroup;
 			children = (
+				AE79D51A2A6D4F6500341F45 /* ShowInfoView */,
 				AE79D4F22A6C916A00341F45 /* ShowOverview */,
 				AE79D4E92A6C916500341F45 /* ProductionCompanies */,
 			);
@@ -454,8 +461,18 @@
 			children = (
 				AE79D4FD2A6C936000341F45 /* ShowOverviewViewRepresentable.swift */,
 				AE79D4FF2A6C937600341F45 /* ProductionCompaniesViewRepresentable.swift */,
+				AE79D51F2A6D4FB300341F45 /* ShowInfoViewRepresentable.swift */,
 			);
 			path = ShowDetails;
+			sourceTree = "<group>";
+		};
+		AE79D51A2A6D4F6500341F45 /* ShowInfoView */ = {
+			isa = PBXGroup;
+			children = (
+				AE79D51B2A6D4F6500341F45 /* ShowInfoView.swift */,
+				AE79D51C2A6D4F6500341F45 /* ShowInfoView.xib */,
+			);
+			path = ShowInfoView;
 			sourceTree = "<group>";
 		};
 		AED6FA4E2A58C40700AB8F92 /* Di */ = {
@@ -736,6 +753,7 @@
 				AE53D3662A58B7A80017C9EE /* Mulish-Black.ttf in Resources */,
 				AE53D3622A58B7A80017C9EE /* Mulish-LightItalic.ttf in Resources */,
 				AE53D35E2A58B7A80017C9EE /* loading.json in Resources */,
+				AE79D51E2A6D4F6500341F45 /* ShowInfoView.xib in Resources */,
 				AE79D4EF2A6C916500341F45 /* ProductionCompanyCell.xib in Resources */,
 				AE53D3692A58B7A80017C9EE /* Mulish-ExtraLightItalic.ttf in Resources */,
 				AE53D36E2A58B7A80017C9EE /* Mulish-Medium.ttf in Resources */,
@@ -798,6 +816,7 @@
 				AE79D4FE2A6C936000341F45 /* ShowOverviewViewRepresentable.swift in Sources */,
 				AED6FA782A59499A00AB8F92 /* ApplicationStates.swift in Sources */,
 				AED6FA772A59499A00AB8F92 /* ApplicationStateManager.swift in Sources */,
+				AE79D5202A6D4FB300341F45 /* ShowInfoViewRepresentable.swift in Sources */,
 				AE53D3952A58C2510017C9EE /* SwiftUIBaseVC.swift in Sources */,
 				AE79D4FA2A6C916A00341F45 /* ShowOverviewView.swift in Sources */,
 				AED6FA632A58C46800AB8F92 /* InjectBoundaries.swift in Sources */,
@@ -809,6 +828,7 @@
 				AED6FA8F2A59C6E400AB8F92 /* AdaptedConstraint.swift in Sources */,
 				AE79D5152A6D3BD200341F45 /* Ext_UIStackView.swift in Sources */,
 				AE2E8D422A5CB080004FC80C /* GenericHeaderView.swift in Sources */,
+				AE79D51D2A6D4F6500341F45 /* ShowInfoView.swift in Sources */,
 				AE53D3322A58B58F0017C9EE /* CoordinatorKeys.swift in Sources */,
 				AE53D3932A58C1640017C9EE /* Ext_FeedbackMessage.swift in Sources */,
 				AED6FA832A59580E00AB8F92 /* BaseTabBarController.swift in Sources */,
