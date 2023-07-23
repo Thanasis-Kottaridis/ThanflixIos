@@ -39,46 +39,60 @@ public class MovieDetailsMapper: DomainMapper {
         var showOverview: [Overview] = []
         
         // 1. add run time
-        showOverview.append(Overview(
-            key: "OVERVIEW_RUNTIME",
-            value: formatMinutes(model.runtime ?? 0)
-        ))
+        if let value = model.runtime {
+            showOverview.append(Overview(
+                key: "OVERVIEW_RUNTIME",
+                value: formatMinutes(value)
+            ))
+        }
         
         // 2. add countries overview
-        showOverview.append(Overview(
-            key: "OVERVIEW_COUNTRIES",
-            value: model.productionCountries?.map({ $0.name }).joined(separator: ",")
-        ))
+        if let value = model.productionCountries {
+            showOverview.append(Overview(
+                key: "OVERVIEW_COUNTRIES",
+                value: value.map({ $0.name }).joined(separator: ",")
+            ))
+        }
         
         // 3. Add language overview
-        showOverview.append(Overview(
-            key: "OVERVIEW_LANGUAGE",
-            value: model.spokenLanguages?.map({ $0.name }).joined(separator: ",")
-        ))
+        if let value = model.spokenLanguages {
+            showOverview.append(Overview(
+                key: "OVERVIEW_LANGUAGE",
+                value: value.map({ $0.name }).joined(separator: ",")
+            ))
+        }
         
         // 4. Add Geners overview
-        showOverview.append(Overview(
-            key: "OVERVIEW_GENERS",
-            value: model.genres?.map({ $0.name }).joined(separator: ",")
-        ))
+        if let value = model.genres {
+            showOverview.append(Overview(
+                key: "OVERVIEW_GENERS",
+                value: value.map({ $0.name }).joined(separator: ",")
+            ))
+        }
         
         // 5. Add Budget overview
-        showOverview.append(Overview(
-            key: "OVERVIEW_BUDGET",
-            value: formatAmountInDollars(model.budget ?? 0)
-        ))
+        if let value = model.budget {
+            showOverview.append(Overview(
+                key: "OVERVIEW_BUDGET",
+                value: formatAmountInDollars(value)
+            ))
+        }
         
         // 6. Add Revenuw overview
-        showOverview.append(Overview(
-            key: "OVERVIEW_REVENUE",
-            value: formatAmountInDollars(model.revenue ?? 0)
-        ))
+        if let value = model.revenue {
+            showOverview.append(Overview(
+                key: "OVERVIEW_REVENUE",
+                value: formatAmountInDollars(value)
+            ))
+        }
         
         // 7. Add Revenuw overview
-        showOverview.append(Overview(
-            key: "OVERVIEW_SYNOPSIS",
-            value: model.overview
-        ))
+        if let value = model.overview {
+            showOverview.append(Overview(
+                key: "OVERVIEW_SYNOPSIS",
+                value: value
+            ))
+        }
         
         return showOverview
     }

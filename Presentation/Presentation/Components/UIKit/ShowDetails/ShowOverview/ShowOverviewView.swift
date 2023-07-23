@@ -72,6 +72,7 @@ public class ShowOverviewView: UIView {
     }
     
     private func setUpStackView(overviewList: [Overview]) {
+        contentStackView.removeAllArrangedSubviews()
         contentStackView.layer.cornerRadius = ConstraintConstants.cornerRadius
         contentStackView.backgroundColor = ColorPalette.BackgroundDefaultPrimary.value
         

@@ -62,6 +62,9 @@
 		AE79D4F82A6C916A00341F45 /* ShowOverviewView.xib in Resources */ = {isa = PBXBuildFile; fileRef = AE79D4F42A6C916A00341F45 /* ShowOverviewView.xib */; };
 		AE79D4F92A6C916A00341F45 /* ShowOverviewItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE79D4F52A6C916A00341F45 /* ShowOverviewItemView.swift */; };
 		AE79D4FA2A6C916A00341F45 /* ShowOverviewView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE79D4F62A6C916A00341F45 /* ShowOverviewView.swift */; };
+		AE79D4FE2A6C936000341F45 /* ShowOverviewViewRepresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE79D4FD2A6C936000341F45 /* ShowOverviewViewRepresentable.swift */; };
+		AE79D5002A6C937600341F45 /* ProductionCompaniesViewRepresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE79D4FF2A6C937600341F45 /* ProductionCompaniesViewRepresentable.swift */; };
+		AE79D5152A6D3BD200341F45 /* Ext_UIStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE79D5142A6D3BD200341F45 /* Ext_UIStackView.swift */; };
 		AEA26DBB2A55BDA4003E8AA0 /* Domain.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AED7A1EF2A515B2800A6C820 /* Domain.framework */; };
 		AED6FA632A58C46800AB8F92 /* InjectBoundaries.swift in Sources */ = {isa = PBXBuildFile; fileRef = AED6FA622A58C46800AB8F92 /* InjectBoundaries.swift */; };
 		AED6FA662A58C47B00AB8F92 /* PresentationBoundary.swift in Sources */ = {isa = PBXBuildFile; fileRef = AED6FA652A58C47A00AB8F92 /* PresentationBoundary.swift */; };
@@ -165,6 +168,9 @@
 		AE79D4F42A6C916A00341F45 /* ShowOverviewView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ShowOverviewView.xib; sourceTree = "<group>"; };
 		AE79D4F52A6C916A00341F45 /* ShowOverviewItemView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShowOverviewItemView.swift; sourceTree = "<group>"; };
 		AE79D4F62A6C916A00341F45 /* ShowOverviewView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShowOverviewView.swift; sourceTree = "<group>"; };
+		AE79D4FD2A6C936000341F45 /* ShowOverviewViewRepresentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowOverviewViewRepresentable.swift; sourceTree = "<group>"; };
+		AE79D4FF2A6C937600341F45 /* ProductionCompaniesViewRepresentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductionCompaniesViewRepresentable.swift; sourceTree = "<group>"; };
+		AE79D5142A6D3BD200341F45 /* Ext_UIStackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ext_UIStackView.swift; sourceTree = "<group>"; };
 		AED6FA622A58C46800AB8F92 /* InjectBoundaries.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InjectBoundaries.swift; sourceTree = "<group>"; };
 		AED6FA652A58C47A00AB8F92 /* PresentationBoundary.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PresentationBoundary.swift; sourceTree = "<group>"; };
 		AED6FA732A59499A00AB8F92 /* ApplicationStateManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApplicationStateManager.swift; sourceTree = "<group>"; };
@@ -397,6 +403,7 @@
 				AE53D3802A58BBD60017C9EE /* Ext_UIColor.swift */,
 				AE53D38F2A58BECF0017C9EE /* Ext_UIApplication.swift */,
 				AE53D3922A58C1640017C9EE /* Ext_FeedbackMessage.swift */,
+				AE79D5142A6D3BD200341F45 /* Ext_UIStackView.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -445,6 +452,8 @@
 		AE79D4FC2A6C918300341F45 /* ShowDetails */ = {
 			isa = PBXGroup;
 			children = (
+				AE79D4FD2A6C936000341F45 /* ShowOverviewViewRepresentable.swift */,
+				AE79D4FF2A6C937600341F45 /* ProductionCompaniesViewRepresentable.swift */,
 			);
 			path = ShowDetails;
 			sourceTree = "<group>";
@@ -786,6 +795,7 @@
 				AE53D3832A58BBD60017C9EE /* Ext_UIView.swift in Sources */,
 				AE53D3262A58B4F40017C9EE /* BaseAppDelegate.swift in Sources */,
 				AED6FA792A59499A00AB8F92 /* ApplicationStateEvents.swift in Sources */,
+				AE79D4FE2A6C936000341F45 /* ShowOverviewViewRepresentable.swift in Sources */,
 				AED6FA782A59499A00AB8F92 /* ApplicationStates.swift in Sources */,
 				AED6FA772A59499A00AB8F92 /* ApplicationStateManager.swift in Sources */,
 				AE53D3952A58C2510017C9EE /* SwiftUIBaseVC.swift in Sources */,
@@ -797,12 +807,14 @@
 				AE53D3602A58B7A80017C9EE /* Font.swift in Sources */,
 				AE79D4F12A6C916500341F45 /* ProductionCompaniesView.swift in Sources */,
 				AED6FA8F2A59C6E400AB8F92 /* AdaptedConstraint.swift in Sources */,
+				AE79D5152A6D3BD200341F45 /* Ext_UIStackView.swift in Sources */,
 				AE2E8D422A5CB080004FC80C /* GenericHeaderView.swift in Sources */,
 				AE53D3322A58B58F0017C9EE /* CoordinatorKeys.swift in Sources */,
 				AE53D3932A58C1640017C9EE /* Ext_FeedbackMessage.swift in Sources */,
 				AED6FA832A59580E00AB8F92 /* BaseTabBarController.swift in Sources */,
 				AED6FA872A59C6D600AB8F92 /* KeyboardLayoutConstraint.swift in Sources */,
 				AED6FA7B2A594B9600AB8F92 /* InjectManagers.swift in Sources */,
+				AE79D5002A6C937600341F45 /* ProductionCompaniesViewRepresentable.swift in Sources */,
 				AE53D3312A58B58F0017C9EE /* BaseNavigation.swift in Sources */,
 				AED7A1B62A515AD200A6C820 /* Presentation.docc in Sources */,
 				AE2E8D9E2A5E8885004FC80C /* InjectDataContexts.swift in Sources */,

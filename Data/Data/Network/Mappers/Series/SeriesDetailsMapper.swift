@@ -40,35 +40,46 @@ public class SeriesDetailsMapper: DomainMapper {
         var showOverview: [Overview] = []
         
         // 1. add number of seasons and episodes
-        showOverview.append(Overview(
-            key: "OVERVIEW_SESONS_AND_EPISODES",
-            value: "\(model.numberOfSeasons ?? 0) Seasons - \(model.numberOfEpisodes ?? 0) Episodes"
-        ))
-        
+        if let seasons = model.spokenLanguages,
+           let episodes = model.numberOfEpisodes {
+            showOverview.append(Overview(
+                key: "OVERVIEW_SESONS_AND_EPISODES",
+                value: "\(seasons) Seasons - \(episodes) Episodes"
+            ))
+        }
+
         
         // 2. add countries overview
-        showOverview.append(Overview(
-            key: "OVERVIEW_COUNTRIES",
-            value: model.productionCountries?.map({ $0.name }).joined(separator: ",")
-        ))
+        if let value = model.spokenLanguages {
+            showOverview.append(Overview(
+                key: "OVERVIEW_COUNTRIES",
+                value:value.map({ $0.name }).joined(separator: ",")
+            ))
+        }
         
         // 3. Add language overview
-        showOverview.append(Overview(
-            key: "OVERVIEW_LANGUAGE",
-            value: model.spokenLanguages?.map({ $0.name }).joined(separator: ",")
-        ))
+        if let value = model.spokenLanguages {
+            showOverview.append(Overview(
+                key: "OVERVIEW_LANGUAGE",
+                value: value.map({ $0.name }).joined(separator: ",")
+            ))
+        }
         
         // 4. Add Geners overview
-        showOverview.append(Overview(
-            key: "OVERVIEW_GENERS",
-            value: model.genres?.map({ $0.name }).joined(separator: ",")
-        ))
+        if let value = model.genres {
+            showOverview.append(Overview(
+                key: "OVERVIEW_GENERS",
+                value: value.map({ $0.name }).joined(separator: ",")
+            ))
+        }
         
         // 5. Add Synopsis overview
-        showOverview.append(Overview(
-            key: "OVERVIEW_SYNOPSIS",
-            value: model.overview
-        ))
+        if let value = model.overview, !value.isEmpty {
+            showOverview.append(Overview(
+                key: "OVERVIEW_SYNOPSIS",
+                value: value
+            ))
+        }
         
         return showOverview
     }
