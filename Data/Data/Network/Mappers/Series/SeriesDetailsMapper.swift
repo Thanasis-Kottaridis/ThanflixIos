@@ -40,7 +40,7 @@ public class SeriesDetailsMapper: DomainMapper {
         var showOverview: [Overview] = []
         
         // 1. add number of seasons and episodes
-        if let seasons = model.spokenLanguages,
+        if let seasons = model.numberOfSeasons,
            let episodes = model.numberOfEpisodes {
             showOverview.append(Overview(
                 key: "OVERVIEW_SESONS_AND_EPISODES",

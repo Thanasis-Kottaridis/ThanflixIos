@@ -38,6 +38,9 @@ struct SeriesDetailsScreen: View {
                     Spacer()
                         .frame(height: headerHeight)
                     
+                    // 2. Add series Info
+                    
+                    // 3. Add Overview List
                     ShowOverviewWrapperView(
                         configurations: ObservedObject(
                             wrappedValue: ShowOverviewConfigurations(
@@ -46,7 +49,16 @@ struct SeriesDetailsScreen: View {
                         )
                     )
                     
-                    ProductionCompaniesWrapperView(showDetails: viewModel.state.details)
+                    // 4. Add Seasons
+                
+                    // 5. Add Production Companies
+                    ProductionCompaniesWrapperView(
+                        configurations: ObservedObject(
+                            wrappedValue: ProductionCompaniesConfigurations(
+                                showDetails:  viewModel.state.details
+                            )
+                        )
+                    )
                 }
             }
         }.onAppear {

@@ -8,20 +8,28 @@
 import SwiftUI
 import Domain
 
-public struct ProductionCompaniesWrapperView: View {
-    
-    private let showDetails: ShowDetails
-    @State private var headerHeight: CGFloat = 0.0
+public class ProductionCompaniesConfigurations: ObservableObject {
+    public let showDetails: ShowDetails
     
     public init(showDetails: ShowDetails) {
         self.showDetails = showDetails
+    }
+}
+
+public struct ProductionCompaniesWrapperView: View {
+    
+    @ObservedObject private var configurations: ProductionCompaniesConfigurations
+    @State private var headerHeight: CGFloat = 0.0
+    
+    public init(configurations: ObservedObject<ProductionCompaniesConfigurations>) {
+        _configurations = configurations
     }
     
     public var body: some View {
         VStack {
             ProductionCompaniesViewRepresentable(
                 height: $headerHeight,
-                showDetails: showDetails
+                showDetails: configurations.showDetails
             )
         }.frame(height: headerHeight)
     }
@@ -45,19 +53,18 @@ internal struct ProductionCompaniesViewRepresentable: UIViewRepresentable {
     
     func makeUIView(context: Context) -> UIViewType {
         let customView = ProductionCompaniesView()
-        customView.setupView(showDetails: showDetails)
-
-        DispatchQueue.main.async {
-            let fittingSize = CGSize(width: customView.frame.width, height: UIView.layoutFittingCompressedSize.height)
-            let size = customView.systemLayoutSizeFitting(fittingSize)
-            height = size.height + 1
-        }
-
         return customView
     }
     
     func updateUIView(_ uiView: UIViewType, context: Context) {
         // Update any properties or perform additional configuration if needed
+        uiView.setupView(showDetails: showDetails)
+
+        DispatchQueue.main.async {
+            let fittingSize = CGSize(width: uiView.frame.width, height: UIView.layoutFittingCompressedSize.height)
+            let size = uiView.systemLayoutSizeFitting(fittingSize)
+            height = size.height + 1
+        }
     }
 }
 

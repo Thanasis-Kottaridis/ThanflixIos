@@ -56,18 +56,18 @@ internal struct GenericHeaderViewRepresentable: UIViewRepresentable {
     
     func makeUIView(context: Context) -> UIViewType {
         let customView = GenericHeaderView()
-        customView.setupView(configurations: configurations)
-
-        DispatchQueue.main.async {
-            let fittingSize = CGSize(width: customView.frame.width, height: UIView.layoutFittingCompressedSize.height)
-            let size = customView.systemLayoutSizeFitting(fittingSize)
-            height = size.height + 1
-        }
-
         return customView
     }
     
     func updateUIView(_ uiView: UIViewType, context: Context) {
         // Update any properties or perform additional configuration if needed
+        uiView.setupView(configurations: configurations)
+
+        DispatchQueue.main.async {
+            let fittingSize = CGSize(width: uiView.frame.width, height: UIView.layoutFittingCompressedSize.height)
+            let size = uiView.systemLayoutSizeFitting(fittingSize)
+            height = size.height + 1
+        }
+
     }
 }

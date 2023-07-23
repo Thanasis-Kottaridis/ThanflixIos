@@ -55,13 +55,6 @@ internal struct ShowOverviewViewRepresentable: UIViewRepresentable {
     func makeUIView(context: Context) -> UIViewType {
         let customView = ShowOverviewView()
         customView.setupView(showDetails: showDetails)
-
-        DispatchQueue.main.async {
-            let fittingSize = CGSize(width: customView.frame.width, height: UIView.layoutFittingCompressedSize.height)
-            let size = customView.systemLayoutSizeFitting(fittingSize)
-            height = size.height + 1
-        }
-
         return customView
     }
     
