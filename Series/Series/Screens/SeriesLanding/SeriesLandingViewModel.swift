@@ -55,7 +55,7 @@ class SeriesLandingViewModel: BaseViewModel {
         let dispatchGroup = DispatchGroup()
         
         // 2. show loader
-        self.state = self.state.copy(isLoading: false)
+        self.state = self.state.copy(isLoading: true)
 
         // 3. call all endpoints
         fetchTodaySeries(dispatchGroup: dispatchGroup)

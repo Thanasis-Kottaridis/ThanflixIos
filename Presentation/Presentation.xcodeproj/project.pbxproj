@@ -68,6 +68,7 @@
 		AE79D51D2A6D4F6500341F45 /* ShowInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE79D51B2A6D4F6500341F45 /* ShowInfoView.swift */; };
 		AE79D51E2A6D4F6500341F45 /* ShowInfoView.xib in Resources */ = {isa = PBXBuildFile; fileRef = AE79D51C2A6D4F6500341F45 /* ShowInfoView.xib */; };
 		AE79D5202A6D4FB300341F45 /* ShowInfoViewRepresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE79D51F2A6D4FB300341F45 /* ShowInfoViewRepresentable.swift */; };
+		AE79D5422A6DE16200341F45 /* BaseErrorDispatcherImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE79D5372A6DE16200341F45 /* BaseErrorDispatcherImpl.swift */; };
 		AEA26DBB2A55BDA4003E8AA0 /* Domain.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AED7A1EF2A515B2800A6C820 /* Domain.framework */; };
 		AED6FA632A58C46800AB8F92 /* InjectBoundaries.swift in Sources */ = {isa = PBXBuildFile; fileRef = AED6FA622A58C46800AB8F92 /* InjectBoundaries.swift */; };
 		AED6FA662A58C47B00AB8F92 /* PresentationBoundary.swift in Sources */ = {isa = PBXBuildFile; fileRef = AED6FA652A58C47A00AB8F92 /* PresentationBoundary.swift */; };
@@ -177,6 +178,7 @@
 		AE79D51B2A6D4F6500341F45 /* ShowInfoView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShowInfoView.swift; sourceTree = "<group>"; };
 		AE79D51C2A6D4F6500341F45 /* ShowInfoView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ShowInfoView.xib; sourceTree = "<group>"; };
 		AE79D51F2A6D4FB300341F45 /* ShowInfoViewRepresentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowInfoViewRepresentable.swift; sourceTree = "<group>"; };
+		AE79D5372A6DE16200341F45 /* BaseErrorDispatcherImpl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseErrorDispatcherImpl.swift; sourceTree = "<group>"; };
 		AED6FA622A58C46800AB8F92 /* InjectBoundaries.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InjectBoundaries.swift; sourceTree = "<group>"; };
 		AED6FA652A58C47A00AB8F92 /* PresentationBoundary.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PresentationBoundary.swift; sourceTree = "<group>"; };
 		AED6FA732A59499A00AB8F92 /* ApplicationStateManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApplicationStateManager.swift; sourceTree = "<group>"; };
@@ -299,6 +301,7 @@
 			children = (
 				AE53D3352A58B5DF0017C9EE /* BaseViewModel.swift */,
 				AE53D3362A58B5DF0017C9EE /* BaseErrorDispatcher.swift */,
+				AE79D5372A6DE16200341F45 /* BaseErrorDispatcherImpl.swift */,
 				AE53D3372A58B5DF0017C9EE /* Ext_BaseViewModel.swift */,
 				AE53D3382A58B5E00017C9EE /* BaseState.swift */,
 			);
@@ -849,6 +852,7 @@
 				AE53D33C2A58B5E00017C9EE /* BaseState.swift in Sources */,
 				AE79D4F92A6C916A00341F45 /* ShowOverviewItemView.swift in Sources */,
 				AE7600442A6BDFFD00B84849 /* GenericHeaderOverlapWrapper.swift in Sources */,
+				AE79D5422A6DE16200341F45 /* BaseErrorDispatcherImpl.swift in Sources */,
 				AED6FA8A2A59C6DE00AB8F92 /* PagingDataSource.swift in Sources */,
 				AED6FA662A58C47B00AB8F92 /* PresentationBoundary.swift in Sources */,
 				AE53D3452A58B70A0017C9EE /* GenericLoader.swift in Sources */,

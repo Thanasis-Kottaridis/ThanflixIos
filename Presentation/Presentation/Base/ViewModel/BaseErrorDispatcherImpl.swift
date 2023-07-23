@@ -7,10 +7,12 @@
 
 import Foundation
 import Domain
-import Presentation
 
-class BaseErrorDispatcherImpl: BaseErrorDispatcher {
-    func handleErrors(
+public class BaseErrorDispatcherImpl: BaseErrorDispatcher {
+    
+    public init() {}
+    
+    public func handleErrors(
         actionHandler: BaseActionHandler?,
         error: BaseException,
         config: HandleErrorsConfig
@@ -50,6 +52,8 @@ class BaseErrorDispatcherImpl: BaseErrorDispatcher {
                 return true
             }
             
+            let action = PresentFeedbackAction(feedbackMessage: FeedbackMessage(message: genericErrorMessage, type: .error))
+            actionHandler?.handleBaseAction(action: action)
             return true
         }
         // MARK: default error handling.

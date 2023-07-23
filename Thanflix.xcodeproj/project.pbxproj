@@ -26,7 +26,6 @@
 		AEA26DC92A55CA27003E8AA0 /* Enviroments.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEA26DC82A55CA27003E8AA0 /* Enviroments.swift */; };
 		AEA26DCE2A55CC92003E8AA0 /* RequestHeadersBuilderImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEA26DCD2A55CC92003E8AA0 /* RequestHeadersBuilderImpl.swift */; };
 		AEA26DD22A55CDCF003E8AA0 /* Ext_UIDevice.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEA26DD12A55CDCF003E8AA0 /* Ext_UIDevice.swift */; };
-		AED6FA6E2A58C50500AB8F92 /* BaseErrorDispatcherImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = AED6FA672A58C50500AB8F92 /* BaseErrorDispatcherImpl.swift */; };
 		AED6FA712A59489200AB8F92 /* MasterCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = AED6FA702A59489200AB8F92 /* MasterCoordinator.swift */; };
 		AED6FA7D2A594D2000AB8F92 /* MainAppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = AED6FA7C2A594D2000AB8F92 /* MainAppCoordinator.swift */; };
 		AED7A06A2A5153CC00A6C820 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AED7A0692A5153CC00A6C820 /* AppDelegate.swift */; };
@@ -157,7 +156,6 @@
 		AEA26DC82A55CA27003E8AA0 /* Enviroments.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Enviroments.swift; sourceTree = "<group>"; };
 		AEA26DCD2A55CC92003E8AA0 /* RequestHeadersBuilderImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestHeadersBuilderImpl.swift; sourceTree = "<group>"; };
 		AEA26DD12A55CDCF003E8AA0 /* Ext_UIDevice.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Ext_UIDevice.swift; sourceTree = "<group>"; };
-		AED6FA672A58C50500AB8F92 /* BaseErrorDispatcherImpl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseErrorDispatcherImpl.swift; sourceTree = "<group>"; };
 		AED6FA702A59489200AB8F92 /* MasterCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MasterCoordinator.swift; sourceTree = "<group>"; };
 		AED6FA7C2A594D2000AB8F92 /* MainAppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainAppCoordinator.swift; sourceTree = "<group>"; };
 		AED7A0662A5153CC00A6C820 /* Thanflix.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Thanflix.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -276,7 +274,6 @@
 			children = (
 				AEA26DC82A55CA27003E8AA0 /* Enviroments.swift */,
 				AEA26DCD2A55CC92003E8AA0 /* RequestHeadersBuilderImpl.swift */,
-				AED6FA672A58C50500AB8F92 /* BaseErrorDispatcherImpl.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -770,7 +767,6 @@
 				AED7A06A2A5153CC00A6C820 /* AppDelegate.swift in Sources */,
 				AED6FA7D2A594D2000AB8F92 /* MainAppCoordinator.swift in Sources */,
 				AED7A06C2A5153CC00A6C820 /* SceneDelegate.swift in Sources */,
-				AED6FA6E2A58C50500AB8F92 /* BaseErrorDispatcherImpl.swift in Sources */,
 				AED6FA712A59489200AB8F92 /* MasterCoordinator.swift in Sources */,
 				AEA26DD22A55CDCF003E8AA0 /* Ext_UIDevice.swift in Sources */,
 			);
