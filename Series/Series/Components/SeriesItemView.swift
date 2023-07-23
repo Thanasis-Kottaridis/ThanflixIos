@@ -15,8 +15,22 @@ struct SeriesItemView: View {
         static let largelCornerRadius = 24.adapted()
         static let normalCornerRadius = 16.adapted()
         
+        static let listItemSpacing = 12.adapted()
+        static let largeCellsWidth = 244.adapted()
+        static let largeCellsHeght = 380.adapted()
+        static let normalCellsWidth = 138.adapted()
+        static let normalCellsHeight = 221.adapted()
+        
         static func getCellCornerRadius(isLarge: Bool) -> CGFloat {
             return isLarge ? largelCornerRadius : normalCornerRadius
+        }
+        
+        static func getCellsHeght(isLarge: Bool) -> CGFloat {
+            return isLarge ? largeCellsHeght : normalCellsHeight
+        }
+        
+        static func getCellsWidth(isLarge: Bool) -> CGFloat {
+            return isLarge ? largeCellsWidth : normalCellsWidth
         }
     }
     
@@ -32,13 +46,31 @@ struct SeriesItemView: View {
     var body: some View {
         
         ZStack {
-            Image(uiImage: image ?? UIImage())
-                .resizable()
-                .aspectRatio(contentMode: .fit)
-                .background(image == nil ? ColorPalette.FillPrimary.value.swiftUIColor : .clear)
-                .clipShape(RoundedRectangle(cornerRadius: ConstraintConstants.getCellCornerRadius(isLarge: isLargeCell)))
-            
-            if image == nil {
+            if let image = image {
+                Image(uiImage: image)
+                    .resizable()
+                    .aspectRatio(contentMode: .fit)
+                    .clipShape(
+                        RoundedRectangle(
+                            cornerRadius: ConstraintConstants.getCellCornerRadius(isLarge: isLargeCell)
+                        )
+                    )
+                    .frame(
+                        width: ConstraintConstants.getCellsWidth(isLarge: isLargeCell),
+                        height: ConstraintConstants.getCellsHeght(isLarge: isLargeCell)
+                    )
+            } else {
+                Color(ColorPalette.FillPrimary.value)
+                    .clipShape(
+                        RoundedRectangle(
+                            cornerRadius: ConstraintConstants.getCellCornerRadius(isLarge: isLargeCell)
+                        )
+                    )
+                    .frame(
+                        width: ConstraintConstants.getCellsWidth(isLarge: isLargeCell),
+                        height: ConstraintConstants.getCellsHeght(isLarge: isLargeCell)
+                    )
+                
                 Text(show.title ?? "")
                     .modifier(CustomTextStyle(style: .body1(weight: .BOLD)))
                     .font(.headline)

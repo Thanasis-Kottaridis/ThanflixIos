@@ -214,6 +214,7 @@
 		AED6FB1B2A59CCF800AB8F92 /* Series */ = {
 			isa = PBXGroup;
 			children = (
+				AE79D46B2A6C435100341F45 /* Components */,
 				AE2E8D082A5CAB35004FC80C /* Coordinators */,
 				AEFEE0F52A6B181F0084B6BD /* Screens */,
 				AED6FB1C2A59CCF800AB8F92 /* Series.h */,
@@ -250,7 +251,6 @@
 		AEFEE0F82A6B18310084B6BD /* SeriesLanding */ = {
 			isa = PBXGroup;
 			children = (
-				AE79D46B2A6C435100341F45 /* Components */,
 				AE79D4612A6C0E7C00341F45 /* Interactors */,
 				AEFEE0F92A6B18530084B6BD /* SeriesLandingScreen.swift */,
 				AE79D45A2A6C0E7800341F45 /* SeriesLandingViewModel.swift */,

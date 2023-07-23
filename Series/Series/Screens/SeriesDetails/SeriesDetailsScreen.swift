@@ -50,6 +50,17 @@ struct SeriesDetailsScreen: View {
                     )
                     
                     // 4. Add Seasons
+                    if let seasons = viewModel.state.details.seasons {
+                        SeriesSectionView(
+                            section: SectionModel(
+                                model: Str.seasonsTitle,
+                                items: seasons
+                            ),
+                            isLargeCell: false,
+                            onTapItem: { _ in }
+                        )
+                    }
+                    
                 
                     // 5. Add Production Companies
                     ProductionCompaniesWrapperView(
