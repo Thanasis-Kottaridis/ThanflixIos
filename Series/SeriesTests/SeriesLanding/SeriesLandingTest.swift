@@ -1,21 +1,21 @@
 //
-//  MoviesLandingTest.swift
-//  MoviesTests
+//  SeriesLandingTest.swift
+//  SeriesTests
 //
-//  Created by thanos kottaridis on 23/7/23.
+//  Created by thanos kottaridis on 24/7/23.
 //
 
 import XCTest
 import Domain
 import Presentation
-@testable import Movies
+@testable import Series
 import Combine
 
 // MARK: - Mock Action Handler
 fileprivate class MockActionHandler: BaseActionHandler {
     var loaderExp: XCTestExpectation?
     var feedbackExp: XCTestExpectation?
-    var movieDetailsExp: XCTestExpectation?
+    var seriesDetailsExp: XCTestExpectation?
 
     /// We use this array of acctions in order to keep
     /// reference to all actions performed during test case
@@ -32,6 +32,10 @@ fileprivate class MockActionHandler: BaseActionHandler {
         if action is HideLoaderAction {
             loaderExp?.fulfill()
         }
+        
+        if action is GoToSeriesDetails {
+            seriesDetailsExp?.fulfill()
+        }
     }
     
     func handleAction(action: Action) {
@@ -45,19 +49,19 @@ fileprivate class MockActionHandler: BaseActionHandler {
             loaderExp?.fulfill()
         }
         
-        if action is GoToMovieDetails {
-            movieDetailsExp?.fulfill()
+        if action is GoToSeriesDetails {
+            seriesDetailsExp?.fulfill()
         }
     }
 }
 
 // MARK: - Mock Movies DataContext
-fileprivate let mock_nowPlayingMovies: [Show] = [
+fileprivate let mock_todaySeries: [Show] = [
     Show(
         id: 1,
         posterPath: "poster/path/1",
         releaseDate: "01-01-2023",
-        title: "Mock Now Playing 2",
+        title: "Mock Today 1",
         voteAverage: 5.5,
         voteCount: 1000
     ),
@@ -65,7 +69,7 @@ fileprivate let mock_nowPlayingMovies: [Show] = [
         id: 2,
         posterPath: "poster/path/2",
         releaseDate: "01-01-2023",
-        title: "Mock Now Playing 2",
+        title: "Mock Today 2",
         voteAverage: 5.5,
         voteCount: 1000
     ),
@@ -73,7 +77,7 @@ fileprivate let mock_nowPlayingMovies: [Show] = [
         id: 3,
         posterPath: "poster/path/3",
         releaseDate: "01-01-2023",
-        title: "Mock Now Playing 3",
+        title: "Mock Today 3",
         voteAverage: 5.5,
         voteCount: 1000
     ),
@@ -81,7 +85,7 @@ fileprivate let mock_nowPlayingMovies: [Show] = [
         id: 4,
         posterPath: "poster/path/4",
         releaseDate: "01-01-2023",
-        title: "Mock Now Playing 4",
+        title: "Mock Today 4",
         voteAverage: 5.5,
         voteCount: 1000
     ),
@@ -89,19 +93,19 @@ fileprivate let mock_nowPlayingMovies: [Show] = [
         id: 5,
         posterPath: "poster/path/5",
         releaseDate: "01-01-2023",
-        title: "Mock Now Playing 5",
+        title: "Mock Today 5",
         voteAverage: 5.5,
         voteCount: 1000
     )
 ]
 
 // MARK: - Mock Data
-fileprivate let mock_popularMovies: [Show] = [
+fileprivate let mock_onTheAirSeries: [Show] = [
     Show(
         id: 6,
         posterPath: "poster/path/6",
         releaseDate: "01-01-2023",
-        title: "Mock Popular 6",
+        title: "Mock onTheAir 6",
         voteAverage: 5.5,
         voteCount: 1000
     ),
@@ -109,7 +113,7 @@ fileprivate let mock_popularMovies: [Show] = [
         id: 7,
         posterPath: "poster/path/7",
         releaseDate: "01-01-2023",
-        title: "Mock Popular 7",
+        title: "Mock onTheAir 7",
         voteAverage: 5.5,
         voteCount: 1000
     ),
@@ -117,7 +121,7 @@ fileprivate let mock_popularMovies: [Show] = [
         id: 8,
         posterPath: "poster/path/8",
         releaseDate: "01-01-2023",
-        title: "Mock Popular 8",
+        title: "Mock onTheAir 8",
         voteAverage: 5.5,
         voteCount: 1000
     ),
@@ -125,7 +129,7 @@ fileprivate let mock_popularMovies: [Show] = [
         id: 9,
         posterPath: "poster/path/9",
         releaseDate: "01-01-2023",
-        title: "Mock Popular 9",
+        title: "Mock onTheAir 9",
         voteAverage: 5.5,
         voteCount: 1000
     ),
@@ -133,13 +137,13 @@ fileprivate let mock_popularMovies: [Show] = [
         id: 10,
         posterPath: "poster/path/10",
         releaseDate: "01-01-2023",
-        title: "Mock Popular 10",
+        title: "Mock onTheAir 10",
         voteAverage: 5.5,
         voteCount: 1000
     )
 ]
 
-fileprivate let mock_topRatedMovies: [Show] = [
+fileprivate let mock_popularSeries: [Show] = [
     Show(
         id: 11,
         posterPath: "poster/path/11",
@@ -152,7 +156,7 @@ fileprivate let mock_topRatedMovies: [Show] = [
         id: 12,
         posterPath: "poster/path/12",
         releaseDate: "01-01-2023",
-        title: "Mock Top Rated 12",
+        title: "Mock popular 12",
         voteAverage: 5.5,
         voteCount: 1000
     ),
@@ -160,7 +164,7 @@ fileprivate let mock_topRatedMovies: [Show] = [
         id: 13,
         posterPath: "poster/path/13",
         releaseDate: "01-01-2023",
-        title: "Mock Top Rated 13",
+        title: "Mock popular 13",
         voteAverage: 5.5,
         voteCount: 1000
     ),
@@ -168,7 +172,7 @@ fileprivate let mock_topRatedMovies: [Show] = [
         id: 14,
         posterPath: "poster/path/14",
         releaseDate: "01-01-2023",
-        title: "Mock Top Rated 14",
+        title: "Mock popular 14",
         voteAverage: 5.5,
         voteCount: 1000
     ),
@@ -176,18 +180,18 @@ fileprivate let mock_topRatedMovies: [Show] = [
         id: 15,
         posterPath: "poster/path/15",
         releaseDate: "01-01-2023",
-        title: "Mock Top Rated 15",
+        title: "Mock popular 15",
         voteAverage: 5.5,
         voteCount: 1000
     )
 ]
 
-fileprivate let mock_upcomingMovies: [Show] = [
+fileprivate let mock_topRatedSeries: [Show] = [
     Show(
         id: 16,
         posterPath: "poster/path/16",
         releaseDate: "01-01-2023",
-        title: "Mock Upcoming 16",
+        title: "Mock topRated 16",
         voteAverage: 5.5,
         voteCount: 1000
     ),
@@ -195,7 +199,7 @@ fileprivate let mock_upcomingMovies: [Show] = [
         id: 17,
         posterPath: "poster/path/17",
         releaseDate: "01-01-2023",
-        title: "Mock Upcoming 17",
+        title: "Mock topRated 17",
         voteAverage: 5.5,
         voteCount: 1000
     ),
@@ -203,7 +207,7 @@ fileprivate let mock_upcomingMovies: [Show] = [
         id: 18,
         posterPath: "poster/path/18",
         releaseDate: "01-01-2023",
-        title: "Mock Upcoming 18",
+        title: "Mock topRated 18",
         voteAverage: 5.5,
         voteCount: 1000
     ),
@@ -211,7 +215,7 @@ fileprivate let mock_upcomingMovies: [Show] = [
         id: 19,
         posterPath: "poster/path/19",
         releaseDate: "01-01-2023",
-        title: "Mock Upcoming 19",
+        title: "Mock topRated 19",
         voteAverage: 5.5,
         voteCount: 1000
     ),
@@ -219,79 +223,71 @@ fileprivate let mock_upcomingMovies: [Show] = [
         id: 20,
         posterPath: "poster/path/20",
         releaseDate: "01-01-2023",
-        title: "Mock Upcoming 20",
+        title: "Mock topRated 20",
         voteAverage: 5.5,
         voteCount: 1000
     )
 ]
 
 // MARK: - Mock Datacontext
-fileprivate class MockMoviesDataContext: MoviesDataContext {
+fileprivate class MockSeriesDataContext: SeriesDataContext {
     
     var expectation: XCTestExpectation?
     var isError: Bool
-    var nowPlayingMovies: [Show]
-    var popularMovies: [Show]
-    var topRatedMovies: [Show]
-    var upcomingMovies: [Show]
-    var requestCounter: Int = 0
+    var todaySeries: [Show]
+    var onTheAirSeries: [Show]
+    var popularSeries: [Show]
+    var topRatedSeries: [Show]
 
     init(
         expectation: XCTestExpectation? = nil,
         isError: Bool = false,
-        nowPlayingMovies: [Show],
-        popularMovies: [Show],
-        topRatedMovies: [Show],
-        upcomingMovies: [Show]
+        todaySeries: [Show],
+        onTheAirSeries: [Show],
+        popularSeries: [Show],
+        topRatedSeries: [Show]
     ) {
         self.expectation = expectation
         self.isError = isError
-        self.nowPlayingMovies = nowPlayingMovies
-        self.popularMovies = popularMovies
-        self.topRatedMovies = topRatedMovies
-        self.upcomingMovies = upcomingMovies
+        self.todaySeries = todaySeries
+        self.onTheAirSeries = onTheAirSeries
+        self.popularSeries = popularSeries
+        self.topRatedSeries = topRatedSeries
     }
     
-    func getFavoriteMovies() async -> Domain.Result<Domain.PagedListResult<Domain.Show>?, Domain.BaseException> {
-        fatalError("Not Yet Implemented")
-    }
-    
-    func getNowPlayingMovies(page: Int) async -> Domain.Result<Domain.PagedListResult<Domain.Show>?, Domain.BaseException> {
+    func getAiringTodaySeries(page: Int) async -> Domain.Result<Domain.PagedListResult<Domain.Show>?, Domain.BaseException> {
         if isError {
             return Result.Failure(BaseException())
         } else {
-            return Result.Success(getPagedList(shows: nowPlayingMovies, page: page))
+            return Result.Success(getPagedList(shows: todaySeries, page: page))
         }
     }
     
-    func getPopularMovies(page: Int) async -> Domain.Result<Domain.PagedListResult<Domain.Show>?, Domain.BaseException> {
+    func getOnTheAirSeries(page: Int) async -> Domain.Result<Domain.PagedListResult<Domain.Show>?, Domain.BaseException> {
         if isError {
             return Result.Failure(BaseException())
         } else {
-            return Result.Success(getPagedList(shows: popularMovies, page: page))
+            return Result.Success(getPagedList(shows: onTheAirSeries, page: page))
         }
-        
-        
     }
     
-    func getTopRatedMovies(page: Int) async -> Domain.Result<Domain.PagedListResult<Domain.Show>?, Domain.BaseException> {
+    func getPopularSeries(page: Int) async -> Domain.Result<Domain.PagedListResult<Domain.Show>?, Domain.BaseException> {
         if isError {
             return Result.Failure(BaseException())
         } else {
-            return Result.Success(getPagedList(shows: topRatedMovies, page: page))
+            return Result.Success(getPagedList(shows: popularSeries, page: page))
         }
-        
     }
     
-    func getUpcomingMovies(page: Int) async -> Domain.Result<Domain.PagedListResult<Domain.Show>?, Domain.BaseException> {
+    func getTopRatedSeries(page: Int) async -> Domain.Result<Domain.PagedListResult<Domain.Show>?, Domain.BaseException> {
         if isError {
             return Result.Failure(BaseException())
         } else {
-            return Result.Success(getPagedList(shows: upcomingMovies, page: page))
+            return Result.Success(getPagedList(shows: topRatedSeries, page: page))
         }
     }
     
-    func getMovieDetails(movieId: Int) async -> Domain.Result<Domain.ShowDetails?, Domain.BaseException> {
+    func getSeriesDetails(seriesId: Int) async -> Domain.Result<Domain.ShowDetails?, Domain.BaseException> {
         fatalError("Not Yet Implemented")
     }
     
@@ -341,21 +337,33 @@ final class MoviesLandingTest: XCTestCase {
         
         // this helper var keeps recored of
         // all state updates during test
-        var stateObserver: [MoviesLandingState] = []
+        var stateObserver: [SeriesLandingState] = []
+        
+        //create the expectation for hide loader on VM init
+        var exp = expectation(
+            description: "Hide loader for initial set up"
+        )
         
         // set mock repository Dependency.
-        InjectedValues[\.moviesDataContext] = MockMoviesDataContext(
-            nowPlayingMovies: mock_nowPlayingMovies,
-            popularMovies: mock_popularMovies,
-            topRatedMovies: mock_topRatedMovies,
-            upcomingMovies: mock_upcomingMovies
+        InjectedValues[\.seriesDataContext] = MockSeriesDataContext(
+            todaySeries: mock_todaySeries,
+            onTheAirSeries: mock_onTheAirSeries,
+            popularSeries: mock_popularSeries,
+            topRatedSeries: mock_topRatedSeries
         )
        
         // set up mock ActionHandler
         let mockActionHandler = MockActionHandler()
-        
+        mockActionHandler.loaderExp = exp
+
         // initialze viewModel
-        let viewModel = MoviesLandingViewModel(actionHandler: mockActionHandler)
+        let viewModel = SeriesLandingViewModel(actionHandler: mockActionHandler)
+        
+        // await for expectation
+        waitForExpectations(timeout: 10)
+        // clear actions
+        mockActionHandler.actionsCalled = []
+        
         viewModel.onTriggeredEvent(event: .fetchData)
         
         // obsearve until recieve movies
@@ -366,7 +374,7 @@ final class MoviesLandingTest: XCTestCase {
             .store(in: &cancellables)
         
         // create new expectaion waiting requests to complete.
-        let exp = expectation(
+        exp = expectation(
             description: "hide loader after requests loader expectation"
         )
         mockActionHandler.loaderExp = exp
@@ -408,22 +416,34 @@ final class MoviesLandingTest: XCTestCase {
     func testFetchDataWithError() throws {
         // this helper var keeps recored of
         // all state updates during test
-        var stateObserver: [MoviesLandingState] = []
+        var stateObserver: [SeriesLandingState] = []
+        
+        //create the expectation for hide loader on VM init
+        var exp = expectation(
+            description: "Hide loader for initial set up"
+        )
         
         // set mock repository Dependency.
-        InjectedValues[\.moviesDataContext] = MockMoviesDataContext(
+        InjectedValues[\.seriesDataContext] = MockSeriesDataContext(
             isError: true,
-            nowPlayingMovies: mock_nowPlayingMovies,
-            popularMovies: mock_popularMovies,
-            topRatedMovies: mock_topRatedMovies,
-            upcomingMovies: mock_upcomingMovies
+            todaySeries: mock_todaySeries,
+            onTheAirSeries: mock_onTheAirSeries,
+            popularSeries: mock_popularSeries,
+            topRatedSeries: mock_topRatedSeries
         )
        
         // set up mock ActionHandler
         let mockActionHandler = MockActionHandler()
-        
+        mockActionHandler.loaderExp = exp
+
         // initialze viewModel
-        let viewModel = MoviesLandingViewModel(actionHandler: mockActionHandler)
+        let viewModel = SeriesLandingViewModel(actionHandler: mockActionHandler)
+        
+        // await for expectation
+        waitForExpectations(timeout: 10)
+        // clear actions
+        mockActionHandler.actionsCalled = []
+        
         viewModel.onTriggeredEvent(event: .fetchData)
         
         // obsearve until recieve movies
@@ -434,7 +454,7 @@ final class MoviesLandingTest: XCTestCase {
             .store(in: &cancellables)
         
         // create new expectaion waiting requests to complete.
-        let exp = expectation(
+        exp = expectation(
             description: "hide loader after requests loader expectation"
         )
         mockActionHandler.loaderExp = exp
@@ -478,18 +498,18 @@ final class MoviesLandingTest: XCTestCase {
     func testNavigateToMovie() throws {
         
         // set mock repository Dependency.
-        InjectedValues[\.moviesDataContext] = MockMoviesDataContext(
-            nowPlayingMovies: mock_nowPlayingMovies,
-            popularMovies: mock_popularMovies,
-            topRatedMovies: mock_topRatedMovies,
-            upcomingMovies: mock_upcomingMovies
+        InjectedValues[\.seriesDataContext] = MockSeriesDataContext(
+            todaySeries: mock_todaySeries,
+            onTheAirSeries: mock_onTheAirSeries,
+            popularSeries: mock_popularSeries,
+            topRatedSeries: mock_topRatedSeries
         )
        
         // set up mock ActionHandler
         let mockActionHandler = MockActionHandler()
         
         // initialze viewModel
-        let viewModel = MoviesLandingViewModel(actionHandler: mockActionHandler)
+        let viewModel = SeriesLandingViewModel(actionHandler: mockActionHandler)
         
         // Fetch data and wait expecttion
         viewModel.onTriggeredEvent(event: .fetchData)
@@ -505,12 +525,12 @@ final class MoviesLandingTest: XCTestCase {
         mockActionHandler.actionsCalled = []
         
         // perform navigation
-        viewModel.onTriggeredEvent(event: .goToMovieDetails(index: IndexPath(row: 3, section: 0)))
+        viewModel.onTriggeredEvent(event: .goToShowDetails(id: 4))
         
         // (because we perform 4 request to fetch data from BE)
         let actions = mockActionHandler.actionsCalled
         XCTAssertTrue(
-            (actions[0] as! GoToMovieDetails).id == 4 &&
+            (actions[0] as! GoToSeriesDetails).id == 4 &&
             actions.count == 1
         )
     }
