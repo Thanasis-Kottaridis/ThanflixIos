@@ -252,7 +252,7 @@
 			children = (
 				AE53D3242A58B4F40017C9EE /* Application */,
 				AE53D3272A58B56D0017C9EE /* Window */,
-				AE53D32D2A58B58F0017C9EE /* Coordinator */,
+				AE53D32D2A58B58F0017C9EE /* Navigation */,
 				AE53D32A2A58B57F0017C9EE /* Controllers */,
 				AE53D3342A58B5DF0017C9EE /* ViewModel */,
 			);
@@ -286,14 +286,14 @@
 			path = Controllers;
 			sourceTree = "<group>";
 		};
-		AE53D32D2A58B58F0017C9EE /* Coordinator */ = {
+		AE53D32D2A58B58F0017C9EE /* Navigation */ = {
 			isa = PBXGroup;
 			children = (
 				AE53D32E2A58B58F0017C9EE /* BaseNavigation.swift */,
 				AE53D32F2A58B58F0017C9EE /* CoordinatorKeys.swift */,
 				AE53D3302A58B58F0017C9EE /* Coordinator.swift */,
 			);
-			path = Coordinator;
+			path = Navigation;
 			sourceTree = "<group>";
 		};
 		AE53D3342A58B5DF0017C9EE /* ViewModel */ = {

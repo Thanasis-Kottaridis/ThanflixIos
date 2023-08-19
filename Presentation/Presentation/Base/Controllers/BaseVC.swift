@@ -68,7 +68,6 @@ open class BaseVC: UIViewController {
         setupView()
         setUpObservers()
         populateData()
-        localize()
     }
     
     open override func viewDidAppear(_ animated: Bool) {
@@ -89,6 +88,5 @@ open class BaseVC: UIViewController {
     //MARK: - OPEN FUNCS FOR CHILD VC
     open func setupView() {}
     open func setUpObservers() {}
-    open func localize() {}
     open func populateData() {}
 }
