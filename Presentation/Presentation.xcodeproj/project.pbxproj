@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		122CB4112C7F4B420069F7C3 /* SwiftUIAccessibilityModifiers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 122CB4102C7F4B420069F7C3 /* SwiftUIAccessibilityModifiers.swift */; };
 		AE2E8D422A5CB080004FC80C /* GenericHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE2E8D412A5CB080004FC80C /* GenericHeaderView.swift */; };
 		AE2E8D442A5CB089004FC80C /* GenericHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = AE2E8D432A5CB089004FC80C /* GenericHeaderView.xib */; };
 		AE2E8D9E2A5E8885004FC80C /* InjectDataContexts.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE2E8D9B2A5E8885004FC80C /* InjectDataContexts.swift */; };
@@ -114,6 +115,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		122CB4102C7F4B420069F7C3 /* SwiftUIAccessibilityModifiers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUIAccessibilityModifiers.swift; sourceTree = "<group>"; };
 		1602AD75357EAE33AE852489 /* Pods-Presentation.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Presentation.debug.xcconfig"; path = "Target Support Files/Pods-Presentation/Pods-Presentation.debug.xcconfig"; sourceTree = "<group>"; };
 		1C0EB74AEFDC46228B34C960 /* Pods_Presentation.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Presentation.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3BEFE8A06268BE02B54F6964 /* Pods-Presentation.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Presentation.release.xcconfig"; path = "Target Support Files/Pods-Presentation/Pods-Presentation.release.xcconfig"; sourceTree = "<group>"; };
@@ -220,6 +222,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		122CB40D2C7F4B030069F7C3 /* Accesibility */ = {
+			isa = PBXGroup;
+			children = (
+				122CB4102C7F4B420069F7C3 /* SwiftUIAccessibilityModifiers.swift */,
+			);
+			path = Accesibility;
+			sourceTree = "<group>";
+		};
 		150C94242878029B86C717D7 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -517,6 +527,7 @@
 		AED6FA842A59C6C400AB8F92 /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
+				122CB40D2C7F4B030069F7C3 /* Accesibility */,
 				AE7600382A6BD33D00B84849 /* Keyboard */,
 				AED6FA8B2A59C6E400AB8F92 /* Scaling */,
 				AED6FA882A59C6DE00AB8F92 /* Paging */,
@@ -844,6 +855,7 @@
 				AEFEE1112A6B23C80084B6BD /* GenericHeaderViewRepresentable.swift in Sources */,
 				AE53D3442A58B70A0017C9EE /* FeedbackMessageView.swift in Sources */,
 				AED6FA8E2A59C6E400AB8F92 /* AdaptedVC.swift in Sources */,
+				122CB4112C7F4B420069F7C3 /* SwiftUIAccessibilityModifiers.swift in Sources */,
 				AE76003C2A6BDC2C00B84849 /* KeyboardManager.swift in Sources */,
 				AE53D33A2A58B5E00017C9EE /* BaseErrorDispatcher.swift in Sources */,
 				AE53D3842A58BBD60017C9EE /* Ext_String.swift in Sources */,

@@ -45,6 +45,8 @@ class MovieCollectionViewCell: UICollectionViewCell {
         titleLbl.isHidden = true
         
         fetchBackgroundImage(show)
+        setUpAccessibility()
+        
     }
     
     private func fetchBackgroundImage(_ show: Show) {
@@ -74,5 +76,13 @@ class MovieCollectionViewCell: UICollectionViewCell {
         self.titleLbl.isHidden = false
         titleLbl.attributedText = show?.title?.with(.body1(weight: .BOLD))
         titleLbl.numberOfLines = 0
+    }
+    
+    private func setUpAccessibility() {
+        isAccessibilityElement = true
+        accessibilityTraits = .button
+        accessibilityLabel = show?.title
+//        accessibilityValue = "Double tap to view details"
+        
     }
 }
